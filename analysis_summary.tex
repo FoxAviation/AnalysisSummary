@@ -1,0 +1,61 @@
+\documentclass[a4paper]{article}
+
+%Text libs
+\usepackage{amsfonts}
+\usepackage[ansinew, utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+
+%Math commands
+\newcommand{\rplus}{{\rm I\!R}^+}
+\newcommand{\real}{{\rm I\!R}}
+\newcommand{\erw}{{\rm I\!E}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\natnull}{\mathbb{N}_0}
+\newcommand{\laO}{\mathcal{O}}
+
+\begin{document}
+	\section{Folgen}
+		\paragraph{Def: 2.2 - Grenzwert einer reellen Folge}
+			\begin{itemize}
+				\item $a \in \real$ Grenzwert von $(a_n)$ $\Leftrightarrow \forall \epsilon > 0$ $\exists n_0 \in \nat$ $\forall n \geq n_0:$ $|a_n - a| < \epsilon$
+				\item Existiert $a \in \real$ Grenzwert $\Rightarrow$ $(a_n)$ konvergent, sonst $(a_n)$ divergent
+			\end{itemize}
+		\paragraph{Satz 2.3 - Rechenregeln für Grenzwerte}
+			$(a_n)_{n \in \nat}$, $(b_n)_{n \in \nat}$ reelle Folgen, $\lim\limits_{n \rightarrow \infty} a_n = a$, $\lim\limits_{n \rightarrow \infty} b_n = b$
+			\begin{itemize}
+				\item Folge $(a_n + b_n)$ konvergiert gegen $a+b$
+				\item Folge $(a_n \cdot b_n)$ konvergiert gegen $a \cdot b$
+				\item $b \neq 0 \Rightarrow (\frac{a_n}{b_n})_{n \in \nat}$ konvergiert gegen $\frac{a}{b}$ 
+				\item $a_n \leq b_n$ für fast alle $n \in \nat \rightarrow a \leq b$
+				\item \textbf{Einschließungskriterium} $a=b$, c reelle Folge und $a_n \leq c_n \leq b_n$ für fast alle $n \in \nat \Rightarrow$ $(c_n)_{n \in \nat}$ konvergiert gegen $a$
+			\end{itemize}
+		\textit{Spezialfall des Einschließungskriteriums:}\\$(x_n)_{n \in \nat} Folge, x \in R, (y_n)_{n \in \nat}$ Nullfolge, sodass $|x_n -x| \leq y_n$ für fast alle $n \Rightarrow (x_n)_{n \in \nat}$ konvergiert gegen $x$
+		\paragraph{Satz 2.4 - Eigenschaften konvergenter Folgen}
+		Sei $a_n$ konvergente reelle Folge
+		\begin{itemize}
+			\item $(a_n)$ beschränkt
+			\item $(a_n)$ besitzt genau einen Grenzwert
+		\end{itemize}
+		\paragraph{Def: 2.5 - Uneigentliche Konvergenz}
+		$(a_n)_{a \in \nat}$ konvergiert uneigentlich gegen $\infty \Leftrightarrow \forall K > 0 \exists n_0 \in \nat \forall n \geq n_0: a_n > K$\\
+		$(a_n)_{n \in \nat}$ konvergiert uneigentlich gegen $-\infty \Leftrightarrow (-a_n)_{n \in \nat}$ konvergiert uneigentlich gegen $\infty$
+		\paragraph{Satz 2.6 - Rechenregeln für uneigentliche Konvergenz}
+		$(b_n)_{n \in \nat}$ reelle Folge, $\lim\limits_{n \rightarrow \infty} (b_n)_{n \in \nat} = \infty$, $(a_n)_{n \in \nat}$ reelle Folge, $\lim\limits_{n \rightarrow \infty} a_n = a, a \in \real \cup \{\infty, -\infty\}$
+		\begin{itemize}
+			\item $a \neq - \infty \Rightarrow (a_n + b_n)_{n \in \nat}$ konvergiert uneigentlich gegen $\infty$
+			\item $a \neq 0 \Rightarrow (a_n + b_n)_{n \in \nat}$ konvergiert uneigentlich
+			\item $a > 0 \Rightarrow \lim\limits_{n \rightarrow \infty} a_nb_n = \infty$
+			\item $a < 0 \Rightarrow \lim\limits_{n \rightarrow \infty} a_nb_n = -\infty$
+			\item $a \notin \{\infty, -\infty\} \Rightarrow (\frac{a_n}{b_n})_{n \in \nat}$ konvergiert gegen 0
+		\end{itemize}
+		\paragraph{Def 2.7 - Monotone Folgen}
+		$(a_n)_{n \in \nat}$ reelle Folge heißt
+		\begin{itemize}
+			\item monoton wachsend, falls $a_{n+1} \geq a_n \forall n \in \nat$
+			\item streng monoton wachsend, falls  $a_{n+1} > a_n \forall n \in \nat$
+			\item monoton fallend, falls  $a_{n+1} \leq a_n \forall n \in \nat$
+			\item streng monoton fallend, falls  $a_{n+1} < a_n \forall n \in \nat$
+		\end{itemize}
+		\paragraph{Satz 2.8 - Monotoniesatz}
+		$(a_n)_{n \in \nat}$ reelle Folge, wachsend und nach oben beschränkt $\Rightarrow$ $(a_n)_{n \in \nat}$ konvergent und $\lim\limits_{n \rightarrow \infty} a_n = $
+\end{document}
