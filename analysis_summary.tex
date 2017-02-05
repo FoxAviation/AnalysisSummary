@@ -1,4 +1,4 @@
-\documentclass[paper=a4,paper=landscape, fontsize=9pt,DIV=25, twoside]{scrartcl}
+\documentclass[paper=a4,paper=landscape, fontsize=7pt,DIV=25, twoside]{scrartcl}
 %\usepackage[DIV=15]{typearea}
 
 
@@ -18,6 +18,7 @@
 \newcommand{\nat}{\mathbb{N}}
 \newcommand{\natnull}{\mathbb{N}_0}
 \newcommand{\laO}{\mathcal{O}}
+\newcommand{\aseq}{(a_n)_{n \in \nat}}
 
 % Redefine section commands to use less space
 \makeatletter
@@ -70,9 +71,9 @@
 		\end{itemize}
 		\paragraph{Def: 2.5 - Uneigentliche Konvergenz}
 		$(a_n)_{a \in \nat}$ konvergiert uneigentlich gegen $\infty \Leftrightarrow \forall K > 0 \exists n_0 \in \nat \forall n \geq n_0: a_n > K$\\
-		$(a_n)_{n \in \nat}$ konvergiert uneigentlich gegen $-\infty \Leftrightarrow (-a_n)_{n \in \nat}$ konvergiert uneigentlich gegen $\infty$
+		$\aseq$ konvergiert uneigentlich gegen $-\infty \Leftrightarrow (-a_n)_{n \in \nat}$ konvergiert uneigentlich gegen $\infty$
 		\paragraph{Satz 2.6 - Rechenregeln für uneigentliche Konvergenz}
-		$(b_n)_{n \in \nat}$ reelle Folge, $\lim\limits_{n \rightarrow \infty} (b_n)_{n \in \nat} = \infty$, $(a_n)_{n \in \nat}$ reelle Folge, $\lim\limits_{n \rightarrow \infty} a_n = a, a \in \real \cup \{\infty, -\infty\}$
+		$(b_n)_{n \in \nat}$ reelle Folge, $\lim\limits_{n \rightarrow \infty} (b_n)_{n \in \nat} = \infty$, $\aseq$ reelle Folge, $\lim\limits_{n \rightarrow \infty} a_n = a, a \in \real \cup \{\infty, -\infty\}$
 		\begin{itemize}[noitemsep,nolistsep]
 			\item $a \neq - \infty \Rightarrow (a_n + b_n)_{n \in \nat}$ konvergiert uneigentlich gegen $\infty$
 			\item $a \neq 0 \Rightarrow (a_n + b_n)_{n \in \nat}$ konvergiert uneigentlich
@@ -81,7 +82,7 @@
 			\item $a \notin \{\infty, -\infty\} \Rightarrow (\frac{a_n}{b_n})_{n \in \nat}$ konvergiert gegen 0
 		\end{itemize}
 		\paragraph{Def 2.7 - Monotone Folgen}
-		$(a_n)_{n \in \nat}$ reelle Folge heißt
+		$\aseq$ reelle Folge heißt
 		\begin{itemize}[noitemsep,nolistsep]
 			\item monoton wachsend, falls $a_{n+1} \geq a_n \forall n \in \nat$
 			\item streng monoton wachsend, falls  $a_{n+1} > a_n \forall n \in \nat$
@@ -89,12 +90,12 @@
 			\item streng monoton fallend, falls  $a_{n+1} < a_n \forall n \in \nat$
 		\end{itemize}
 		\paragraph{Satz 2.8 - Monotoniesatz}
-		$(a_n)_{n \in \nat}$ reelle Folge, wachsend und nach oben beschränkt $\Rightarrow$ $(a_n)_{n \in \nat}$ konvergent und $\lim\limits_{n \rightarrow \infty} a_n = sup_{n \in \nat} a_n := sup \{a_n : n \in \nat\}$
-		\paragraph{Def 2.9 Häufungspunkt} a $\in \real$ Häufungspunkt $\Leftrightarrow$ $ \exists (a_{n_k})_{k \in \nat}$ Teilfolge von $(a_n)_{n \in \nat}$, die gegen a konvergiert.
+		$\aseq$ reelle Folge, wachsend und nach oben beschränkt $\Rightarrow$ $\aseq$ konvergent und $\lim\limits_{n \rightarrow \infty} a_n = sup_{n \in \nat} a_n := sup \{a_n : n \in \nat\}$
+		\paragraph{Def 2.9 Häufungspunkt} a $\in \real$ Häufungspunkt $\Leftrightarrow$ $ \exists (a_{n_k})_{k \in \nat}$ Teilfolge von $\aseq$, die gegen a konvergiert.
 		\paragraph{Satz von Bolzano-Weierstraß} Jede beschränkte reelle Folge $(an)_{n \in \nat}$ besitzt eine konvergente Teilfolge und hat also mindestens
 		einen Häufungspunkt.
 		\paragraph{Def 2.11 - Limes superior, limes inferior}
-		$(a_n)_{n \in \nat}$ nach oben (unten) beschänkt $\Rightarrow$ größter (kleinster) Häufungspunkt: \textbf{Limes superior (inferior)}
+		$\aseq$ nach oben (unten) beschänkt $\Rightarrow$ größter (kleinster) Häufungspunkt: \textbf{Limes superior (inferior)}
 	\section{Komplexe und mehrdimensionale Folgen}
 		\paragraph{Def 3.1 Grenzwert komplexer Folgen}
 		z GW von $(z_n) \Leftrightarrow \forall \epsilon > 0 \exists n_0 \in \nat \forall n \geq n_0 : |z_n - z| < \epsilon$\\
@@ -102,9 +103,44 @@
 		\paragraph{Konvergenz} $(z_n)_{n \in \nat} = a_n + ib_n: \lim\limits_{n\rightarrow \infty} z_n = \lim\limits_{n\rightarrow \infty} a_n + i \lim\limits_{n\rightarrow \infty} b_n$
 		\paragraph{Grenzwert}
 		$\lim\limits_{n\rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n\rightarrow \infty} ||v_n - v||_2 = 0$
-                \section{Reihen}
-
-              \end{multicols*}
+	\section{Reihen}
+		\paragraph{Def 2.2 - Folgen Grenzwert in $\real$}
+		$a$ \text{ Grenzwert von } $ (a_n) \Leftrightarrow \forall \epsilon > 0 \exists n_0 \in \nat \forall b \geq n_0 : |a_n - a| < \epsilon$
+		\paragraph{Nullfolge}
+		$\lim\limits_{n \rightarrow \infty} (a_n) \rightarrow 0$
+		\paragraph{Rechenregeln Grenzwerte}
+			\begin{itemize}
+				\item $(a_n+b_n) \rightarrow a+b$
+				\item $(a_n \cdot b_n) \rightarrow a \cdot b$
+				\item $b \neq 0 \Rightarrow (\frac{a_n}{b_n}) \rightarrow \frac{a}{b}$
+				\item \textbf{Einschließungskriterium:} $a=b \wedge a_n \leq c_n \leq b_n$ für fast alle $n \in \nat \Rightarrow c_n \rightarrow a$
+			\end{itemize}
+		\paragraph{Eigenschaften konvergenter Folgen}
+		$(a_n)$ beschränkt $\Rightarrow \{a_n : n \in \nat\} beschränkt \wedge \exists! \text{ ein GW}$
+		\paragraph{Uneigentliche Konvergenz}
+		$\aseq$ divergent $\Rightarrow\aseq$ konvergiert uneig. gg. $\infty \Leftrightarrow \forall K > 0 \exists n_0 \in \nat \forall n \geq n_0: a_n > K$
+		\paragraph{Rechenregeln uneig. Konvergenz}
+			\begin{itemize}
+				\item $a \neq -\inf \Rightarrow (a_n+b_n)_{n \in \nat} \rightarrow \infty$
+				\item $a \neq 0 \Rightarrow (a_n \cdot b_n)_{n \in \nat}$ konvergiert
+				\item $a \notin \{-\infty, \infty\} \vee\aseq \text{ beschränkt } \Rightarrow (\frac{a_n}{b_n})_{n \in \nat} \rightarrow 0$
+			\end{itemize}
+		\paragraph{Monotone Folge}
+			$(a_n)$ monoton wachsend, falls $a_{n+1} \geq a_n \forall n \in \nat$. (Äquivalent für $>,<,\leq$)
+		\paragraph{Monotoniesatz}
+			$\aseq$ monoton wachsend $\wedge$ nach oben beschränkt $\Rightarrow \lim\limits_{n \rightarrow \infty} a_n = \underset{n \in \nat}{sup}\:a_n = sup\:\{a_n:n \in \nat\}$
+		\paragraph{Teilfolge, Häufungspunkte}
+			$(a_n)_{a \in \nat}$ reelle Folge:
+			\begin{itemize}
+			\item $(n_k)_{k \in \nat}$ streng monoton wachsend in $\nat \Rightarrow (a_{n_k})_{k \in \nat}$ Teilfolge von $\aseq$
+			\item $a \in \real$ Häufungspunkt von $\aseq \Leftrightarrow \exists$ Teilfolge, die gg. $a$ konvergiert
+			\end{itemize}
+		\paragraph{Satz v. Bozano-Weierstraß}
+		Jede beschränkte Folge $\aseq$ besitzt eine konvergente Teilfolge und hat min. einen Häufungspunkt
+		\paragraph{Limes superior, Limes inferior}
+		$(a_n)_{a \in \nat}$ reelle Folge: $\aseq$ nach oben (unten) beschränkt $\rightarrow$ Bez. größter (kleinster) Häufungspunkt: Limes superior (inferior)
+		
+\end{multicols*}
 \end{document}
 %%% Local Variables:
 %%% mode: latex
