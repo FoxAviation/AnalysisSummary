@@ -1,4 +1,4 @@
-\documentclass[paper=a4,paper=landscape, fontsize=7pt,DIV=25, twoside]{scrartcl}
+\documentclass[paper=a4,paper=landscape, fontsize=6pt,DIV=25, twoside]{scrartcl}
 %\usepackage[DIV=15]{typearea}
 
 
@@ -14,11 +14,13 @@
 %Math commands
 \newcommand{\rplus}{{\mathbb{R}}^+}
 \newcommand{\real}{{\mathbb{R}}}
+\newcommand{\compl}{\mathbb{C}}
 \newcommand{\erw}{{\mathbb{E}}}
 \newcommand{\nat}{\mathbb{N}}
 \newcommand{\natnull}{\mathbb{N}_0}
 \newcommand{\laO}{\mathcal{O}}
 \newcommand{\aseq}{(a_n)_{n \in \nat}}
+\newcommand{\srow}{(s_n)_{n \in \nat}}
 
 % Redefine section commands to use less space
 \makeatletter
@@ -46,7 +48,7 @@
 \begin{document}
 \begin{multicols*}{4}
 
-
+%ADD sup, infimum, ....
 	\section{Folgen}
 		\paragraph{Def: 2.2 - Grenzwert einer reellen Folge}
 			\begin{itemize}[noitemsep,nolistsep]
@@ -139,7 +141,25 @@
 		Jede beschränkte Folge $\aseq$ besitzt eine konvergente Teilfolge und hat min. einen Häufungspunkt
 		\paragraph{Limes superior, Limes inferior}
 		$(a_n)_{a \in \nat}$ reelle Folge: $\aseq$ nach oben (unten) beschränkt $\rightarrow$ Bez. größter (kleinster) Häufungspunkt: Limes superior (inferior)
-		
+	\section{Komplexe und mehrdimensionale Folgen}
+		\paragraph{Grenzwert komplexer Folgen}
+		$z$ GW von $(z_n) \Leftrightarrow \forall \epsilon > 0 \exists n_0 \in \nat \forall n \geq n_0: |z_n - z| < \epsilon$. Existiert $z \Leftarrow (z_n)$ konvergent.
+		\paragraph{Konvergenz komplexer Folgen}
+		\begin{itemize}
+			\item $z_n = a_n + ib_n$ konvergiert $\Leftrightarrow$ $a_n$ und $b_n$ konvergieren
+			\item $z_n$ konvergent $\Rightarrow \lim\limits_{n \rightarrow \infty} z_n = \lim\limits_{n \rightarrow \infty} a_n + i \cdot \lim\limits_{n \rightarrow \infty} b_n$
+		\end{itemize}
+		\paragraph{Grenzwert mehrdimensionaler Folgen}
+		$\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_2 = 0 \Leftrightarrow \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_\infty = 0$
+	\section{Reihen}
+		\paragraph{Konvergenz} $\srow$ konvergent gg. $s \in \compl \Leftrightarrow$ Folge der Partialsummen gg. $s$ konvergiert
+		\paragraph{Majoranten- \& (Minorantenkriterium}$b_n := \sum_{k=0}^{\infty} b_k; (b_k)_{k \in \nat}\:\text{relle Folge}; a_s := \sum_{k=0}^{\infty} a_k, |\aseq| \leq b_k$ für fast alle $k \in \nat$
+		\begin{itemize}
+			\item $b_s$ konvergiert $\Rightarrow a_s$ konvergiert absolut
+			\item $a_s$ divergiert $\Rightarrow b_s$ divergiert
+		\end{itemize}
+		\paragraph{Quotientenkriterum}
+		$\sum_{k=0}^{\infty} a_k, a \neq 0$ für fast alle $k \in \nat \wedge \lim\limits_{n \in \nat} \arrowvert \frac{a_{n+1}}{a_n} \arrowvert := q$
 \end{multicols*}
 \end{document}
 %%% Local Variables:
