@@ -8,6 +8,7 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{multicol}
 \usepackage{enumitem}
+\usepackage{color}
 
 \linespread{0.5}
 
@@ -153,13 +154,32 @@
 		$\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_2 = 0 \Leftrightarrow \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_\infty = 0$
 	\section{Reihen}
 		\paragraph{Konvergenz} $\srow$ konvergent gg. $s \in \compl \Leftrightarrow$ Folge der Partialsummen gg. $s$ konvergiert
-		\paragraph{Majoranten- \& (Minorantenkriterium}$b_n := \sum_{k=0}^{\infty} b_k; (b_k)_{k \in \nat}\:\text{relle Folge}; a_s := \sum_{k=0}^{\infty} a_k, |\aseq| \leq b_k$ für fast alle $k \in \nat$
+		\paragraph{Majoranten- \& Minorantenkriterium}$\displaystyle b_n := \sum_{k=0}^{\infty} b_k; (b_k)_{k \in \nat}\:\text{relle Folge}; a_s := \sum_{k=0}^{\infty} a_k, |\aseq| \leq b_k$ für fast alle $k \in \nat$
 		\begin{itemize}
 			\item $b_s$ konvergiert $\Rightarrow a_s$ konvergiert absolut
 			\item $a_s$ divergiert $\Rightarrow b_s$ divergiert
 		\end{itemize}
 		\paragraph{Quotientenkriterum}
-		$\sum_{k=0}^{\infty} a_k, a \neq 0$ für fast alle $k \in \nat \wedge \lim\limits_{n \in \nat} \arrowvert \frac{a_{n+1}}{a_n} \arrowvert := q$
+		$\displaystyle \sum_{k=0}^{\infty} a_k, a \neq 0$ für fast alle $k \in \nat \wedge \lim\limits_{n \in \nat} \arrowvert \frac{a_{n+1}}{a_n} \arrowvert := q$ existiert $\Rightarrow$ (*)
+		\paragraph{Wurzelkriterium}
+		$\displaystyle \sum_{k=0}^{\infty} a_k;\:a_k \in \compl: q := \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\arrowvert a_k \arrowvert} \Rightarrow$ (*)
+		\paragraph{(*)}
+		\begin{itemize}
+			\item $q < 1 \Rightarrow$ Reihe konvergiert absolut
+			\item $q > 1 \Rightarrow$ Reihe divergiert
+		\end{itemize}
+		\paragraph{Leibnitz-Kriterium}
+		$\aseq$ relle, monoton fallende Nullfolge $\displaystyle \Rightarrow \sum_{k=0}^{\infty} (-1)^ka_k \Rightarrow \forall n \in \nat \lvert \sum_{k=0}^{\infty}(-1)^ka_k-s_n \rvert \leq  a_{n+1}$
+		\paragraph{Umordnungssatz}\begin{itemize}
+			\item Jede Umordnung einer konvergenten Reihe konvergiert gegen denselben Wert
+			\item Konvergiert eine Reihe aus reellen Summanden, aber nicht absolut $\Rightarrow \forall s \in \real \exists$ bijektive Abbildung $\nat \rightarrow \nat$: die umgeordnete Reihe konvergiert gegen s
+		\paragraph{Potenzreihe}
+		$\displaystyle P(z) := \sum_{k=0}^{\infty} c_kz^k; c_k \in \compl; z \in \compl\\R := \frac{1}{\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|c_k|}}$
+		\end{itemize}
+		\paragraph{Cauchy-Produkt}
+		\color{red}{TODO: How to limit red to this expression????}
+		\paragraph{Natürliche Exponentialfunktion}
+		$\displaystyle exp(z) := \sum_{k=0}^{\infty} \frac{z^k}{k!}$
 \end{multicols*}
 \end{document}
 %%% Local Variables:
