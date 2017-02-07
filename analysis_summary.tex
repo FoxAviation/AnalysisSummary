@@ -9,6 +9,8 @@
 \usepackage{multicol}
 \usepackage{enumitem}
 \usepackage{color}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
 
 \linespread{0.5}
 
@@ -184,34 +186,94 @@
 		\paragraph{Natürliche Exponentialfunktion}
 		$\displaystyle exp(z) := \sum_{k=0}^{\infty} \frac{z^k}{k!}$
 		\paragraph{Eigenschaften von exp}
-		$\forall z,w \in \compl, x \in \real$
+		$\forall z,w \in \compl, x \in \real, n \in \nat$
 		\begin{itemize}
 			\item $\exp(z+w)=\exp(z)\cdot \exp(w)$
 			\item $\exp(-z)=\frac{1}{\exp(z)}, \exp(z) \neq 0 \wedge \exp(\overline{z})=\exp(z)$
 			\item $\lvert e^{ix} \rvert = 1$
 			\item $\lim\limits_{n \rightarrow \infty} (1+\frac{z}{n})^n=\exp(z)$
 			\item $\displaystyle \lvert \exp(z)- \sum_{k=0}^{n} \frac{z^k}{k!} \rvert \leq 2 \cdot \frac{\lvert z \rvert ^{n+1}}{(n+1)!}$
+			\item $\displaystyle \lim\limits_{x \rightarrow 0} \frac{e^x-1}{x} = 1$
+			\item $\displaystyle \lim\limits_{x \rightarrow \infty} x^{-n}e^x=\infty$
+			\item $\displaystyle \lim\limits_{x \rightarrow \infty} x^ne^x=0$
 		\end{itemize}
 			\paragraph{Trigonometrische Funktionen}
 			$ \displaystyle \cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!}\\\sin(z):=\frac{e^{iz}-e{-iz}}{2i} = \sum_{k=0}^{\infty}\frac{z^{2k+1}}{(2k+1)!}$
-			\paragraph{Eigenschaften v. sin \& cos}
+			\paragraph{Eigenschaften v. sin, cos, tan}
 			$\forall z,w \in \compl, x \in \real$
+			
+			%TODO: Add more equations to the following list!!
 			\begin{itemize}
 				\item $\exp(iz) = \cos(z)+i\sin(w)$
 				\item $(\sin(z))^2+(\cos(z))^2=1$
 				\item $\sin(z+w)=\sin(z)\cos(w)+\cos(z)\sin(w)$
 				\item $cos(z+w)=\cos(z)\sin(w)-\sin(z)\sin(w)$
 				\item $\cos(x)=Re(e^{ix}) \; \sin(x)=Im(e^{ix})$
+				\item $z=\tan(c): \arctan'(z)=\frac{1}{\tan'(c)}=\frac{1}{1+(\tan(c))^2}=\frac{1}{1+z^2}$
 			\end{itemize}
 		
-			% \bgroup
-			% \def{\arraystretch{1.5}}
-			\begin{tabular}{|c|c|c|c|c|c|}
-				\hline
-                                 &$0$                     &$\frac{\pi}{6}=30°$               &$\frac{\pi}{4}=45°$                      &$\frac{\pi}{3}=60°$               &$\frac{\pi}{2}=90°$\\ \hline
-                          $\sin$ &$\frac{\sqrt{0}}{2}=0$  &$\frac{\sqrt{1}}{2}=\frac{1}{2}$  &$\frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$  &$\frac{\sqrt{3}}{2}$              &$\frac{\sqrt{4}}{2}=1$\\ \hline
-                          $\cos$ &$\frac{\sqrt{4}}{2}=1$  &$\frac{\sqrt{3}}{2}$              &$\frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$  &$\frac{\sqrt{1}}{2}=\frac{1}{2}$  &$\frac{\sqrt{0}}{2}=0$\\ \hline
-			\end{tabular}
+			\resizebox{.9\hsize}{!}{
+				\begin{tabular}{c|c|c|c|c|c}
+	                                 &$0$                     &$\frac{\pi}{6}=30°$               &$\frac{\pi}{4}=45°$                      &$\frac{\pi}{3}=60°$               &$\frac{\pi}{2}=90°$\\ \hline
+	                          $\sin$ &$\frac{\sqrt{0}}{2}=0$  &$\frac{\sqrt{1}}{2}=\frac{1}{2}$  &$\frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$  &$\frac{\sqrt{3}}{2}$              &$\frac{\sqrt{4}}{2}=1$\\
+	                          $\cos$ &$\frac{\sqrt{4}}{2}=1$  &$\frac{\sqrt{3}}{2}$              &$\frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$  &$\frac{\sqrt{1}}{2}=\frac{1}{2}$  &$\frac{\sqrt{0}}{2}=0$\\
+				\end{tabular}
+			}
+		\section{Stetigkeit}
+			%TODO: Add definition if needed
+			\paragraph{Rechenregeln}
+			$D \subseteq \real;f,g: D \rightarrow \real;f,g$ stetig in $c \Rightarrow f+g, f \cdot g,\frac{f}{g}$ ($g \neq 0$) stetig in $c$
+			\paragraph{Komposition}
+			$D,D' \subseteq \real, f:D \rightarrow \real$ stetig in $c$
+			\begin{itemize}
+				\item $y := f(c) \in D' \wedge g $ stetig in $y \Rightarrow (g \circ f): D \rightarrow \real$ stetig in $c$
+				\item $f,g$ stetig $\wedge f(D) \subseteq D' \Rightarrow (g \circ f): D \rightarrow \real$ stetig
+			\end{itemize}
+			\paragraph{$\epsilon$-$\delta$-Charakterisierung}
+			$D \subseteq \real, f \rightarrow \real, c \in D \Rightarrow f$ stetig in $c \Leftrightarrow \forall \epsilon > 0 \exists \delta > 0: \forall x \in D: \lvert x - c \rvert < \delta: \lvert f(x)-f(c)\rvert < \epsilon$
+			\paragraph{Zwischenwertsatz}
+			$f:[a,b] \rightarrow \real$ stetig $\Rightarrow \forall x \in \real$ mit $ \min\{f(a),f(b)\} \leq y \leq \max\{f(a), f(b)\}: \exists x \in [a,b]: f(x)=y$
+			\paragraph{Satz v. Max. und Min.}
+			$[a,b]$ beschränkt, $f: [a,b] \rightarrow \real$ stetig
+			\begin{itemize}
+				\item $f$ beschränkt
+				\item $\exists x_{\max}, x_{\min} \in [a,b]: f(x_{\max})=\sup\{f(x): x \in [a,b]\} \wedge f(x_{\min}=\inf\{f(x):x \in [a,b]\}$
+			\end{itemize}
+			\paragraph{Stetigkeit in $\compl$ \& $\real ^n$} wörtlich übertragbar\\
+			$D \subseteq \compl$ oder $D \subseteq \real^n$ abgeschlossen: $\forall f: D \rightarrow \compl$ bzw. $f: D \rightarrow \real^m$ beschränkt und nimmt auf D Maximum und Minimum an
+			%\paragraph{Grenzwerte} ausgelassen
+			\paragraph{Stetigkeit von Potenzreihen}
+			$\displaystyle f(z)=\sum_{k=0}^{\infty} c_kz^k$ mit Konvergenzradius $R \Rightarrow f: \{z: \lvert z \rvert < R \} \rightarrow \compl$ stetig
+		\section{Differenziation}
+			\paragraph{Definition}
+			$I \subseteq \real, f: I \rightarrow \real$
+			\begin{itemize}
+				\item $f'(c) := \lim\limits_{x \rightarrow c} \frac{f(x)-f(c)}{x-c}$
+				\item $f$ stetig diff'bar $\Leftrightarrow f'$ stetig
+			\end{itemize}
+			\paragraph{Diff'barkeit $\Rightarrow$ Stetigkeit}
+			$f$ diffbar in c $\Rightarrow f$ in $c$ stetig
+			%TODO: Ableitungsregeln und Monotonie ausgelassen (wohl nicht nötig?)
+			\paragraph{Monotonie \& Umkehrbarkeit}
+			\begin{itemize}
+				\item $f$ stetig: $f$ injektiv $\Leftrightarrow f$ streng monoton wachsend oder fallend
+				\item $f$ außerdem surjektiv $\Rightarrow f^{-1}$ stetig $\wedge$ monoton wachsend / fallend
+			\end{itemize}
+			\paragraph{Differentiation v. $f^{-1}$}
+			$f$ bijektiv, $f'(c) \neq 0 \Rightarrow z := f(c)$ diff'bar, $(f^{-1})'(z)=\frac{1}{f'(c)}$
+			\paragraph{Logarithmus}
+			$\lim\limits_{x\rightarrow0} \frac{\ln(1+x)}{x}=1$
+			\paragraph{Diff. v. Potenzreihen}
+			$\displaystyle f(x)=\sum_{k=0}^{\infty}c_kx^k \in \real: f'(x)=\sum_{k=1}^{\infty}kc_kx^{k-1}$
+			\paragraph{Höhere Ableitungen}
+			$\mathscr{C}^n(I)$: Vektorraum aller n-mal stetig diff'baren Funktionen $f: I \rightarrow \real$
+			\paragraph{Extrema}
+			\begin{itemize}
+				\item \textbf{lokales Maximum} $\Leftrightarrow \epsilon > 0: f(c) \geq f(x) \forall x \in (c-\epsilon,c+\epsilon)\cap I$
+				\item \textbf{lokales Minimum} $\Leftrightarrow \epsilon > 0: f(c) \leq f(x) \forall x \in (c-\epsilon,c+\epsilon)\cap I$
+				\item \textbf{isoliertes lok. Max/Min} $\Leftrightarrow$ Max/min $\wedge x \neq c$
+				\item \textbf{globales Max (Min)} $f(x) \geq (\leq) f(c)$ 
+			\end{itemize}
 \end{multicols*}
 \end{document}
 %%% Local Variables:
