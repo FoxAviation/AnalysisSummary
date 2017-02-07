@@ -177,9 +177,44 @@
 		$\displaystyle P(z) := \sum_{k=0}^{\infty} c_kz^k; c_k \in \compl; z \in \compl\\R := \frac{1}{\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|c_k|}}$
 		\end{itemize}
 		\paragraph{Cauchy-Produkt}
-		{\color{red}TODO: How to limit red to this expression????}
+		\begin{itemize}
+			\item Seien $\displaystyle \sum_{k=0}^{\infty} a_k,\:\sum_{k=0}^{\infty} b_k$ absolut konvergent $\displaystyle \in \compl \Rightarrow (\sum_{k=0}^{\infty} a_k) (\sum_{k=0}^{\infty} b_k) = (\sum_{m=0}^{\infty} c_m)$ mit $\displaystyle c_m=(\sum_{k=0}^{m} a_kb_{m-k})$ mit $c_k$ konvergent.
+			\item Seien $\displaystyle \sum_{k=0}^{\infty} a_kz^k$, $\sum_{k=0}^{\infty} a_kz^k$ zwei Potenzreihen mit Konvergenzradien $R_a$ und $\displaystyle R_b \Rightarrow (\sum_{k=0}^{\infty} a_kz^k)(\sum_{k=0}^{\infty} b_kz^k)=(\sum_{m=0}^{\infty} c_mz^m)$ mit $\displaystyle c_m = \sum_{k=0}^{m} a_km_{m-k}$
+		\end{itemize}
 		\paragraph{Natürliche Exponentialfunktion}
 		$\displaystyle exp(z) := \sum_{k=0}^{\infty} \frac{z^k}{k!}$
+		\paragraph{Eigenschaften von exp}
+		$\forall z,w \in \compl, x \in \real$
+		\begin{itemize}
+			\item $\exp(z+w)=\exp(z)\cdot \exp(w)$
+			\item $\exp(-z)=\frac{1}{\exp(z)}, \exp(z) \neq 0 \wedge \exp(\overline{z})=\exp(z)$
+			\item $\lvert e^{ix} \rvert = 1$
+			\item $\lim\limits_{n \rightarrow \infty} (1+\frac{z}{n})^n=\exp(z)$
+			\item $\displaystyle \lvert \exp(z)- \sum_{k=0}^{n} \frac{z^k}{k!} \rvert \leq 2 \cdot \frac{\lvert z \rvert ^{n+1}}{(n+1)!}$
+		\end{itemize}
+			\paragraph{Trigonometrische Funktionen}
+			$ \displaystyle \cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!}\\\sin(z):=\frac{e^{iz}-e{-iz}}{2i} = \sum_{k=0}^{\infty}\frac{z^{2k+1}}{(2k+1)!}$
+			\paragraph{Eigenschaften v. sin \& cos}
+			$\forall z,w \in \compl, x \in \real$
+			\begin{itemize}
+				\item $\exp(iz) = \cos(z)+i\sin(w)$
+				\item $(\sin(z))^2+(\cos(z))^2=1$
+				\item $\sin(z+w)=\sin(z)\cos(w)+\cos(z)\sin(w)$
+				\item $cos(z+w)=\cos(z)\sin(w)-\sin(z)\sin(w)$
+				\item $\cos(x)=Re(e^{ix}) \; \sin(x)=Im(e^{ix})$
+			\end{itemize}
+		
+			\bgroup
+			\def\arraystretch{1.5}
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				&$0$&$\frac{\pi}{6}=30°$&$\frac{\pi}{4}=45°$&$\frac{\pi}{3}=60°$&$\frac{\pi}{2}=90°$\\
+				\hline
+				$\sin$&$\frac{\sqrt{0}}{2}=0$&$\frac{\sqrt{1}}{2}=\frac{1}{2}$&$\frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$&$\frac{\sqrt{3}}{2}$&$\frac{\sqrt{4}}{2}=1$\\
+				\hline
+				$\cos$&$\frac{\sqrt{4}}{2}=1$&$\frac{\sqrt{3}}{2}$&$\frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$&$\frac{\sqrt{1}}{2}=\frac{1}{2}$&$\frac{\sqrt{0}}{2}=0$\\
+				\hline
+			\end{tabular}
 \end{multicols*}
 \end{document}
 %%% Local Variables:
