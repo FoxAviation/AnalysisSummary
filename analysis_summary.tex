@@ -158,35 +158,35 @@
 		$\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_2 = 0 \Leftrightarrow \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_\infty = 0$
 	\section{Reihen}
 		\paragraph{Konvergenz} $\srow$ konvergent gg. $s \in \compl \Leftrightarrow$ Folge der Partialsummen gg. $s$ konvergiert
-		\paragraph{Majoranten- \& Minorantenkriterium}$\displaystyle b_n := \sum_{k=0}^{\infty} b_k; (b_k)_{k \in \nat}\:\text{relle Folge}; a_s := \sum_{k=0}^{\infty} a_k, |\aseq| \leq b_k$ für fast alle $k \in \nat$
+		\paragraph{Majoranten- \& Minorantenkriterium}$ b_n := \sum_{k=0}^{\infty} b_k; (b_k)_{k \in \nat}\:\text{relle Folge}; a_s := \sum_{k=0}^{\infty} a_k, |\aseq| \leq b_k$ für fast alle $k \in \nat$
 		\begin{itemize}[noitemsep,nolistsep]
 			\item $b_s$ konvergiert $\Rightarrow a_s$ konvergiert absolut
 			\item $a_s$ divergiert $\Rightarrow b_s$ divergiert
 		\end{itemize}
 		\paragraph{Quotientenkriterum}
-		$\displaystyle \sum_{k=0}^{\infty} a_k, a \neq 0$ für fast alle $k \in \nat \wedge \lim\limits_{n \in \nat} \arrowvert \frac{a_{n+1}}{a_n} \arrowvert := q$ existiert $\Rightarrow$ (*)
+		$ \sum_{k=0}^{\infty} a_k, a \neq 0$ für fast alle $k \in \nat \wedge \lim\limits_{n \in \nat} \arrowvert \frac{a_{n+1}}{a_n} \arrowvert := q$ existiert $\Rightarrow$ (*)
 		\paragraph{Wurzelkriterium}
-		$\displaystyle \sum_{k=0}^{\infty} a_k;\:a_k \in \compl: q := \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\arrowvert a_k \arrowvert} \Rightarrow$ (*)
+		$ \sum_{k=0}^{\infty} a_k;\:a_k \in \compl: q := \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\arrowvert a_k \arrowvert} \Rightarrow$ (*)
 		\paragraph{(*)}
 		\begin{itemize}[noitemsep,nolistsep]
 			\item $q < 1 \Rightarrow$ Reihe konvergiert absolut
 			\item $q > 1 \Rightarrow$ Reihe divergiert
 		\end{itemize}
 		\paragraph{Leibnitz-Kriterium}
-		$\aseq$ relle, monoton fallende Nullfolge $\displaystyle \Rightarrow \sum_{k=0}^{\infty} (-1)^ka_k \Rightarrow \forall n \in \nat \lvert \sum_{k=0}^{\infty}(-1)^ka_k-s_n \rvert \leq  a_{n+1}$
+		$\aseq$ relle, monoton fallende Nullfolge $ \Rightarrow \sum_{k=0}^{\infty} (-1)^ka_k \Rightarrow \forall n \in \nat \lvert \sum_{k=0}^{\infty}(-1)^ka_k-s_n \rvert \leq  a_{n+1}$
 		\paragraph{Umordnungssatz}\begin{itemize}[noitemsep,nolistsep]
 			\item Jede Umordnung einer konvergenten Reihe konvergiert gegen denselben Wert
 			\item Konvergiert eine Reihe aus reellen Summanden, aber nicht absolut $\Rightarrow \forall s \in \real \exists$ bijektive Abbildung $\nat \rightarrow \nat$: die umgeordnete Reihe konvergiert gegen s
 		\paragraph{Potenzreihe}
-		$\displaystyle P(z) := \sum_{k=0}^{\infty} c_kz^k; c_k \in \compl; z \in \compl\\R := \frac{1}{\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|c_k|}}$
+		$ P(z) := \sum_{k=0}^{\infty} c_kz^k; c_k \in \compl; z \in \compl\\R := \frac{1}{\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|c_k|}}$
 		\end{itemize}
 		\paragraph{Cauchy-Produkt}
 		\begin{itemize}[noitemsep,nolistsep]
-			\item Seien $\displaystyle \sum_{k=0}^{\infty} a_k,\:\sum_{k=0}^{\infty} b_k$ absolut konvergent $\displaystyle \in \compl \Rightarrow (\sum_{k=0}^{\infty} a_k) (\sum_{k=0}^{\infty} b_k) = (\sum_{m=0}^{\infty} c_m)$ mit $\displaystyle c_m=(\sum_{k=0}^{m} a_kb_{m-k})$ mit $c_k$ konvergent.
-			\item Seien $\displaystyle \sum_{k=0}^{\infty} a_kz^k$, $\sum_{k=0}^{\infty} a_kz^k$ zwei Potenzreihen mit Konvergenzradien $R_a$ und $\displaystyle R_b \Rightarrow (\sum_{k=0}^{\infty} a_kz^k)(\sum_{k=0}^{\infty} b_kz^k)=(\sum_{m=0}^{\infty} c_mz^m)$ mit $\displaystyle c_m = \sum_{k=0}^{m} a_km_{m-k}$
+			\item Seien $ \sum_{k=0}^{\infty} a_k,\:\sum_{k=0}^{\infty} b_k$ absolut konvergent $ \in \compl \Rightarrow (\sum_{k=0}^{\infty} a_k) (\sum_{k=0}^{\infty} b_k) = (\sum_{m=0}^{\infty} c_m)$ mit $ c_m=(\sum_{k=0}^{m} a_kb_{m-k})$ mit $c_k$ konvergent.
+			\item Seien $ \sum_{k=0}^{\infty} a_kz^k$, $\sum_{k=0}^{\infty} a_kz^k$ zwei Potenzreihen mit Konvergenzradien $R_a$ und $ R_b \Rightarrow (\sum_{k=0}^{\infty} a_kz^k)(\sum_{k=0}^{\infty} b_kz^k)=(\sum_{m=0}^{\infty} c_mz^m)$ mit $ c_m = \sum_{k=0}^{m} a_km_{m-k}$
 		\end{itemize}
 		\paragraph{Natürliche Exponentialfunktion}
-		$\displaystyle exp(z) := \sum_{k=0}^{\infty} \frac{z^k}{k!}$
+		$ exp(z) := \sum_{k=0}^{\infty} \frac{z^k}{k!}$
 		\paragraph{Eigenschaften von exp}
 		$\forall z,w \in \compl, x \in \real, n \in \nat$
 		\begin{itemize}[noitemsep,nolistsep]
@@ -194,13 +194,13 @@
 			\item $\exp(-z)=\frac{1}{\exp(z)}, \exp(z) \neq 0 \wedge \exp(\overline{z})=\exp(z)$
 			\item $\lvert e^{ix} \rvert = 1$
 			\item $\lim\limits_{n \rightarrow \infty} (1+\frac{z}{n})^n=\exp(z)$
-			\item $\displaystyle \lvert \exp(z)- \sum_{k=0}^{n} \frac{z^k}{k!} \rvert \leq 2 \cdot \frac{\lvert z \rvert ^{n+1}}{(n+1)!}$
-			\item $\displaystyle \lim\limits_{x \rightarrow 0} \frac{e^x-1}{x} = 1$
-			\item $\displaystyle \lim\limits_{x \rightarrow \infty} x^{-n}e^x=\infty$
-			\item $\displaystyle \lim\limits_{x \rightarrow \infty} x^ne^x=0$
+			\item $ \lvert \exp(z)- \sum_{k=0}^{n} \frac{z^k}{k!} \rvert \leq 2 \cdot \frac{\lvert z \rvert ^{n+1}}{(n+1)!}$
+			\item $ \lim\limits_{x \rightarrow 0} \frac{e^x-1}{x} = 1$
+			\item $ \lim\limits_{x \rightarrow \infty} x^{-n}e^x=\infty$
+			\item $ \lim\limits_{x \rightarrow \infty} x^ne^x=0$
 		\end{itemize}
 			\paragraph{Trigonometrische Funktionen}
-			$ \displaystyle \cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!}\\\sin(z):=\frac{e^{iz}-e{-iz}}{2i} = \sum_{k=0}^{\infty}\frac{z^{2k+1}}{(2k+1)!}$
+			$  \cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!}\\\sin(z):=\frac{e^{iz}-e{-iz}}{2i} = \sum_{k=0}^{\infty}\frac{z^{2k+1}}{(2k+1)!}$
 			\paragraph{Eigenschaften v. sin, cos, tan}
 			$\forall z,w \in \compl, x \in \real$
 			
@@ -245,7 +245,7 @@
 			$D \subseteq \compl$ oder $D \subseteq \real^n$ abgeschlossen: $\forall f: D \rightarrow \compl$ bzw. $f: D \rightarrow \real^m$ beschränkt und nimmt auf D Maximum und Minimum an
 			%\paragraph{Grenzwerte} ausgelassen
 			\paragraph{Stetigkeit von Potenzreihen}
-			$\displaystyle f(z)=\sum_{k=0}^{\infty} c_kz^k$ mit Konvergenzradius $R \Rightarrow f: \{z: \lvert z \rvert < R \} \rightarrow \compl$ stetig
+			$ f(z)=\sum_{k=0}^{\infty} c_kz^k$ mit Konvergenzradius $R \Rightarrow f: \{z: \lvert z \rvert < R \} \rightarrow \compl$ stetig
 		\section{Differenziation}
 			\paragraph{Definition}
 			$I \subseteq \real, f: I \rightarrow \real$
@@ -266,7 +266,7 @@
 			\paragraph{Logarithmus}
 			$\lim\limits_{x\rightarrow0} \frac{\ln(1+x)}{x}=1$
 			\paragraph{Diff. v. Potenzreihen}
-			$\displaystyle f(x)=\sum_{k=0}^{\infty}c_kx^k \in \real: f'(x)=\sum_{k=1}^{\infty}kc_kx^{k-1}$
+			$ f(x)=\sum_{k=0}^{\infty}c_kx^k \in \real: f'(x)=\sum_{k=1}^{\infty}kc_kx^{k-1}$
 			\paragraph{Höhere Ableitungen}
 			$\mathscr{C}^n(I)$: Vektorraum aller n-mal stetig diff'baren Funktionen $f: I \rightarrow \real$
 			\paragraph{Extrema}
@@ -276,6 +276,59 @@
 				\item \textbf{isoliertes lok. Max/Min} $\Leftrightarrow$ Max/min $\wedge x \neq c$
 				\item \textbf{globales Max (Min)} $f(x) \geq (\leq) f(c)$ 
 			\end{itemize}
+			\paragraph{Satz von Rolle}
+			$f: [a,b] \rightarrow \real, f(a)=f(b) \Rightarrow \exists \xi \in (a,b): f'(\xi)=0$
+			\paragraph{Hinreichend für Extrema}
+			$f$ diff'bar, $\exists c: f'(c)=0$
+		\begin{itemize}
+			\item f streng monoton wachsend um c $\Rightarrow$ f in c isol. lok. Min.
+			\item $f \in \mathscr{C}^2, f''(c)=0 \Rightarrow f$ in c isol. lok. Min.
+			\item f' um c str. monoton fallend $\Rightarrow f$ in c isol. lok. Max.
+			\item $f \in \mathscr{C}^2, f''(c)<0 \Rightarrow f$ in c isol. lok. Max.
+		\end{itemize}
+	%L'Hopital ausgelassen%
+	\paragraph{Taylor}
+	$ n \in \{\nat \cup \infty\}: T_nf(x;c):= \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k$
+	\section{Integration}
+	\paragraph{Riehmann-Integral}
+	$\varphi \in \tau [a,b]: \int_{a}^{b}\varphi dx := \sum_{k=1}^{n}c_k(x_k-x_{k-1})$
+	\paragraph{Stetigkeit \& Monotonie $\Rightarrow integrierbar$} $f: [a,b] \rightarrow \real$
+	\begin{itemize}
+		\item $f$ stetig $\Rightarrow f$ integrierbar
+		\item $f$ monoton $\Rightarrow f$ integrierbar
+		\item $\exists$ Unterteilung v. $[a,b]$ stetig oder monoton $\Rightarrow f$ integrierbar 
+	\end{itemize}
+\paragraph{Mittelwertsatz d. Int.-R.}
+$f:[a,b] \rightarrow \real$ stetig, $\exists \xi \in [a,b]: \int_{a}^{b}f(x)dx=f(\xi)(b-a)$
+%Hauptsatz der Integralrechnung weggelassen (ev. weiter kürzen)
+\paragraph{Partielle Integration}
+$f,g: [a,b] \rightarrow \real$ stetig: $\int_{a}^{b}f(x)g'(x)dx=[f(x)g(x)]_a^b-\int_{a}^{b}f'(x)g(x) dx$
+\paragraph{Substitution}
+$\int_{a}^{b}f(g(x))g'(x)dx=\int_{g(a)}^{g(b)}f(y)dy$
+\paragraph{Majorantenkriterium f. Int.}
+$f$ über $[a,b]$ absolut integrierbar $\Leftrightarrow$
+\begin{itemize}
+	\item f in jedem Teilintervall $\in [a,b]$ integrierbar
+	\item $\lvert f(x) \rvert \leq g(x) \forall x \in [a,b)$
+	\item $g$ über $[a,b)$ uneig. integrierbar
+\end{itemize}
+\paragraph{Integralvergl.krit.}
+$f:[1,\infty]\rightarrow\real$ monoton fallend $, \forall x: f(x)>0, f$ über $[1,\infty]$ uneig. integr. $\Rightarrow \sum_{k=1}^{\infty}f(k)$ konvergiert
+%Ausgelassen: Satz von Taylor
+\paragraph{Potenzreihen}
+$f(x)=\sum_{k=0}^{\infty}c_kx^k \Rightarrow \int f(x)dx=\sum_{k=0}^{\infty}\frac{1}{k+1}c_kx^{k+1}$
+\section{Kurven}
+\paragraph{Diff'bare Kurven}
+\begin{itemize}
+	\item $k'(t)=(k'_1(t),...,)$ \textbf{Tangentialvektor}
+	\item $T_k(t)=\frac{1}{\lVert k'(t)\rVert_2}$ \textbf{Tangentialeinheitsvektor} in t
+\end{itemize}
+\paragraph{Rektifizierbarkeit, Bogenlänge}
+$k:[a,b]\rightarrow \real^n$ rektifizierbar $\Leftrightarrow \{\sum_{k=1}^{N}\lVert\gamma(t_k)-\gamma(t_{k+1}\rVert_2: a = t_0 < t_1 < ... < t_N = b$ Unterteilung v. $[a,b]\}$
+\paragraph{Bogenlänge stetig diff'barer Kurven}
+$k: [a,b]\rightarrow \real^n$ stückweise stetig diff'bar $\Rightarrow L(k)=\int_{a}^{b}\lVert k'(t)\rVert_2 dt$
+%TODO: Parametertransformation Def. 10.5 ff%
+
 \end{multicols*}
 \end{document}
 %%% Local Variables:
