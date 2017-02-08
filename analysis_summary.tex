@@ -1,6 +1,4 @@
 \documentclass[paper=a4,paper=landscape, fontsize=6pt,DIV=25, twoside]{scrartcl}
-%\usepackage[DIV=15]{typearea}
-
 
 %Text libs
 \usepackage{fontspec}
@@ -29,7 +27,7 @@
 \makeatletter
 \renewcommand{\section}{\@startsection{section}{1}{0mm}%
                                 {-1ex plus -.5ex minus -.2ex}%
-                                {0.5ex plus .2ex}%x
+                                {0.5ex plus .2ex}%
                                 {\normalfont\large\bfseries}}
 \renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
                                 {-1explus -.5ex minus -.2ex}%
@@ -39,6 +37,7 @@
                                 {-1ex plus -.5ex minus -.2ex}%
                                 {1ex plus .2ex}%
                                 {\normalfont\small\bfseries}}
+
 \makeatother
 
 % Don't print section numbers
@@ -46,7 +45,8 @@
 
 
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt plus 0.0ex}
+\setlength{\parskip}{0pt plus1pt minus1pt}
+
 
 \begin{document}
 \begin{multicols*}{4}
@@ -100,8 +100,10 @@
 		\paragraph{Satz von Bolzano-Weierstraß} Jede beschränkte reelle Folge $(an)_{n \in \nat}$ besitzt eine konvergente Teilfolge und hat also mindestens
 		einen Häufungspunkt.
 		\paragraph{Def 2.11 - Limes superior, limes inferior}
-		$\aseq$ nach oben (unten) beschänkt $\Rightarrow$ größter (kleinster) Häufungspunkt: \textbf{Limes superior (inferior)}
-	\section{Komplexe und mehrdimensionale Folgen}
+		$\aseq$ nach oben (unten) beschänkt $\Rightarrow$ größter (kleinster) Häufungspunkt: \emph{Limes superior (inferior)}
+                
+                \section{Komplexe und mehrdimensionale Folgen}
+                
 		\paragraph{Def 3.1 Grenzwert komplexer Folgen}
 		z GW von $(z_n) \Leftrightarrow \forall \epsilon > 0 \exists n_0 \in \nat \forall n \geq n_0 : |z_n - z| < \epsilon$\\
 		$\exists GW \Leftarrow z_n$ konvergent
@@ -114,7 +116,7 @@
 		\paragraph{Nullfolge}
 		$\lim\limits_{n \rightarrow \infty} (a_n) \rightarrow 0$
 		\paragraph{Rechenregeln Grenzwerte}
-			\begin{itemize}
+			\begin{itemize}[noitemsep,nolistsep]
 				\item $(a_n+b_n) \rightarrow a+b$
 				\item $(a_n \cdot b_n) \rightarrow a \cdot b$
 				\item $b \neq 0 \Rightarrow (\frac{a_n}{b_n}) \rightarrow \frac{a}{b}$
@@ -125,7 +127,7 @@
 		\paragraph{Uneigentliche Konvergenz}
 		$\aseq$ divergent $\Rightarrow\aseq$ konvergiert uneig. gg. $\infty \Leftrightarrow \forall K > 0 \exists n_0 \in \nat \forall n \geq n_0: a_n > K$
 		\paragraph{Rechenregeln uneig. Konvergenz}
-			\begin{itemize}
+			\begin{itemize}[noitemsep,nolistsep]
 				\item $a \neq -\inf \Rightarrow (a_n+b_n)_{n \in \nat} \rightarrow \infty$
 				\item $a \neq 0 \Rightarrow (a_n \cdot b_n)_{n \in \nat}$ konvergiert
 				\item $a \notin \{-\infty, \infty\} \vee\aseq \text{ beschränkt } \Rightarrow (\frac{a_n}{b_n})_{n \in \nat} \rightarrow 0$
@@ -136,7 +138,7 @@
 			$\aseq$ monoton wachsend $\wedge$ nach oben beschränkt $\Rightarrow \lim\limits_{n \rightarrow \infty} a_n = \underset{n \in \nat}{sup}\:a_n = sup\:\{a_n:n \in \nat\}$
 		\paragraph{Teilfolge, Häufungspunkte}
 			$(a_n)_{a \in \nat}$ reelle Folge:
-			\begin{itemize}
+			\begin{itemize}[noitemsep,nolistsep]
 			\item $(n_k)_{k \in \nat}$ streng monoton wachsend in $\nat \Rightarrow (a_{n_k})_{k \in \nat}$ Teilfolge von $\aseq$
 			\item $a \in \real$ Häufungspunkt von $\aseq \Leftrightarrow \exists$ Teilfolge, die gg. $a$ konvergiert
 			\end{itemize}
@@ -148,7 +150,7 @@
 		\paragraph{Grenzwert komplexer Folgen}
 		$z$ GW von $(z_n) \Leftrightarrow \forall \epsilon > 0 \exists n_0 \in \nat \forall n \geq n_0: |z_n - z| < \epsilon$. Existiert $z \Leftarrow (z_n)$ konvergent.
 		\paragraph{Konvergenz komplexer Folgen}
-		\begin{itemize}
+		\begin{itemize}[noitemsep,nolistsep]
 			\item $z_n = a_n + ib_n$ konvergiert $\Leftrightarrow$ $a_n$ und $b_n$ konvergieren
 			\item $z_n$ konvergent $\Rightarrow \lim\limits_{n \rightarrow \infty} z_n = \lim\limits_{n \rightarrow \infty} a_n + i \cdot \lim\limits_{n \rightarrow \infty} b_n$
 		\end{itemize}
@@ -157,7 +159,7 @@
 	\section{Reihen}
 		\paragraph{Konvergenz} $\srow$ konvergent gg. $s \in \compl \Leftrightarrow$ Folge der Partialsummen gg. $s$ konvergiert
 		\paragraph{Majoranten- \& Minorantenkriterium}$\displaystyle b_n := \sum_{k=0}^{\infty} b_k; (b_k)_{k \in \nat}\:\text{relle Folge}; a_s := \sum_{k=0}^{\infty} a_k, |\aseq| \leq b_k$ für fast alle $k \in \nat$
-		\begin{itemize}
+		\begin{itemize}[noitemsep,nolistsep]
 			\item $b_s$ konvergiert $\Rightarrow a_s$ konvergiert absolut
 			\item $a_s$ divergiert $\Rightarrow b_s$ divergiert
 		\end{itemize}
@@ -166,20 +168,20 @@
 		\paragraph{Wurzelkriterium}
 		$\displaystyle \sum_{k=0}^{\infty} a_k;\:a_k \in \compl: q := \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\arrowvert a_k \arrowvert} \Rightarrow$ (*)
 		\paragraph{(*)}
-		\begin{itemize}
+		\begin{itemize}[noitemsep,nolistsep]
 			\item $q < 1 \Rightarrow$ Reihe konvergiert absolut
 			\item $q > 1 \Rightarrow$ Reihe divergiert
 		\end{itemize}
 		\paragraph{Leibnitz-Kriterium}
 		$\aseq$ relle, monoton fallende Nullfolge $\displaystyle \Rightarrow \sum_{k=0}^{\infty} (-1)^ka_k \Rightarrow \forall n \in \nat \lvert \sum_{k=0}^{\infty}(-1)^ka_k-s_n \rvert \leq  a_{n+1}$
-		\paragraph{Umordnungssatz}\begin{itemize}
+		\paragraph{Umordnungssatz}\begin{itemize}[noitemsep,nolistsep]
 			\item Jede Umordnung einer konvergenten Reihe konvergiert gegen denselben Wert
 			\item Konvergiert eine Reihe aus reellen Summanden, aber nicht absolut $\Rightarrow \forall s \in \real \exists$ bijektive Abbildung $\nat \rightarrow \nat$: die umgeordnete Reihe konvergiert gegen s
 		\paragraph{Potenzreihe}
 		$\displaystyle P(z) := \sum_{k=0}^{\infty} c_kz^k; c_k \in \compl; z \in \compl\\R := \frac{1}{\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|c_k|}}$
 		\end{itemize}
 		\paragraph{Cauchy-Produkt}
-		\begin{itemize}
+		\begin{itemize}[noitemsep,nolistsep]
 			\item Seien $\displaystyle \sum_{k=0}^{\infty} a_k,\:\sum_{k=0}^{\infty} b_k$ absolut konvergent $\displaystyle \in \compl \Rightarrow (\sum_{k=0}^{\infty} a_k) (\sum_{k=0}^{\infty} b_k) = (\sum_{m=0}^{\infty} c_m)$ mit $\displaystyle c_m=(\sum_{k=0}^{m} a_kb_{m-k})$ mit $c_k$ konvergent.
 			\item Seien $\displaystyle \sum_{k=0}^{\infty} a_kz^k$, $\sum_{k=0}^{\infty} a_kz^k$ zwei Potenzreihen mit Konvergenzradien $R_a$ und $\displaystyle R_b \Rightarrow (\sum_{k=0}^{\infty} a_kz^k)(\sum_{k=0}^{\infty} b_kz^k)=(\sum_{m=0}^{\infty} c_mz^m)$ mit $\displaystyle c_m = \sum_{k=0}^{m} a_km_{m-k}$
 		\end{itemize}
@@ -187,7 +189,7 @@
 		$\displaystyle exp(z) := \sum_{k=0}^{\infty} \frac{z^k}{k!}$
 		\paragraph{Eigenschaften von exp}
 		$\forall z,w \in \compl, x \in \real, n \in \nat$
-		\begin{itemize}
+		\begin{itemize}[noitemsep,nolistsep]
 			\item $\exp(z+w)=\exp(z)\cdot \exp(w)$
 			\item $\exp(-z)=\frac{1}{\exp(z)}, \exp(z) \neq 0 \wedge \exp(\overline{z})=\exp(z)$
 			\item $\lvert e^{ix} \rvert = 1$
@@ -203,7 +205,7 @@
 			$\forall z,w \in \compl, x \in \real$
 			
 			%TODO: Add more equations to the following list!!
-			\begin{itemize}
+			\begin{itemize}[noitemsep,nolistsep]
 				\item $\exp(iz) = \cos(z)+i\sin(w)$
 				\item $(\sin(z))^2+(\cos(z))^2=1$
 				\item $\sin(z+w)=\sin(z)\cos(w)+\cos(z)\sin(w)$
@@ -225,7 +227,7 @@
 			$D \subseteq \real;f,g: D \rightarrow \real;f,g$ stetig in $c \Rightarrow f+g, f \cdot g,\frac{f}{g}$ ($g \neq 0$) stetig in $c$
 			\paragraph{Komposition}
 			$D,D' \subseteq \real, f:D \rightarrow \real$ stetig in $c$
-			\begin{itemize}
+			\begin{itemize}[noitemsep,nolistsep]
 				\item $y := f(c) \in D' \wedge g $ stetig in $y \Rightarrow (g \circ f): D \rightarrow \real$ stetig in $c$
 				\item $f,g$ stetig $\wedge f(D) \subseteq D' \Rightarrow (g \circ f): D \rightarrow \real$ stetig
 			\end{itemize}
@@ -235,7 +237,7 @@
 			$f:[a,b] \rightarrow \real$ stetig $\Rightarrow \forall x \in \real$ mit $ \min\{f(a),f(b)\} \leq y \leq \max\{f(a), f(b)\}: \exists x \in [a,b]: f(x)=y$
 			\paragraph{Satz v. Max. und Min.}
 			$[a,b]$ beschränkt, $f: [a,b] \rightarrow \real$ stetig
-			\begin{itemize}
+			\begin{itemize}[noitemsep,nolistsep]
 				\item $f$ beschränkt
 				\item $\exists x_{\max}, x_{\min} \in [a,b]: f(x_{\max})=\sup\{f(x): x \in [a,b]\} \wedge f(x_{\min}=\inf\{f(x):x \in [a,b]\}$
 			\end{itemize}
@@ -247,7 +249,7 @@
 		\section{Differenziation}
 			\paragraph{Definition}
 			$I \subseteq \real, f: I \rightarrow \real$
-			\begin{itemize}
+			\begin{itemize}[noitemsep,nolistsep]
 				\item $f'(c) := \lim\limits_{x \rightarrow c} \frac{f(x)-f(c)}{x-c}$
 				\item $f$ stetig diff'bar $\Leftrightarrow f'$ stetig
 			\end{itemize}
@@ -255,7 +257,7 @@
 			$f$ diffbar in c $\Rightarrow f$ in $c$ stetig
 			%TODO: Ableitungsregeln und Monotonie ausgelassen (wohl nicht nötig?)
 			\paragraph{Monotonie \& Umkehrbarkeit}
-			\begin{itemize}
+			\begin{itemize}[noitemsep,nolistsep]
 				\item $f$ stetig: $f$ injektiv $\Leftrightarrow f$ streng monoton wachsend oder fallend
 				\item $f$ außerdem surjektiv $\Rightarrow f^{-1}$ stetig $\wedge$ monoton wachsend / fallend
 			\end{itemize}
@@ -268,7 +270,7 @@
 			\paragraph{Höhere Ableitungen}
 			$\mathscr{C}^n(I)$: Vektorraum aller n-mal stetig diff'baren Funktionen $f: I \rightarrow \real$
 			\paragraph{Extrema}
-			\begin{itemize}
+			\begin{itemize}[noitemsep,nolistsep]
 				\item \textbf{lokales Maximum} $\Leftrightarrow \epsilon > 0: f(c) \geq f(x) \forall x \in (c-\epsilon,c+\epsilon)\cap I$
 				\item \textbf{lokales Minimum} $\Leftrightarrow \epsilon > 0: f(c) \leq f(x) \forall x \in (c-\epsilon,c+\epsilon)\cap I$
 				\item \textbf{isoliertes lok. Max/Min} $\Leftrightarrow$ Max/min $\wedge x \neq c$
