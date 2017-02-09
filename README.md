@@ -8,3 +8,9 @@ Das PDF-Dokument wird per default von der .gitignore ausgeschlossen und ist desh
 ## Kompilierung
 Nutzung von xelatex ~~empfohlen~~ notwendig.
 
+* ```xelatex analysis_summary.tex```
+
+Oder
+
+* ```latexmk -xelatex analysis_summary.tex```
+
