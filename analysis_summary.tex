@@ -1,6 +1,6 @@
 \documentclass[paper=a3,paper=landscape, fontsize=9pt,DIV=25]{scrartcl}
 
-%Text libs
+% Text libs
 \usepackage{fontspec}
 \usepackage{amsfonts}
 \usepackage{amsmath,amssymb,amsthm}
@@ -12,16 +12,19 @@
 \usepackage{mathrsfs}
 \usepackage{datetime}
 \usepackage{fancyhdr}
+\usepackage{color}
 
 % header and footer
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{Analysis Cheatsheet WiSe 16/17}
 \rfoot{\today\ \currenttime}
-%\hfoot{\thepage}
 \lfoot{\thepage}
 
+% line spacing
 \linespread{0.5}
+
+
 
 % Math commands
 \newcommand{\rplus}{{\mathbb{R}}^+}
@@ -37,15 +40,15 @@
 % Redefine section commands to use less space
 \makeatletter
 \renewcommand{\section}{\@startsection{section}{1}{0mm}%
-                                {-1ex plus -.5ex minus -.2ex}%
-                                {0.5ex plus .2ex}%
-                                {\normalfont\large\bfseries}}
+  {-1ex plus -.5ex minus -.2ex}%
+  {0.5ex plus .2ex}%
+  {\color{blue}\normalfont\large\bfseries}}
 \renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
-                                {-1explus -.5ex minus -.2ex}%
-                                {0.5ex plus .2ex}%
-                                {\normalfont\normalsize\bfseries}}
+  {-1explus -.5ex minus -.2ex}%
+  {0.5ex plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
 
-                              
+
 
 % Don't print section numbers
 \setcounter{secnumdepth}{0}
@@ -65,286 +68,446 @@
 \begin{document}
 \begin{multicols*}{4}
 
-%ADD sup, infimum, ....
-	\section{Folgen}
-		\paragraph{Def: 2.2 - Grenzwert einer reellen Folge}
-			\begin{itemize}
-				\item $a \in \real$ Grenzwert von $(a_n)$ $\Leftrightarrow \forall \varepsilon > 0$ $\exists n_0 \in \nat$ $\forall n \geq n_0:$ $|a_n - a| < \varepsilon$
-				\item Existiert $a \in \real$ Grenzwert $\Rightarrow$ $(a_n)$ konvergent, sonst $(a_n)$ divergent
-			\end{itemize}
-		\paragraph{Satz 2.3 - Rechenregeln für Grenzwerte}
-			$(a_n)_{n \in \nat}$, $(b_n)_{n \in \nat}$ reelle Folgen, $\lim\limits_{n \rightarrow \infty} a_n = a$, $\lim\limits_{n \rightarrow \infty} b_n = b$
-			\begin{itemize}
-				\item Folge $(a_n + b_n)$ konvergiert gegen $a+b$
-				\item Folge $(a_n \cdot b_n)$ konvergiert gegen $a \cdot b$
-				\item $b \neq 0 \Rightarrow (\frac{a_n}{b_n})_{n \in \nat}$ konvergiert gegen $\frac{a}{b}$ 
-				\item $a_n \leq b_n$ für fast alle $n \in \nat \rightarrow a \leq b$
-				\item \textbf{Einschließungskriterium} $a=b$, c reelle Folge und $a_n \leq c_n \leq b_n$ für fast alle $n \in \nat \Rightarrow$ $(c_n)_{n \in \nat}$ konvergiert gegen $a$
-			\end{itemize}
-		\textit{Spezialfall des Einschließungskriteriums:}\\$(x_n)_{n \in \nat} Folge, x \in R, (y_n)_{n \in \nat}$ Nullfolge, sodass $|x_n -x| \leq y_n$ für fast alle $n \Rightarrow (x_n)_{n \in \nat}$ konvergiert gegen $x$
-		\paragraph{Satz 2.4 - Eigenschaften konvergenter Folgen}
-		Sei $a_n$ konvergente reelle Folge
-		\begin{itemize}
-			\item $(a_n)$ beschränkt
-			\item $(a_n)$ besitzt genau einen Grenzwert
-		\end{itemize}
-		\paragraph{Def: 2.5 - Uneigentliche Konvergenz}
-		$(a_n)_{a \in \nat}$ konvergiert uneigentlich gegen $\infty \Leftrightarrow \forall K > 0 \exists n_0 \in \nat \forall n \geq n_0: a_n > K$\\
-		$\aseq$ konvergiert uneigentlich gegen $-\infty \Leftrightarrow (-a_n)_{n \in \nat}$ konvergiert uneigentlich gegen $\infty$
-		\paragraph{Satz 2.6 - Rechenregeln für uneigentliche Konvergenz}
-		$(b_n)_{n \in \nat}$ reelle Folge, $\lim\limits_{n \rightarrow \infty} (b_n)_{n \in \nat} = \infty$, $\aseq$ reelle Folge, $\lim\limits_{n \rightarrow \infty} a_n = a, a \in \real \cup \{\infty, -\infty\}$
-		\begin{itemize}
-			\item $a \neq - \infty \Rightarrow (a_n + b_n)_{n \in \nat}$ konvergiert uneigentlich gegen $\infty$
-			\item $a \neq 0 \Rightarrow (a_n + b_n)_{n \in \nat}$ konvergiert uneigentlich
-			\item $a > 0 \Rightarrow \lim\limits_{n \rightarrow \infty} a_nb_n = \infty$
-			\item $a < 0 \Rightarrow \lim\limits_{n \rightarrow \infty} a_nb_n = -\infty$
-			\item $a \notin \{\infty, -\infty\} \Rightarrow (\frac{a_n}{b_n})_{n \in \nat}$ konvergiert gegen 0
-		\end{itemize}
-		\paragraph{Def 2.7 - Monotone Folgen}
-		$\aseq$ reelle Folge heißt
-		\begin{itemize}
-			\item monoton wachsend, falls $a_{n+1} \geq a_n \forall n \in \nat$
-			\item streng monoton wachsend, falls  $a_{n+1} > a_n \forall n \in \nat$
-			\item monoton fallend, falls  $a_{n+1} \leq a_n \forall n \in \nat$
-			\item streng monoton fallend, falls  $a_{n+1} < a_n \forall n \in \nat$
-		\end{itemize}
-		\paragraph{Satz 2.8 - Monotoniesatz}
-		$\aseq$ reelle Folge, wachsend und nach oben beschränkt $\Rightarrow$ $\aseq$ konvergent und $\lim\limits_{n \rightarrow \infty} a_n = sup_{n \in \nat} a_n := sup \{a_n : n \in \nat\}$
-		\paragraph{Def 2.9 Häufungspunkt} a $\in \real$ Häufungspunkt $\Leftrightarrow$ $ \exists (a_{n_k})_{k \in \nat}$ Teilfolge von $\aseq$, die gegen a konvergiert.
-		\paragraph{Satz von Bolzano-Weierstraß} Jede beschränkte reelle Folge $(an)_{n \in \nat}$ besitzt eine konvergente Teilfolge und hat also mindestens
-		einen Häufungspunkt.
-		\paragraph{Def 2.11 - Limes superior, limes inferior}
-		$\aseq$ nach oben (unten) beschänkt $\Rightarrow$ größter (kleinster) Häufungspunkt: \emph{Limes superior (inferior)}
-                
-                \section{Komplexe und mehrdimensionale Folgen}
-                
-		\paragraph{Def 3.1 Grenzwert komplexer Folgen}
-		z GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \forall n \geq n_0 : |z_n - z| < \varepsilon$\\
-		$\exists GW \Leftarrow z_n$ konvergent
-		\paragraph{Konvergenz}\hspace{0pt} \\
-                $(z_n)_{n \in \nat} = a_n + ib_n: \lim\limits_{n\rightarrow \infty} z_n = \lim\limits_{n\rightarrow \infty} a_n + i \lim\limits_{n\rightarrow \infty} b_n$
-		\paragraph{Grenzwert}
-		$\lim\limits_{n\rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n\rightarrow \infty} ||v_n - v||_2 = 0$
-	\section{Reihen}
-		\paragraph{Def 2.2 - Folgen Grenzwert in $\real$}
-		$a$ \text{ Grenzwert von } $ (a_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \forall b \geq n_0 : |a_n - a| < \varepsilon$
-		\paragraph{Nullfolge}
-		$\lim\limits_{n \rightarrow \infty} (a_n) \rightarrow 0$
-		\paragraph{Rechenregeln Grenzwerte}
-			\begin{itemize}
-				\item $(a_n+b_n) \rightarrow a+b$
-				\item $(a_n \cdot b_n) \rightarrow a \cdot b$
-				\item $b \neq 0 \Rightarrow (\frac{a_n}{b_n}) \rightarrow \frac{a}{b}$
-				\item \textbf{Einschließungskriterium:} $a=b \wedge a_n \leq c_n \leq b_n$ für fast alle $n \in \nat \Rightarrow c_n \rightarrow a$
-			\end{itemize}
-		\paragraph{Eigenschaften konvergenter Folgen}
-		$(a_n)$ beschränkt $\Rightarrow \{a_n : n \in \nat\} beschränkt \wedge \exists! \text{ ein GW}$
-		\paragraph{Uneigentliche Konvergenz}
-		$\aseq$ divergent $\Rightarrow\aseq$ konvergiert uneig. gg. $\infty \Leftrightarrow \forall K > 0 \exists n_0 \in \nat \forall n \geq n_0: a_n > K$
-		\paragraph{Rechenregeln uneig. Konvergenz}
-			\begin{itemize}
-				\item $a \neq -\inf \Rightarrow (a_n+b_n)_{n \in \nat} \rightarrow \infty$
-				\item $a \neq 0 \Rightarrow (a_n \cdot b_n)_{n \in \nat}$ konvergiert
-				\item $a \notin \{-\infty, \infty\} \vee\aseq \text{ beschränkt } \Rightarrow (\frac{a_n}{b_n})_{n \in \nat} \rightarrow 0$
-			\end{itemize}
-		\paragraph{Monotone Folge}
-			$(a_n)$ monoton wachsend, falls $a_{n+1} \geq a_n \forall n \in \nat$. (Äquivalent für $>,<,\leq$)
-		\paragraph{Monotoniesatz}
-			$\aseq$ monoton wachsend $\wedge$ nach oben beschränkt $\Rightarrow \lim\limits_{n \rightarrow \infty} a_n = \underset{n \in \nat}{sup}\:a_n = sup\:\{a_n:n \in \nat\}$
-		\paragraph{Teilfolge, Häufungspunkte}
-			$(a_n)_{a \in \nat}$ reelle Folge:
-			\begin{itemize}
-			\item $(n_k)_{k \in \nat}$ streng monoton wachsend in $\nat \Rightarrow (a_{n_k})_{k \in \nat}$ Teilfolge von $\aseq$
-			\item $a \in \real$ Häufungspunkt von $\aseq \Leftrightarrow \exists$ Teilfolge, die gg. $a$ konvergiert
-			\end{itemize}
-		\paragraph{Satz v. Bozano-Weierstraß}\hspace{0pt} \\
-		Jede beschränkte Folge $\aseq$ besitzt eine konvergente Teilfolge und hat min. einen Häufungspunkt
-		\paragraph{Limes superior, Limes inferior}
-		$(a_n)_{a \in \nat}$ reelle Folge: $\aseq$ nach oben (unten) beschränkt $\rightarrow$ Bez. größter (kleinster) Häufungspunkt: Limes superior (inferior)
-	\section{Komplexe und mehrdimensionale Folgen}
-		\paragraph{Grenzwert komplexer Folgen}\hspace{0pt} \\
-		$z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \forall n \geq n_0: |z_n - z| < \varepsilon$. Existiert $z \Leftarrow (z_n)$ konvergent.
-		\paragraph{Konvergenz komplexer Folgen}
-		\begin{itemize}
-			\item $z_n = a_n + ib_n$ konvergiert $\Leftrightarrow$ $a_n$ und $b_n$ konvergieren
-			\item $z_n$ konvergent $\Rightarrow \lim\limits_{n \rightarrow \infty} z_n = \lim\limits_{n \rightarrow \infty} a_n + i \cdot \lim\limits_{n \rightarrow \infty} b_n$
-		\end{itemize}
-		\paragraph{Grenzwert mehrdimensionaler Folgen}\hspace{0pt} \\
-		$\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_2 = 0 \Leftrightarrow \\ \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_\infty = 0$
-	\section{Reihen}
-                \paragraph{Konvergenz}
-                $\srow$ konvergent gg. $s \in \compl \Leftrightarrow$ Folge der Partialsummen gg. $s$ konvergiert
-		\paragraph{Majoranten- \& Minorantenkriterium}\hspace{0pt} \\
-                $ b_n := \sum_{k=0}^{\infty} b_k; (b_k)_{k \in \nat}\:\text{relle Folge}\\ a_s := \sum_{k=0}^{\infty} a_k, |\aseq| \leq b_k \text{für fast alle}\ k \in \nat$
-		\begin{itemize}
-			\item $b_s \text{konvergiert}\ \Rightarrow a_s \text{konvergiert absolut}$
-			\item $a_s \text{divergiert}\ \Rightarrow b_s$ divergiert
-		\end{itemize}
-		\paragraph{Quotientenkriterum}\hspace{0pt} \\
-		$ \sum_{k=0}^{\infty} a_k, a \neq 0$ für fast alle $k \in \nat \wedge \lim\limits_{n \in \nat} \arrowvert \frac{a_{n+1}}{a_n} \arrowvert := q$ existiert $\Rightarrow$ (*)
-		\paragraph{Wurzelkriterium}\hspace{0pt} \\
-		$ \sum_{k=0}^{\infty} a_k;\:a_k \in \compl: q := \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\arrowvert a_k \arrowvert} \Rightarrow$ (*)
-		\paragraph{(*)}
-		\begin{itemize}
-			\item $q < 1 \Rightarrow$ Reihe konvergiert absolut
-			\item $q > 1 \Rightarrow$ Reihe divergiert
-		\end{itemize}
-		\paragraph{Leibnitz-Kriterium}
-		$\aseq$ relle, monoton fallende Nullfolge $ \Rightarrow \sum_{k=0}^{\infty} (-1)^ka_k \Rightarrow \forall n \in \nat \lvert \sum_{k=0}^{\infty}(-1)^ka_k-s_n \rvert \leq  a_{n+1}$
-		\paragraph{Umordnungssatz}\begin{itemize}
-			\item Jede Umordnung einer konvergenten Reihe konvergiert gegen denselben Wert
-			\item Konvergiert eine Reihe aus reellen Summanden, aber nicht absolut $\Rightarrow \forall s \in \real \exists$ bijektive Abbildung $\nat \rightarrow \nat$: die umgeordnete Reihe konvergiert gegen s
-		\paragraph{Potenzreihe}
-		$ P(z) := \sum_{k=0}^{\infty} c_kz^k; c_k \in \compl; z \in \compl\\R := \frac{1}{\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|c_k|}}$
-		\end{itemize}
-		\paragraph{Cauchy-Produkt}
-		\begin{itemize}
-			\item Seien $ \sum_{k=0}^{\infty} a_k,\:\sum_{k=0}^{\infty} b_k$ absolut konvergent $ \in \compl \Rightarrow (\sum_{k=0}^{\infty} a_k) (\sum_{k=0}^{\infty} b_k) = (\sum_{m=0}^{\infty} c_m)$ mit $ c_m=(\sum_{k=0}^{m} a_kb_{m-k})$ mit $c_k$ konvergent.
-			\item Seien $ \sum_{k=0}^{\infty} a_kz^k$, $\sum_{k=0}^{\infty} a_kz^k$ zwei Potenzreihen mit Konvergenzradien $R_a$ und $ R_b \Rightarrow (\sum_{k=0}^{\infty} a_kz^k)(\sum_{k=0}^{\infty} b_kz^k)=(\sum_{m=0}^{\infty} c_mz^m)$ mit $ c_m = \sum_{k=0}^{m} a_km_{m-k}$
-		\end{itemize}
-		\paragraph{Natürliche Exponentialfunktion}
-		$ exp(z) := \sum_{k=0}^{\infty} \frac{z^k}{k!}$
-		\paragraph{Eigenschaften von exp}
-		$\forall z,w \in \compl, x \in \real, n \in \nat$
-		\begin{itemize}
-			\item $\exp(z+w)=\exp(z)\cdot \exp(w)$
-			\item $\exp(-z)=\frac{1}{\exp(z)}, \exp(z) \neq 0 \wedge \exp(\overline{z})=\exp(z)$
-			\item $\lvert e^{ix} \rvert = 1$
-			\item $\lim\limits_{n \rightarrow \infty} (1+\frac{z}{n})^n=\exp(z)$
-			\item $ \lvert \exp(z)- \sum_{k=0}^{n} \frac{z^k}{k!} \rvert \leq 2 \cdot \frac{\lvert z \rvert ^{n+1}}{(n+1)!}$
-			\item $ \lim\limits_{x \rightarrow 0} \frac{e^x-1}{x} = 1$
-			\item $ \lim\limits_{x \rightarrow \infty} x^{-n}e^x=\infty$
-			\item $ \lim\limits_{x \rightarrow \infty} x^ne^x=0$
-		\end{itemize}
-			\paragraph{Trigonometrische Funktionen}\hspace{0pt} \\
-			$  \cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!}\\\sin(z):=\frac{e^{iz}-e^{-iz}}{2i} = \sum_{k=0}^{\infty} (-1)^k \frac{z^{2k+1}}{(2k+1)!}$
-			\paragraph{Eigenschaften v. sin, cos, tan}
-			$\forall z,w \in \compl, x \in \real$
-			
-			%TODO: Add more equations to the following list!!
-			\begin{itemize}
-				\item $\exp(iz) = \cos(z)+i\sin(w)$
-				\item $(\sin(z))^2+(\cos(z))^2=1$
-				\item $\sin(z+w)=\sin(z)\cos(w)+\cos(z)\sin(w)$
-				\item $cos(z+w)=\cos(z)\sin(w)-\sin(z)\sin(w)$
-				\item $\cos(x)=Re(e^{ix}) \; \sin(x)=Im(e^{ix})$
-				\item $z=\tan(c): \arctan'(z)=\frac{1}{\tan'(c)}=\frac{1}{1+(\tan(c))^2}=\frac{1}{1+z^2}$
-			\end{itemize}
-		
-			\resizebox{.9\hsize}{!}{
-				\begin{tabular}{c|c|c|c|c|c}
-	                                 &$0$                     &$\frac{\pi}{6}=30°$               &$\frac{\pi}{4}=45°$                      &$\frac{\pi}{3}=60°$               &$\frac{\pi}{2}=90°$\\ \hline
-	                          $\sin$ &$\frac{\sqrt{0}}{2}=0$  &$\frac{\sqrt{1}}{2}=\frac{1}{2}$  &$\frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$  &$\frac{\sqrt{3}}{2}$              &$\frac{\sqrt{4}}{2}=1$\\
-	                          $\cos$ &$\frac{\sqrt{4}}{2}=1$  &$\frac{\sqrt{3}}{2}$              &$\frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$  &$\frac{\sqrt{1}}{2}=\frac{1}{2}$  &$\frac{\sqrt{0}}{2}=0$\\
-				\end{tabular}
-			}
-		\section{Stetigkeit}
-			%TODO: Add definition if needed
-			\paragraph{Rechenregeln}
-			$D \subseteq \real;f,g: D \rightarrow \real;f,g ~\text{stetig in}\ c \\ \Rightarrow f+g, f \cdot g,\frac{f}{g}$ ($g \neq 0$) stetig in $c$
-			\paragraph{Komposition}
-			$D,D' \subseteq \real, f:D \rightarrow \real$ stetig in $c$
-			\begin{itemize}
-				\item $y := f(c) \in D' \wedge g $ stetig in $y \Rightarrow (g \circ f): D \rightarrow \real$ stetig in $c$
-				\item $f,g$ stetig $\wedge f(D) \subseteq D' \Rightarrow (g \circ f): D \rightarrow \real$ stetig
-			\end{itemize}
-			\paragraph{$\varepsilon$-$\delta$-Charakterisierung}
-			$D \subseteq \real, f \rightarrow \real, c \in D \Rightarrow f$ stetig in $c \Leftrightarrow \forall \varepsilon > 0 \exists \delta > 0: \forall x \in D: \lvert x - c \rvert < \delta: \lvert f(x)-f(c)\rvert < \varepsilon$
-			\paragraph{Zwischenwertsatz}
-			$f:[a,b] \rightarrow \real$ stetig $\Rightarrow \forall x \in \real$ mit $ \min\{f(a),f(b)\} \leq y \leq \max\{f(a), f(b)\}: \exists x \in [a,b]: f(x)=y$
-			\paragraph{Satz v. Max. und Min.}
-			$[a,b]$ beschränkt, $f: [a,b] \rightarrow \real$ stetig
-			\begin{itemize}
-				\item $f$ beschränkt
-				\item $\exists x_{\max}, x_{\min} \in [a,b]: f(x_{\max})=\sup\{f(x): x \in [a,b]\} \wedge f(x_{\min}=\inf\{f(x):x \in [a,b]\}$
-			\end{itemize}
-			\paragraph{Stetigkeit in $\compl$ \& $\real ^n$} wörtlich übertragbar\\
-			$D \subseteq \compl$ oder $D \subseteq \real^n$ abgeschlossen: $\forall f: D \rightarrow \compl$ bzw. $f: D \rightarrow \real^m$ beschränkt und nimmt auf D Maximum und Minimum an
-			%\paragraph{Grenzwerte} ausgelassen
-			\paragraph{Stetigkeit von Potenzreihen}
-			$ f(z)=\sum_{k=0}^{\infty} c_kz^k$ mit Konvergenzradius $R \Rightarrow f: \{z: \lvert z \rvert < R \} \rightarrow \compl$ stetig
-		\section{Differenziation}
-			\paragraph{Definition}
-			$I \subseteq \real, f: I \rightarrow \real$
-			\begin{itemize}
-				\item $f'(c) := \lim\limits_{x \rightarrow c} \frac{f(x)-f(c)}{x-c}$
-				\item $f$ stetig diff'bar $\Leftrightarrow f'$ stetig
-			\end{itemize}
-			\paragraph{Diff'barkeit $\Rightarrow$ Stetigkeit}
-			$f$ diffbar in c $\Rightarrow f$ in $c$ stetig
-			%TODO: Ableitungsregeln und Monotonie ausgelassen (wohl nicht nötig?)
-			\paragraph{Monotonie \& Umkehrbarkeit}
-			\begin{itemize}
-				\item $f$ stetig: $f$ injektiv $\Leftrightarrow f$ streng monoton wachsend oder fallend
-				\item $f$ außerdem surjektiv $\Rightarrow f^{-1}$ stetig $\wedge$ monoton wachsend / fallend
-			\end{itemize}
-			\paragraph{Differentiation v. $f^{-1}$}
-			$f$ bijektiv, $f'(c) \neq 0 \Rightarrow z := f(c)$ diff'bar, $(f^{-1})'(z)=\frac{1}{f'(c)}$
-			\paragraph{Logarithmus}
-			$\lim\limits_{x\rightarrow0} \frac{\ln(1+x)}{x}=1$
-			\paragraph{Diff. v. Potenzreihen}
-			$ f(x)=\sum_{k=0}^{\infty}c_kx^k \in \real: f'(x)=\sum_{k=1}^{\infty}kc_kx^{k-1}$
-			\paragraph{Höhere Ableitungen}
-			$\mathscr{C}^n(I)$: Vektorraum aller n-mal stetig diff'baren Funktionen $f: I \rightarrow \real$
-			\paragraph{Extrema}
-			\begin{itemize}
-				\item \textbf{lokales Maximum} $\Leftrightarrow \varepsilon > 0: f(c) \geq f(x) \forall x \in (c-\varepsilon,c+\varepsilon)\cap I$
-				\item \textbf{lokales Minimum} $\Leftrightarrow \varepsilon > 0: f(c) \leq f(x) \forall x \in (c-\varepsilon,c+\varepsilon)\cap I$
-				\item \textbf{isoliertes lok. Max/Min} $\Leftrightarrow$ Max/min $\wedge x \neq c$
-				\item \textbf{globales Max (Min)} $f(x) \geq (\leq) f(c)$ 
-			\end{itemize}
-			\paragraph{Satz von Rolle}
-			$f: [a,b] \rightarrow \real, f(a)=f(b) \Rightarrow \exists \xi \in (a,b): f'(\xi)=0$
-			\paragraph{Hinreichend für Extrema}
-			$f$ diff'bar, $\exists c: f'(c)=0$
-		\begin{itemize}
-			\item f streng monoton wachsend um c $\Rightarrow$ f in c isol. lok. Min.
-			\item $f \in \mathscr{C}^2, f''(c)=0 \Rightarrow f$ in c isol. lok. Min.
-			\item f' um c str. monoton fallend $\Rightarrow f$ in c isol. lok. Max.
-			\item $f \in \mathscr{C}^2, f''(c)<0 \Rightarrow f$ in c isol. lok. Max.
-		\end{itemize}
-	%L'Hopital ausgelassen%
-	\paragraph{Taylor}\hspace{0pt} \\
-	$ n \in \{\nat \cup \infty\}: T_nf(x;c):= \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k$
-	\section{Integration}
-	\paragraph{Riehmann-Integral}\hspace{0pt} \\
-	$\varphi \in \tau [a,b]: \int_{a}^{b}\varphi dx := \sum_{k=1}^{n}c_k(x_k-x_{k-1})$
-	\paragraph{Stetigkeit \& Monotonie $\Rightarrow integrierbar$} $f: [a,b] \rightarrow \real$
-	\begin{itemize}
-		\item $f$ stetig $\Rightarrow f$ integrierbar
-		\item $f$ monoton $\Rightarrow f$ integrierbar
-		\item $\exists$ Unterteilung v. $[a,b]$ stetig oder monoton $\Rightarrow f$ integrierbar 
-	\end{itemize}
-        \paragraph{Mittelwertsatz d. Int.-R.}
-        $f:[a,b] \rightarrow \real$ stetig, $\exists \xi \in [a,b]: \int_{a}^{b}f(x)dx=f(\xi)(b-a)$
-        % Hauptsatz der Integralrechnung weggelassen (ev. weiter kürzen)
-        \paragraph{Partielle Integration}
-        $f,g: [a,b] \rightarrow \real$ stetig: $\int_{a}^{b}f(x)g'(x)dx=[f(x)g(x)]_a^b-\int_{a}^{b}f'(x)g(x) dx$
-        \paragraph{Substitution}
-        $\int_{a}^{b}f(g(x))g'(x)dx=\int_{g(a)}^{g(b)}f(y)dy$
-        \paragraph{Majorantenkriterium f. Int.}\hspace{0pt} \\
-        $f$ über $[a,b]$ absolut integrierbar $\Leftrightarrow$
-        \begin{itemize}
-	        \item f in jedem Teilintervall $\in [a,b]$ integrierbar
-                \item $\lvert f(x) \rvert \leq g(x) \forall x \in [a,b)$
-                \item $g$ über $[a,b)$ uneig. integrierbar
-        \end{itemize}
-        \paragraph{Integralvergl.krit.}
-        $f:[1,\infty]\rightarrow\real$ monoton fallend $, \forall x: f(x)>0, f$ über $[1,\infty]$ uneig. integr. $\Rightarrow \sum_{k=1}^{\infty}f(k)$ konvergiert
-        % Ausgelassen: Satz von Taylor
-        \paragraph{Potenzreihen}
-        $f(x)=\sum_{k=0}^{\infty}c_kx^k \Rightarrow \int f(x)dx=\sum_{k=0}^{\infty}\frac{1}{k+1}c_kx^{k+1}$
-\section{Kurven}
-\paragraph{Diff'bare Kurven}
-\begin{itemize}
-	\item $k'(t)=(k'_1(t),...,)$ \textbf{Tangentialvektor}
-	\item $T_k(t)=\frac{1}{\lVert k'(t)\rVert_2}$ \textbf{Tangentialeinheitsvektor} in t
-\end{itemize}
-\paragraph{Rektifizierbarkeit, Bogenlänge}
-$k:[a,b]\rightarrow \real^n$ rektifizierbar $\Leftrightarrow \{\sum_{k=1}^{N}\lVert\gamma(t_k)-\gamma(t_{k+1}\rVert_2: a = t_0 < t_1 < ... < t_N = b$ Unterteilung v. $[a,b]\}$
-\paragraph{Bogenlänge stetig diff'barer Kurven}
-$k: [a,b]\rightarrow \real^n$ stückweise stetig diff'bar $\Rightarrow L(k)=\int_{a}^{b}\lVert k'(t)\rVert_2 dt$
-%TODO: Parametertransformation Def. 10.5 ff%
+  % ADD sup, infimum, ....
+  \section{Folgen}
+
+
+  \paragraph{Def: 2.2 - Grenzwert einer reellen Folge}
+  \begin{itemize}
+  \item $a \in \real$ Grenzwert von $(a_n)$ $\Leftrightarrow \forall \varepsilon > 0$ $\exists n_0 \in \nat$ $\forall n \geq n_0:$ $|a_n - a| < \varepsilon$
+  \item Existiert $a \in \real$ Grenzwert $\Rightarrow$ $(a_n)$ konvergent, sonst $(a_n)$ divergent
+  \end{itemize}
+
+
+  \paragraph{Satz 2.3 - Rechenregeln für Grenzwerte}
+  $(a_n)_{n \in \nat}$, $(b_n)_{n \in \nat}$ reelle Folgen, $\lim\limits_{n \rightarrow \infty} a_n = a$, $\lim\limits_{n \rightarrow \infty} b_n = b$
+  \begin{itemize}
+  \item Folge $(a_n + b_n)$ konvergiert gegen $a+b$
+  \item Folge $(a_n \cdot b_n)$ konvergiert gegen $a \cdot b$
+  \item $b \neq 0 \Rightarrow (\frac{a_n}{b_n})_{n \in \nat}$ konvergiert gegen $\frac{a}{b}$
+  \item $a_n \leq b_n$ für fast alle $n \in \nat \rightarrow a \leq b$
+  \item \textbf{Einschließungskriterium} $a=b$, c reelle Folge und $a_n \leq c_n \leq b_n$ für fast alle $n \in \nat \Rightarrow$ $(c_n)_{n \in \nat}$ konvergiert gegen $a$
+  \end{itemize}
+
+  \textit{Spezialfall des Einschließungskriteriums:}\\$(x_n)_{n \in \nat} Folge, x \in R, (y_n)_{n \in \nat}$ Nullfolge, sodass $|x_n -x| \leq y_n$ für fast alle $n \Rightarrow (x_n)_{n \in \nat}$ konvergiert gegen $x$
+
+
+  \paragraph{Satz 2.4 - Eigenschaften konvergenter Folgen}\hspace{0pt} \\
+  Sei $a_n$ konvergente reelle Folge
+  \begin{itemize}
+  \item $(a_n)$ beschränkt
+  \item $(a_n)$ besitzt genau einen Grenzwert
+  \end{itemize}
+
+
+  \paragraph{Def: 2.5 - Uneigentliche Konvergenz}\hspace{0pt} \\
+  $(a_n)_{a \in \nat}$ konvergiert uneigentlich gegen $\infty \Leftrightarrow \forall K > 0 \exists n_0 \in \nat \forall n \geq n_0: a_n > K$\\
+  $\aseq$ konvergiert uneigentlich gegen $-\infty \Leftrightarrow (-a_n)_{n \in \nat}$ konvergiert uneigentlich gegen $\infty$
+
+
+  \paragraph{Satz 2.6 - Rechenregeln für uneigentliche Konvergenz}\hspace{0pt} \\
+  $(b_n)_{n \in \nat}$ reelle Folge, $\lim\limits_{n \rightarrow \infty} (b_n)_{n \in \nat} = \infty$, $\aseq$ reelle Folge, $\lim\limits_{n \rightarrow \infty} a_n = a, a \in \real \cup \{\infty, -\infty\}$
+
+  \begin{itemize}
+  \item $a \neq - \infty \Rightarrow (a_n + b_n)_{n \in \nat}$ konvergiert uneigentlich gegen $\infty$
+  \item $a \neq 0 \Rightarrow (a_n + b_n)_{n \in \nat}$ konvergiert uneigentlich
+  \item $a > 0 \Rightarrow \lim\limits_{n \rightarrow \infty} a_nb_n = \infty$
+  \item $a < 0 \Rightarrow \lim\limits_{n \rightarrow \infty} a_nb_n = -\infty$
+  \item $a \notin \{\infty, -\infty\} \Rightarrow (\frac{a_n}{b_n})_{n \in \nat}$ konvergiert gegen 0
+  \end{itemize}
+
+
+  \paragraph{Def 2.7 - Monotone Folgen}
+  $\aseq$ reelle Folge heißt
+  \begin{itemize}
+  \item monoton wachsend, falls $a_{n+1} \geq a_n \forall n \in \nat$
+  \item streng monoton wachsend, falls  $a_{n+1} > a_n \forall n \in \nat$
+  \item monoton fallend, falls  $a_{n+1} \leq a_n \forall n \in \nat$
+  \item streng monoton fallend, falls  $a_{n+1} < a_n \forall n \in \nat$
+  \end{itemize}
+
+
+  \paragraph{Satz 2.8 - Monotoniesatz}\hspace{0pt} \\
+  $\aseq$ reelle Folge, wachsend und nach oben beschränkt $\Rightarrow$ $\aseq$ konvergent und $\lim\limits_{n \rightarrow \infty} a_n = sup_{n \in \nat} a_n := sup \{a_n : n \in \nat\}$
+
+
+  \paragraph{Def 2.9 Häufungspunkt}
+  a $\in \real$ Häufungspunkt $\Leftrightarrow$ $ \exists (a_{n_k})_{k \in \nat}$ Teilfolge von $\aseq$, die gegen a konvergiert.
+
+
+  \paragraph{Satz von Bolzano-Weierstraß}
+  Jede beschränkte reelle Folge $(an)_{n \in \nat}$ besitzt eine konvergente Teilfolge und hat also mindestens einen Häufungspunkt.
+
+
+  \paragraph{Def 2.11 - Limes superior, limes inferior}
+  $\aseq$ nach oben (unten) beschänkt $\Rightarrow$ größter (kleinster) Häufungspunkt: \emph{Limes superior (inferior)}
+
+
+
+  \section{Komplexe und mehrdimensionale Folgen}
+
+  \paragraph{Def 3.1 Grenzwert komplexer Folgen}\hspace{0pt} \\
+  z GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \forall n \geq n_0 : |z_n - z| < \varepsilon$\\
+  $\exists GW \Leftarrow z_n$ konvergent
+
+
+  \paragraph{Konvergenz}\hspace{0pt} \\
+  $(z_n)_{n \in \nat} = a_n + ib_n: \lim\limits_{n\rightarrow \infty} z_n = \lim\limits_{n\rightarrow \infty} a_n + i \lim\limits_{n\rightarrow \infty} b_n$
+
+
+  \paragraph{Grenzwert}
+  $\lim\limits_{n\rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n\rightarrow \infty} ||v_n - v||_2 = 0$
+
+
+  \section{Reihen}
+  \paragraph{Def 2.2 - Folgen Grenzwert in $\real$}
+  $a$ \text{ Grenzwert von } $ (a_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \forall b \geq n_0 : |a_n - a| < \varepsilon$
+
+
+  \paragraph{Nullfolge}
+  $\lim\limits_{n \rightarrow \infty} (a_n) \rightarrow 0$
+
+
+  \paragraph{Rechenregeln Grenzwerte}
+  \begin{itemize}
+  \item $(a_n+b_n) \rightarrow a+b$
+  \item $(a_n \cdot b_n) \rightarrow a \cdot b$
+  \item $b \neq 0 \Rightarrow (\frac{a_n}{b_n}) \rightarrow \frac{a}{b}$
+  \item \textbf{Einschließungskriterium:} $a=b \wedge a_n \leq c_n \leq b_n$ für fast alle $n \in \nat \Rightarrow c_n \rightarrow a$
+  \end{itemize}
+
+
+  \paragraph{Eigenschaften konvergenter Folgen}\hspace{0pt} \\
+  $(a_n)$ beschränkt $\Rightarrow \{a_n : n \in \nat\} beschränkt \wedge \exists! \text{ ein GW}$
+
+
+  \paragraph{Uneigentliche Konvergenz}
+  $\aseq$ divergent $\Rightarrow\aseq$ konvergiert uneig. gg. $\infty \Leftrightarrow \forall K > 0 \exists n_0 \in \nat \forall n \geq n_0: a_n > K$
+
+
+  \paragraph{Rechenregeln uneig. Konvergenz}
+  \begin{itemize}
+  \item $a \neq -\inf \Rightarrow (a_n+b_n)_{n \in \nat} \rightarrow \infty$
+  \item $a \neq 0 \Rightarrow (a_n \cdot b_n)_{n \in \nat}$ konvergiert
+  \item $a \notin \{-\infty, \infty\} \vee\aseq \text{ beschränkt } \Rightarrow (\frac{a_n}{b_n})_{n \in \nat} \rightarrow 0$
+  \end{itemize}
+
+
+  \paragraph{Monotone Folge}
+  $(a_n)$ monoton wachsend, falls $a_{n+1} \geq a_n \forall n \in \nat$. (Äquivalent für $>,<,\leq$)
+
+
+  \paragraph{Monotoniesatz}
+  $\aseq$ monoton wachsend $\wedge$ nach oben beschränkt $\Rightarrow \lim\limits_{n \rightarrow \infty} a_n = \underset{n \in \nat}{sup}\:a_n = sup\:\{a_n:n \in \nat\}$
+
+  \paragraph{Teilfolge, Häufungspunkte}
+  $(a_n)_{a \in \nat}$ reelle Folge:
+  \begin{itemize}
+  \item $(n_k)_{k \in \nat}$ streng monoton wachsend in $\nat \Rightarrow (a_{n_k})_{k \in \nat}$ Teilfolge von $\aseq$
+  \item $a \in \real$ Häufungspunkt von $\aseq \Leftrightarrow \exists$ Teilfolge, die gg. $a$ konvergiert
+  \end{itemize}
+
+
+  \paragraph{Satz v. Bozano-Weierstraß}\hspace{0pt} \\
+  Jede beschränkte Folge $\aseq$ besitzt eine konvergente Teilfolge und hat min. einen Häufungspunkt
+
+
+  \paragraph{Limes superior, Limes inferior}
+  $(a_n)_{a \in \nat}$ reelle Folge: $\aseq$ nach oben (unten) beschränkt $\rightarrow$ Bez. größter (kleinster) Häufungspunkt: Limes superior (inferior)
+
+
+
+  \section{Komplexe und mehrdimensionale Folgen}
+
+  \paragraph{Grenzwert komplexer Folgen}\hspace{0pt} \\
+  $z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \forall n \geq n_0: |z_n - z| < \varepsilon$. Existiert $z \Leftarrow (z_n)$ konvergent.
+
+
+  \paragraph{Konvergenz komplexer Folgen}
+  \begin{itemize}
+  \item $z_n = a_n + ib_n$ konvergiert $\Leftrightarrow$ $a_n$ und $b_n$ konvergieren
+  \item $z_n$ konvergent $\Rightarrow \lim\limits_{n \rightarrow \infty} z_n = \lim\limits_{n \rightarrow \infty} a_n + i \cdot \lim\limits_{n \rightarrow \infty} b_n$
+  \end{itemize}
+
+
+  \paragraph{Grenzwert mehrdimensionaler Folgen}\hspace{0pt} \\
+  $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_2 = 0 \Leftrightarrow \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_\infty = 0 $
+
+
+
+  \section{Reihen}
+
+  \paragraph{Konvergenz}
+  $\srow$ konvergent gg. $s \in \compl \Leftrightarrow$ Folge der Partialsummen gg. $s$ konvergiert
+
+
+  \paragraph{Majoranten- \& Minorantenkriterium}\hspace{0pt} \\
+  $ b_n := \sum_{k=0}^{\infty} b_k; (b_k)_{k \in \nat}\:\text{relle Folge}\\ a_s := \sum_{k=0}^{\infty} a_k, |\aseq| \leq b_k \text{für fast alle}\ k \in \nat$
+  \begin{itemize}
+  \item $b_s \text{konvergiert}\ \Rightarrow a_s \text{konvergiert absolut}$
+  \item $a_s \text{divergiert}\ \Rightarrow b_s$ divergiert
+  \end{itemize}
+
+
+  \paragraph{Quotientenkriterum}\hspace{0pt} \\
+  $ \sum_{k=0}^{\infty} a_k, a \neq 0$ für fast alle $k \in \nat \wedge \lim\limits_{n \in \nat} \arrowvert \frac{a_{n+1}}{a_n} \arrowvert := q$ existiert $\Rightarrow$ (*)
+
+
+  \paragraph{Wurzelkriterium}\hspace{0pt} \\
+  $ \sum_{k=0}^{\infty} a_k;\:a_k \in \compl: q := \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\arrowvert a_k \arrowvert} \Rightarrow$ (*)
+
+
+  \paragraph{(*)}
+  \begin{itemize}
+  \item $q < 1 \Rightarrow$ Reihe konvergiert absolut
+  \item $q > 1 \Rightarrow$ Reihe divergiert
+  \end{itemize}
+
+
+  \paragraph{Leibnitz-Kriterium}
+  $\aseq$ relle, monoton fallende Nullfolge $ \Rightarrow \sum_{k=0}^{\infty} (-1)^ka_k \Rightarrow \forall n \in \nat \lvert \sum_{k=0}^{\infty}(-1)^ka_k-s_n \rvert \leq  a_{n+1}$
+
+
+  \paragraph{Umordnungssatz}\begin{itemize}
+  \item Jede Umordnung einer konvergenten Reihe konvergiert gegen denselben Wert
+  \item Konvergiert eine Reihe aus reellen Summanden, aber nicht absolut $\Rightarrow \forall s \in \real \exists$ bijektive Abbildung $\nat \rightarrow \nat$: die umgeordnete Reihe konvergiert gegen s
+    \paragraph{Potenzreihe}
+    $ P(z) := \sum_{k=0}^{\infty} c_kz^k; c_k \in \compl; z \in \compl\\R := \frac{1}{\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|c_k|}}$
+  \end{itemize}
+
+
+  \paragraph{Cauchy-Produkt}
+  \begin{itemize}
+  \item Seien $ \sum_{k=0}^{\infty} a_k,\:\sum_{k=0}^{\infty} b_k$ absolut konvergent $ \in \compl \Rightarrow (\sum_{k=0}^{\infty} a_k) (\sum_{k=0}^{\infty} b_k) = (\sum_{m=0}^{\infty} c_m)$ mit $ c_m=(\sum_{k=0}^{m} a_kb_{m-k})$ mit $c_k$ konvergent.
+  \item Seien $ \sum_{k=0}^{\infty} a_kz^k$, $\sum_{k=0}^{\infty} a_kz^k$ zwei Potenzreihen mit Konvergenzradien $R_a$ und $ R_b \Rightarrow (\sum_{k=0}^{\infty} a_kz^k)(\sum_{k=0}^{\infty} b_kz^k)=(\sum_{m=0}^{\infty} c_mz^m)$ mit $ c_m = \sum_{k=0}^{m} a_km_{m-k}$
+  \end{itemize}
+
+
+  \paragraph{Natürliche Exponentialfunktion}
+  $ exp(z) := \sum_{k=0}^{\infty} \frac{z^k}{k!}$
+
+
+  \paragraph{Eigenschaften von exp}
+  $\forall z,w \in \compl, x \in \real, n \in \nat$
+  \begin{itemize}
+  \item $\exp(z+w)=\exp(z)\cdot \exp(w)$
+  \item $\exp(-z)=\frac{1}{\exp(z)}, \exp(z) \neq 0 \wedge \exp(\overline{z})=\exp(z)$
+  \item $\lvert e^{ix} \rvert = 1$
+  \item $\lim\limits_{n \rightarrow \infty} (1+\frac{z}{n})^n=\exp(z)$
+  \item $ \lvert \exp(z)- \sum_{k=0}^{n} \frac{z^k}{k!} \rvert \leq 2 \cdot \frac{\lvert z \rvert ^{n+1}}{(n+1)!}$
+  \item $ \lim\limits_{x \rightarrow 0} \frac{e^x-1}{x} = 1$
+  \item $ \lim\limits_{x \rightarrow \infty} x^{-n}e^x=\infty$
+  \item $ \lim\limits_{x \rightarrow \infty} x^ne^x=0$
+  \end{itemize}
+
+
+  \paragraph{Trigonometrische Funktionen}\hspace{0pt} \\
+  $  \cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!}\\\sin(z):=\frac{e^{iz}-e^{-iz}}{2i} = \sum_{k=0}^{\infty} (-1)^k \frac{z^{2k+1}}{(2k+1)!}$
+
+
+  \paragraph{Eigenschaften v. sin, cos, tan}
+  $\forall z,w \in \compl, x \in \real$
+
+  % TODO: Add more equations to the following list!!
+  \begin{itemize}
+  \item $\exp(iz) = \cos(z)+i\sin(w)$
+  \item $(\sin(z))^2+(\cos(z))^2=1$
+  \item $\sin(z+w)=\sin(z)\cos(w)+\cos(z)\sin(w)$
+  \item $cos(z+w)=\cos(z)\sin(w)-\sin(z)\sin(w)$
+  \item $\cos(x)=Re(e^{ix}) \; \sin(x)=Im(e^{ix})$
+  \item $z=\tan(c): \arctan'(z)=\frac{1}{\tan'(c)}=\frac{1}{1+(\tan(c))^2}=\frac{1}{1+z^2}$
+  \end{itemize}
+
+  \resizebox{.9\hsize}{!}{
+    \begin{tabular}{c|c|c|c|c|c}
+      &$0$                     &$\frac{\pi}{6}=30°$               &$\frac{\pi}{4}=45°$                      &$\frac{\pi}{3}=60°$               &$\frac{\pi}{2}=90°$\\ \hline
+      $\sin$ &$\frac{\sqrt{0}}{2}=0$  &$\frac{\sqrt{1}}{2}=\frac{1}{2}$  &$\frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$  &$\frac{\sqrt{3}}{2}$              &$\frac{\sqrt{4}}{2}=1$\\
+      $\cos$ &$\frac{\sqrt{4}}{2}=1$  &$\frac{\sqrt{3}}{2}$              &$\frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$  &$\frac{\sqrt{1}}{2}=\frac{1}{2}$  &$\frac{\sqrt{0}}{2}=0$\\
+    \end{tabular}
+  }
+
+
+
+  \section{Stetigkeit}
+
+  \paragraph{Definition}\hspace{0pt} \\
+  $\text{stetig in}\ c \Leftrightarrow \forall (x_n) \ \text{mit}\ \lim\limits_{x \rightarrow 0}x_n = c \ \text{gilt}\ \lim\limits_{x \rightarrow 0}f(x_n)=f(c)$
+
+  \paragraph{Rechenregeln}
+  $D \subseteq \real;f,g: D \rightarrow \real;f,g ~\text{stetig in}\ c \\ \Rightarrow f+g, f \cdot g,\frac{f}{g}$ ($g \neq 0$) stetig in $c$
+
+
+  \paragraph{Komposition}
+  $D,D' \subseteq \real, f:D \rightarrow \real$ stetig in $c$
+  \begin{itemize}
+  \item $y := f(c) \in D' \wedge g $ stetig in $y \Rightarrow (g \circ f): D \rightarrow \real$ stetig in $c$
+  \item $f,g$ stetig $\wedge f(D) \subseteq D' \Rightarrow (g \circ f): D \rightarrow \real$ stetig
+  \end{itemize}
+
+
+  \paragraph{$\varepsilon$-$\delta$-Charakterisierung}
+  $D \subseteq \real, f \rightarrow \real, c \in D \Rightarrow f$ stetig in $c \Leftrightarrow \forall \varepsilon > 0 \exists \delta > 0: \forall x \in D: \lvert x - c \rvert < \delta: \lvert f(x)-f(c)\rvert < \varepsilon$
+
+
+  \paragraph{Zwischenwertsatz}
+  $f:[a,b] \rightarrow \real$ stetig $\Rightarrow \forall x \in \real$ mit $ \min\{f(a),f(b)\} \leq y \leq \max\{f(a), f(b)\}: \exists x \in [a,b]: f(x)=y$
+
+
+  \paragraph{Satz v. Max. und Min.}
+  $[a,b]$ beschränkt, $f: [a,b] \rightarrow \real$ stetig
+  \begin{itemize}
+  \item $f$ beschränkt
+  \item $\exists x_{\max}, x_{\min} \in [a,b]: f(x_{\max})=\sup\{f(x): x \in [a,b]\} \wedge f(x_{\min}=\inf\{f(x):x \in [a,b]\}$
+  \end{itemize}
+
+
+  \paragraph{Stetigkeit in $\compl$ \& $\real ^n$} wörtlich übertragbar\\
+  $D \subseteq \compl$ oder $D \subseteq \real^n$ abgeschlossen: $\forall f: D \rightarrow \compl$ bzw. $f: D \rightarrow \real^m$ beschränkt und nimmt auf D Maximum und Minimum an
+  % \paragraph{Grenzwerte} ausgelassen
+
+
+  \paragraph{Stetigkeit von Potenzreihen}
+  $ f(z)=\sum_{k=0}^{\infty} c_kz^k$ mit Konvergenzradius $R \Rightarrow f: \{z: \lvert z \rvert < R \} \rightarrow \compl$ stetig
+
+
+
+  \section{Differenziation}
+
+  \paragraph{Definition}
+  $I \subseteq \real, f: I \rightarrow \real$
+  \begin{itemize}
+  \item $f'(c) := \lim\limits_{x \rightarrow c} \frac{f(x)-f(c)}{x-c}$
+  \item $f$ stetig diff'bar $\Leftrightarrow f'$ stetig
+  \end{itemize}
+
+
+  \paragraph{Diff'barkeit $\Rightarrow$ Stetigkeit}
+  $f$ diffbar in c $\Rightarrow f$ in $c$ stetig
+  % TODO: Ableitungsregeln und Monotonie ausgelassen (wohl nicht nötig?)
+
+
+  \paragraph{Monotonie \& Umkehrbarkeit}
+  \begin{itemize}
+  \item $f$ stetig: $f$ injektiv $\Leftrightarrow f$ streng monoton wachsend oder fallend
+  \item $f$ außerdem surjektiv $\Rightarrow f^{-1}$ stetig $\wedge$ monoton wachsend / fallend
+  \end{itemize}
+
+
+  \paragraph{Differentiation v. $f^{-1}$}
+  $f$ bijektiv, $f'(c) \neq 0 \Rightarrow z := f(c)$ diff'bar, $(f^{-1})'(z)=\frac{1}{f'(c)}$
+
+
+  \paragraph{Logarithmus}
+  $\lim\limits_{x\rightarrow0} \frac{\ln(1+x)}{x}=1$
+
+
+  \paragraph{Diff. v. Potenzreihen}\hspace{0pt}\\
+  $ f(x)=\sum_{k=0}^{\infty}c_kx^k \in \real: f'(x)=\sum_{k=1}^{\infty}kc_kx^{k-1}$
+
+
+  \paragraph{Höhere Ableitungen}
+  $\mathscr{C}^n(I)$: Vektorraum aller n-mal stetig diff'baren Funktionen $f: I \rightarrow \real$
+
+
+  \paragraph{Extrema}
+  \begin{itemize}
+  \item \textbf{lokales Maximum} $\Leftrightarrow \varepsilon > 0: f(c) \geq f(x) \forall x \in (c-\varepsilon,c+\varepsilon)\cap I$
+  \item \textbf{lokales Minimum} $\Leftrightarrow \varepsilon > 0: f(c) \leq f(x) \forall x \in (c-\varepsilon,c+\varepsilon)\cap I$
+  \item \textbf{isoliertes lok. Max/Min} $\Leftrightarrow$ Max/min $\wedge x \neq c$
+  \item \textbf{globales Max (Min)} $f(x) \geq (\leq) f(c)$
+  \end{itemize}
+
+
+  \paragraph{Satz von Rolle}
+  $f: [a,b] \rightarrow \real, f(a)=f(b) \Rightarrow \exists \xi \in (a,b): f'(\xi)=0$
+
+
+  \paragraph{Hinreichend für Extrema}
+  $f$ diff'bar, $\exists c: f'(c)=0$
+  \begin{itemize}
+  \item f streng monoton wachsend um c $\Rightarrow$ f in c isol. lok. Min.
+  \item $f \in \mathscr{C}^2, f''(c)=0 \Rightarrow f$ in c isol. lok. Min.
+  \item f' um c str. monoton fallend $\Rightarrow f$ in c isol. lok. Max.
+  \item $f \in \mathscr{C}^2, f''(c)<0 \Rightarrow f$ in c isol. lok. Max.
+  \end{itemize}
+  % L'Hopital ausgelassen%
+
+
+  \paragraph{Taylor}\hspace{0pt} \\
+  $ n \in \{\nat \cup \infty\}: T_nf(x;c):= \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k$
+  \section{Integration}
+
+
+  \paragraph{Riehmann-Integral}\hspace{0pt} \\
+  $\varphi \in \tau [a,b]: \int_{a}^{b}\varphi dx := \sum_{k=1}^{n}c_k(x_k-x_{k-1})$
+
+
+  \paragraph{Stetigkeit \& Monotonie $\Rightarrow integrierbar$} $f: [a,b] \rightarrow \real$
+  \begin{itemize}
+  \item $f$ stetig $\Rightarrow f$ integrierbar
+  \item $f$ monoton $\Rightarrow f$ integrierbar
+  \item $\exists$ Unterteilung v. $[a,b]$ stetig oder monoton $\Rightarrow f$ integrierbar
+  \end{itemize}
+
+
+  \paragraph{Mittelwertsatz d. Int.-R.}
+  $f:[a,b] \rightarrow \real$ stetig, $\exists \xi \in [a,b]: \int_{a}^{b}f(x)dx=f(\xi)(b-a)$
+  % Hauptsatz der Integralrechnung weggelassen (ev. weiter kürzen)
+
+
+  \paragraph{Partielle Integration}
+  $f,g: [a,b] \rightarrow \real$ stetig: $\int_{a}^{b}f(x)g'(x)dx=[f(x)g(x)]_a^b-\int_{a}^{b}f'(x)g(x) dx$
+
+
+  \paragraph{Substitution}
+  $\int_{a}^{b}f(g(x))g'(x)dx=\int_{g(a)}^{g(b)}f(y)dy$
+
+
+  \paragraph{Majorantenkriterium f. Int.}\hspace{0pt} \\
+  $f$ über $[a,b]$ absolut integrierbar $\Leftrightarrow$
+  \begin{itemize}
+  \item f in jedem Teilintervall $\in [a,b]$ integrierbar
+  \item $\lvert f(x) \rvert \leq g(x) \forall x \in [a,b)$
+  \item $g$ über $[a,b)$ uneig. integrierbar
+  \end{itemize}
+
+
+  \paragraph{Integralvergl.krit.}
+  $f:[1,\infty]\rightarrow\real$ monoton fallend $, \forall x: f(x)>0, f$ über $[1,\infty]$ uneig. integr. $\Rightarrow \sum_{k=1}^{\infty}f(k)$ konvergiert
+  % Ausgelassen: Satz von Taylor
+
+
+  \paragraph{Potenzreihen}\hspace{0pt} \\
+  $f(x)=\sum_{k=0}^{\infty}c_kx^k \Rightarrow \int f(x)dx=\sum_{k=0}^{\infty}\frac{1}{k+1}c_kx^{k+1}$
+
+
+
+  \section{Kurven}
+
+  \paragraph{Diff'bare Kurven}
+  \begin{itemize}
+  \item $k'(t)=(k'_1(t),...,)$ Tangentialvektor
+  \item $T_k(t)=\frac{1}{\lVert k'(t)\rVert_2}$ Tangentialeinheitsvektor in t
+  \end{itemize}
+
+
+  \paragraph{Rektifizierbarkeit, Bogenlänge}\hspace{0pt} \\
+  $k:[a,b]\rightarrow \real^n$ rektifizierbar $\Leftrightarrow \{\sum_{k=1}^{N}\lVert\gamma(t_k)-\gamma(t_{k+1})\rVert_2: a = t_0 < t_1 < ... < t_N = b$ Unterteilung v. $[a,b]\}$
+
+
+  \paragraph{Bogenlänge stetig diff'barer Kurven}\hspace{0pt} \\
+  $k: [a,b]\rightarrow \real^n$ stückweise stetig diff'bar $\Rightarrow L(k)=\int_{a}^{b}\lVert k'(t)\rVert_2 dt$
+
+  \paragraph{Parametertransformation}\hspace{0pt} \\
+  $ f: J \rightarrow I \ \text{Parametertransformation} \Leftrightarrow \ \text{bijektiv und stetig;}\\  f, f^{-1} k\text{-mal stetig diff'bar} \rightarrow \mathscr{C}^k \ \text{Parametertransformation}$\\
+  $\mathscr{C}^1 \text{-Par.transf.} f \ \text{orientierungstreu wenn} \ f'(t) > 0 \ \forall t; \\ \text{orientierungsumkehrend für} \ <$\\
+  $ k \ \text{und}\ \tilde{k} \ \text{äquivalente Kurven wenn mit Par.transf.}\ f \ \text{gilt}\ \tilde{k} = k \circ f$ äquivalente Kurven $\rightarrow$ gleiche Bogenlänge\\
+
+
+  \paragraph{Bogenlänge/Umparametrisierung}
+
+
+  % TODO: Parametertransformation Def. 10.5 ff%
 
 \end{multicols*}
 \end{document}
