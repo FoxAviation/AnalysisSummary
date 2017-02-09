@@ -1,4 +1,4 @@
-\documentclass[paper=a4,paper=landscape, fontsize=6pt,DIV=25, twoside]{scrartcl}
+\documentclass[paper=a3,paper=landscape, fontsize=9pt,DIV=25, twoside]{scrartcl}
 
 %Text libs
 \usepackage{fontspec}
@@ -47,8 +47,12 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt plus1pt minus1pt}
 
-%\renewcommand{\begin{itemize}}{\begin{itemize}[noitemsep,nolistsep,leftmargin=3mm]}
+%make lists more compact
 \setlist[itemize]{noitemsep,nolistsep, leftmargin=3mm}
+
+% make superscript smaller
+\DeclareMathSizes{9}{9}{5}{5}
+%\renewcommand{\textsuperscript}[1]{\raisebox{0.8ex}{\smaller{#1}}}
 
 \begin{document}
 \begin{multicols*}{4}
@@ -204,8 +208,8 @@
 			\item $ \lim\limits_{x \rightarrow \infty} x^{-n}e^x=\infty$
 			\item $ \lim\limits_{x \rightarrow \infty} x^ne^x=0$
 		\end{itemize}
-			\paragraph{Trigonometrische Funktionen}
-			$  \cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!}\\\sin(z):=\frac{e^{iz}-e{-iz}}{2i} = \sum_{k=0}^{\infty} (-1)^k \frac{z^{2k+1}}{(2k+1)!}$
+			\paragraph{Trigonometrische Funktionen}\hspace{0pt} \\
+			$  \cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!}\\\sin(z):=\frac{e^{iz}-e^{-iz}}{2i} = \sum_{k=0}^{\infty} (-1)^k \frac{z^{2k+1}}{(2k+1)!}$
 			\paragraph{Eigenschaften v. sin, cos, tan}
 			$\forall z,w \in \compl, x \in \real$
 			
