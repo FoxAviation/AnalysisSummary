@@ -1,18 +1,29 @@
-\documentclass[paper=a3,paper=landscape, fontsize=9pt,DIV=25, twoside]{scrartcl}
+\documentclass[paper=a3,paper=landscape, fontsize=9pt,DIV=25]{scrartcl}
 
 %Text libs
 \usepackage{fontspec}
 \usepackage{amsfonts}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{multicol}
+\usepackage[ngerman]{babel}
 \usepackage{enumitem}
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{mathrsfs}
+\usepackage{datetime}
+\usepackage{fancyhdr}
+
+% header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Analysis Cheatsheet WiSe 16/17}
+\rfoot{\today\ \currenttime}
+%\hfoot{\thepage}
+\lfoot{\thepage}
 
 \linespread{0.5}
 
-%Math commands
+% Math commands
 \newcommand{\rplus}{{\mathbb{R}}^+}
 \newcommand{\real}{{\mathbb{R}}}
 \newcommand{\compl}{\mathbb{C}}
@@ -33,26 +44,23 @@
                                 {-1explus -.5ex minus -.2ex}%
                                 {0.5ex plus .2ex}%
                                 {\normalfont\normalsize\bfseries}}
-\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
-                                {-1ex plus -.5ex minus -.2ex}%
-                                {1ex plus .2ex}%
-                                {\normalfont\small\bfseries}}
 
-\makeatother
+                              
 
 % Don't print section numbers
 \setcounter{secnumdepth}{0}
 
-
+% Paragraphs use less space
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt plus1pt minus1pt}
 
-%make lists more compact
+% make lists more compact
 \setlist[itemize]{noitemsep,nolistsep, leftmargin=3mm}
 
 % make superscript smaller
 \DeclareMathSizes{9}{9}{5}{5}
-%\renewcommand{\textsuperscript}[1]{\raisebox{0.8ex}{\smaller{#1}}}
+
+
 
 \begin{document}
 \begin{multicols*}{4}
