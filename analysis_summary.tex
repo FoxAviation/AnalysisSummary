@@ -290,7 +290,7 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
   $[a,b]$ beschränkt, $f: [a,b] \rightarrow \real$ stetig
   \begin{itemize}
   \item $f$ beschränkt
-  \item $\exists x_{\max}, x_{\min} \in [a,b]: f(x_{\max})=\sup\{f(x): x \in [a,b]\} \wedge f(x_{\min}=\inf\{f(x):x \in [a,b]\}$
+  \item $\exists x_{\max}, x_{\min} \in [a,b]: f(x_{\max})=\sup\{f(x): x \in [a,b]\} \wedge f(x_{\min})=\inf\{f(x):x \in [a,b]\}$
   \end{itemize}
 
 %TODO: Add Satz 5.8, lim von oben, lim von unten
@@ -470,11 +470,21 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   \vdots  & \ddots & \vdots  \\
   \partial_{n1}f(x) & \cdots & \partial_{nn}f(x)
  \end{pmatrix}$
+
   \paragraph{Taylor in höheren Dimensionen}
 
-  \paragraph{Extrema/Kritische Punkte}
 
-  \paragraph{Mehrdimensionale Kettenregel}
+  \paragraph{Extrema/Kritische Punkte}
+  kritischer Punkt: $\nabla f(c) = 0$\\
+  lokales Min.: $\nabla^2f(c)$ pos. semidefinit;
+  lokales Max.: $\nabla^2f(c)$ neg. semidefinit;
+  $\nabla f(c)=0 \ \text{und}\ \nabla^2f(c) \ \text{pos. definit}\ \rightarrow$ isoliertes lok. Min.;
+  $\nabla f(c)=0 \ \text{und}\ \nabla^2f(c) \ \text{neg. definit}\ \rightarrow$ isoliertes lok. Max.;
+  $\nabla f(c)=0 \ \text{und}\ \nabla^2f(c) \ \text{pos. und neg. EW}\ \rightarrow$ Sattelpunkt;
+
+
+  \paragraph{Mehrdimensionale Kettenregel}\hspace{0pt} \\
+  $D(G \circ F)(c) = DG(F(c)) \cdot DF(c)$
 
   \section{Mehrdimensionale Integralrechnung}
 
@@ -487,6 +497,78 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
 
   \section{Differentialgleichungen}
 
+  \paragraph{Rezepte}\hspace{0pt}\\
+
+  
+  \begin{tabular}{|l|l|l|l|}
+    \hline
+    1   & $y'(t)=f(t) \cdot g(y(t))$      & Funkt. $f,g$              \\ \hline
+    2   & $y'(t)+a(t) \cdot y(t) = 0$     & Funkt. $a$                \\ \hline
+    3   & $y'(t)+a(t) \cdot y(t) = f(t)$  & Funkt. $a,f$              \\ \hline
+    4   & $y''(t)+ay'(t)+by(t) = 0$       & Konst. $a,b$              \\ \hline
+    5   & $y''(t)+ay'(t)+by(t) = p(t)$    & Konst. $a,b;$ Polyn. $p$  \\ \hline
+    6   & $y''(t)+ay'(t)+by(t) = e^{ct}$   & Konst. $a,b,c$            \\ \hline
+  \end{tabular}
+
+  \paragraph{Meth. 1}
+
+  $F(t)=\int f(t) \mathrm{d}t;G(t)=\int \frac{1}{g(t)\mathrm{d}t}$
+  Jede allgemeine Lsg für $y(t)$ erfüllt die Gleichung $G(y(t))=F(t)+c$
+  Mit Anfangsbedingung erfüllt jede Lsg. $\int_{y_0}^{y(t)}\frac{1}{g(u)}\mathrm{d}u=\int_{x_0}^{t}f(u)\mathrm{d}u$
+
+  \paragraph{Meth. 2}
+
+  $A(t)=\int a(t)\mathrm{d}t$; allgemeine Lsg. $y(t)=ce^{-A(t)}$
+
+  \paragraph{Meth. 3}
+
+  $A(t)=\int a(t)\mathrm{d}t; B(t)=\int e^{A(t)} \cdot f(t) \mathrm{d}t$
+  Allg. Lsg. $y(t)=e^{-A(t)} \cdot (c+B(t))$
+
+  \paragraph{Meth. 4}
+
+  falls: $a^2>4b$ Löse $\lambda_{1,2}=\lambda^2+a\lambda + b = 0$
+  allg. Lsg.: $y(t)=c_1e^{\lambda_1t}+c_2e^{\lambda_2t}$ \\
+  falls: $a^2=4b$ $\lambda = - \frac{a}{2}$
+  allg. Lsg.: $y(t)=(c_1+c_2)e^{\lambda t}$\\
+  falls: $a^2<4b$ $\omega = \sqrt{b - (\frac{a}{2})^2}$
+  allg. Lsg.: $y(t)=(c_1cos(\omega t) + c_2sin(\omega t))e^{-\frac{a}{2}t}$
+
+  \paragraph{Meth. 5}\hspace{0pt}\\
+
+  Bestimme allg. Lsg. $y_h(t)$ von $y''_h(t)+ay'_h(t)+by_h(t)=0$\\
+  Stelle Polyn. $q(t)=a_nt^n+\dots+a_1t+a_0$ mit Grad $n=deg(p) \ \text{und Param.}\ a_0,\dots,a_n$ auf
+  $y_p(t) =
+  \begin{cases}
+    q(t)    & \quad b \neq 0 \\
+    tq(t)   & \quad a \neq 0, b = 0\\
+    t^2q(t) & \quad a = 0, b = 0\\
+  \end{cases}
+  $ \\
+  in Abhängigkeit von $a_0,\dots ,a_n$;
+  $y''_p(t)+ay'_p(t)+by_p(t)=p(t)$
+  ermittle $a_1,\dots,a_n$ durch Koeffizientenvergleich \\
+  Allg. Lsg.: $y(t)=y_h(t)+y_p(t)$
+
+  %TODO: compare with slides from Carlos at a later point in time. is this right? 
+
+    \paragraph{Meth. 6}\hspace{0pt}\\
+
+  Bestimme allg. Lsg. $y_h(t)$ von $y''_h(t)+ay'_h(t)+by_h(t)=0$\\
+  Löse $\lambda^2+a\lambda+b=0$
+  $y_p(t) =
+  \begin{cases}
+    ke^{ct}    & \quad \lambda_1 \neq c \neq \lambda_2 \\
+    kte^{ct}   & \quad \lambda_1 = c \neq \lambda_2 \ \text{oder}\ \lambda_1 \neq c = \lambda_2 \\
+    kt^2e^{ct} & \quad  \lambda_1 = c = \lambda_2 \\
+  \end{cases}
+  $ \\
+  in Abhängigkeit von $k$;
+  $y''_p(t)+ay'_p(t)+by_p(t)=e^{ct}$
+  ermittle $k$\\
+  Allg. Lsg.: $y(t)=y_h(t)+y_p(t)$
+  % TODO: compare with slides from Carlos at a later point in time. is this right?
+  
 \end{multicols*}
 \end{document}
 
