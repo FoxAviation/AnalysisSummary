@@ -207,12 +207,13 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
   \paragraph{Cauchy-Produkt}
   \begin{itemize}
   \item Seien $ \sum_{k=0}^{\infty} a_k,\:\sum_{k=0}^{\infty} b_k$ absolut konvergent $ \in \compl \Rightarrow (\sum_{k=0}^{\infty} a_k) (\sum_{k=0}^{\infty} b_k) = (\sum_{m=0}^{\infty} c_m)$ mit $ c_m=(\sum_{k=0}^{m} a_kb_{m-k})$ mit $c_k$ absolut konvergent.
-  \item Seien $ \sum_{k=0}^{\infty} a_kz^k$, $\sum_{k=0}^{\infty} a_kz^k$ zwei Potenzreihen mit Konvergenzradien $R_a$ und $ R_b \Rightarrow (\sum_{k=0}^{\infty} b_kz^k)(\sum_{k=0}^{\infty} b_kz^k)=(\sum_{m=0}^{\infty} c_bz^m)$ mit $ c_m = \sum_{k=0}^{m} a_km_{m-k}$ und Konvergenzradius $\min\{R_a,R_b\}$
+  
+  \item Seien $ \sum_{k=0}^{\infty} a_kz^k$, $\sum_{k=0}^{\infty} b_kz^k$ zwei Potenzreihen mit Konvergenzradien $R_a$ und $ R_b \Rightarrow (\sum_{k=0}^{\infty} a_kz^k)(\sum_{k=0}^{\infty} b_kz^k)=(\sum_{m=0}^{\infty} c_bz^m)$ mit $ c_m = \sum_{k=0}^{m} a_kb_{m-k}$ und Konvergenzradius $\min\{R_a,R_b\}$
   \end{itemize}
 
 
-  \paragraph{Natürliche Exponentialfunktion}
-  $ exp(z) := \sum_{k=0}^{\infty} \frac{z^k}{k!}$
+  \paragraph{Natürliche Exponentialfunktion}\hspace{0pt} \\
+  $ exp(z) := \sum_{k=0}^{\infty} \frac{z^k}{k!} = \sum_{K=0}^{n}\binom{n}{k}\frac{1}{n^k}$
 
 
   \paragraph{Eigenschaften von exp}
@@ -292,7 +293,7 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
   \item $\exists x_{\max}, x_{\min} \in [a,b]: f(x_{\max})=\sup\{f(x): x \in [a,b]\} \wedge f(x_{\min}=\inf\{f(x):x \in [a,b]\}$
   \end{itemize}
 
-
+%TODO: Add Satz 5.8, lim von oben, lim von unten
   \paragraph{Stetigkeit in $\compl$ \& $\real ^n$} wörtlich übertragbar\\
   $D \subseteq \compl$ oder $D \subseteq \real^n$ abgeschlossen: $\forall f \text{ stetig}: D \rightarrow \compl$ bzw. $f: D \rightarrow \real^m$ beschränkt und nimmt auf D Maximum und Minimum an
   % \paragraph{Grenzwerte} ausgelassen
