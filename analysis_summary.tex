@@ -13,6 +13,7 @@
 \usepackage{datetime}
 \usepackage{fancyhdr}
 \usepackage{color}
+\usepackage{esint}
 
 % header and footer
 \pagestyle{fancy}
@@ -507,8 +508,30 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   $\nabla f(c)=0 \ \text{und}\ \nabla^2f(c) \ \text{pos. und neg. EW}\ \rightarrow$ Sattelpunkt;
 
 
+  \paragraph{Jacobi-Matrix}
+
+  $F: \real^n \rightarrow \real^m; F(x) =
+  \begin{pmatrix}
+    f_1(x)\\
+    \vdots \\
+    f_m(x)
+  \end{pmatrix}
+  $ \\
+  $f \ \text{in}\ c \ \text{(total) diff'bar wenn lin. Abb. (oder Matrix)}\ L \ \text{existiert mit:}\\ \displaystyle\lim_{\substack{h \rightarrow 0\\ h \in \real^n \setminus \{0\} }} \frac{F(x+h)-F(x)-Lh}{\|h\|} = 0$\\
+  Alle $\partial_jf_k(x)$ ($j=1 \dots n,k=1 \dots m)$ in $c$ stetig $\rightarrow$ $f$ in $c$ stetig diff'bar und Jacobi-Matrix \\
+  $DF(c) :=
+  \begin{pmatrix}
+    \partial_1f_1(c) & \dots   & \partial_nf_1(c) \\
+    \vdots           & \ddots  & \vdots          \\
+    \partial_1f_m(c) & \dots   & \partial_nf_m(c) \\
+  \end{pmatrix}
+  $
+
   \paragraph{Mehrdimensionale Kettenregel}\hspace{0pt} \\
   $D(G \circ F)(c) = DG(F(c)) \cdot DF(c)$
+
+
+  
   \section{Mehrdimensionale Integralrechnung}
 
   % Sazu von Fubini?
