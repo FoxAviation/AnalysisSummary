@@ -464,54 +464,39 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
  $f$ (total) diff'bar $\Leftrightarrow \forall x \in M$ alle partiellen Ableitungen existieren und stetig sind $\Rightarrow f$ stetig diff'bar, $w=\begin{pmatrix}
  \partial_1f(x)\\\vdots \\ \partial_nf(x)
  \end{pmatrix} =: \nabla f(x),\; \partial_vf(x)=\langle \nabla f(x), v \rangle$
-  \paragraph{Hesse-Matrix}\hspace{0pt}\\
+
+ \paragraph{Hesse-Matrix}\hspace{0pt}\\
   $ \nabla^2f(x) = \begin{pmatrix}
   \partial_{11}f(x)  & \cdots & \partial_{1,n}f(x) \\
   \vdots  & \ddots & \vdots  \\
   \partial_{n1}f(x) & \cdots & \partial_{nn}f(x)
  \end{pmatrix}$
-<<<<<<< HEAD
- 
-   \paragraph{Extrema/Kritische Punkte}
-	$c \in M$ lokales Extremum $\Rightarrow c$ kritischer Punkt von $f: \nabla f(c)=0$\\
-	$f : M \rightarrow \real$ zweimal statig diff'bar
-   \begin{itemize}
-	\item $f$ in $c$ lokales Minimum $\Rightarrow \nabla^2f(c)$ positiv semidefinit
-	\item $f$ in $c$ lokales Maximum $\Rightarrow \nabla^2f(c)$ negativ semidefinit
-	\item $\nabla f(c)=0 \wedge \nabla^2f(c)$ positiv definit $\Rightarrow$ f in c isol. lokal. Maximum
-	\item $\nabla f(c)=0 \wedge \nabla^2f(c)$ negativ definit $\Rightarrow$ f in c isol. lokal. Minimum
-	\item $\nabla f(c)=0 \wedge \nabla^2f(c)$ positive und negative EW $\Rightarrow f$ in $c$ Sattelpunkt
-   \end{itemize}
 
-	\paragraph{Mehrdim. Kettenregel}
-	$f: \real^n \rightarrow \real^m, G: \real^m \rightarrow  \real^d: F$ in $c$und G an $y := F(c)$ stetig diff'bar $\Rightarrow$ $D(G \circ F)(c)=DG(y) \cdot DF(c)$
-	
-  \paragraph{Taylor in höheren Dimensionen}
-%TODO: Implement
 
-  \paragraph{Taylor in höheren Dimensionen}
+
+ \paragraph{Taylor in höheren Dimensionen}
 
   % TODO: maybe remove that many pmatrices
   
-  $\arraycolsep=1.4pt\def\arraystretch{1}
-    T_2f((x,y);(0,0))=f(0,0)+\langle f(0,0),
-  \begin{pmatrix}
-    x\\
-    y
-  \end{pmatrix}
-\rangle + \frac{1}{2}
-\begin{pmatrix}
-  x&y
-\end{pmatrix}
-(\nabla^2f
-\begin{pmatrix}
-  x&y
-\end{pmatrix}
-)
-\begin{pmatrix}
-  x&y
-\end{pmatrix}
-$
+ $\arraycolsep=1.4pt\def\arraystretch{1}
+ T_2f((x,y);(0,0))=f(0,0)+\langle f(0,0),
+ \begin{pmatrix}
+   x\\
+   y
+ \end{pmatrix}
+ \rangle + \frac{1}{2}
+ \begin{pmatrix}
+   x&y
+ \end{pmatrix}
+ (\nabla^2f
+ \begin{pmatrix}
+   x&y
+ \end{pmatrix}
+ )
+ \begin{pmatrix}
+   x&y
+ \end{pmatrix}
+ $
 
   \paragraph{Extrema/Kritische Punkte}
   kritischer Punkt: $\nabla f(c) = 0$\\
@@ -525,8 +510,7 @@ $
   \paragraph{Mehrdimensionale Kettenregel}\hspace{0pt} \\
   $D(G \circ F)(c) = DG(F(c)) \cdot DF(c)$
   \section{Mehrdimensionale Integralrechnung}
-	\paragraph{Satz von Fubini}
-	%TODO: Continue here
+
   % Sazu von Fubini?
 
   \paragraph{Transformationssatz}
