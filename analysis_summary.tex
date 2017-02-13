@@ -102,8 +102,8 @@
   \section{Folgen}
   \paragraph{Def: 2.2 - Grenzwert einer reellen Folge}
   \begin{itemize}
-  \item $a \in \real$ Grenzwert von $(a_n)$ $\Leftrightarrow\\\forall \varepsilon > 0$ $\exists n_0 \in \nat$ $\forall n \geq n_0:$ $|a_n - a| < \varepsilon$
-  \item Existiert $a \in \real$ Grenzwert $\Rightarrow$ $(a_n)$ konvergent,\\sonst $(a_n)$ divergent
+  \item $a \in \real$ Grenzwert von $(a_n)$ $\Leftrightarrow \forall \varepsilon > 0$ $\exists n_0 \in \nat$ $\forall n \geq n_0:$ $|a_n - a| < \varepsilon$
+  \item Existiert $a \in \real$ Grenzwert $\Rightarrow$ $(a_n)$ konvergent, sonst $(a_n)$ divergent
   \end{itemize}
 
   \paragraph{Nullfolge}
@@ -177,7 +177,7 @@ $\lim\limits_{n \rightarrow \infty} (a_n) \rightarrow 0$
 \section{Komplexe und mehrdimensionale Folgen}
 
 \paragraph{Grenzwert komplexer Folgen}\hspace{0pt} \\
-$z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \forall n \geq n_0: |z_n - z| < \varepsilon$. Existiert $z \Leftarrow (z_n)$ konvergent.
+$z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \forall n \geq n_0: |z_n - z| < \varepsilon$.\\Existiert $z \Rightarrow (z_n)$ konvergent gegen $z$.
 
 
 \paragraph{Konvergenz komplexer Folgen}
@@ -193,13 +193,13 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
   \section{Reihen}
 
   \paragraph{Konvergenz}
-  $\srow$ konvergent gg. $s \in \compl \Leftrightarrow$ Folge der Partialsummen gg. $s$ konvergiert
+  $\srow$ konvergent gg. $s \in \compl \Leftrightarrow$\\Folge der Partialsummen gg. $s$ konvergiert
 
   \paragraph{Teilfolge, Häufungspunkte}
   $(a_n)_{a \in \nat}$ reelle Folge:
   \begin{itemize}
-  	\item $(n_k)_{k \in \nat}$ streng monoton wachsend in $\nat \Rightarrow (a_{n_k})_{k \in \nat}$ Teilfolge von $\aseq$
-  	\item $a \in \real$ Häufungspunkt von $\aseq \Leftrightarrow \exists$ Teilfolge, die gg. $a$ konvergiert
+  	\item $(n_k)_{k \in \nat}$ streng monoton wachsend in $\nat \\\Rightarrow (a_{n_k})_{k \in \nat}$ Teilfolge von $\aseq$
+  	\item $a \in \real$ Häufungspunkt von $\aseq \Leftrightarrow\\\exists$ Teilfolge, die gg. $a$ konvergiert
   \end{itemize}
 
   \paragraph{Majoranten- \& Minorantenkriterium}\hspace{0pt} \\
@@ -211,14 +211,14 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
 
 
   \paragraph{Quotientenkriterum}\hspace{0pt} \\
-  $ \sum_{k=0}^{\infty} a_k, a \neq 0$ für fast alle $k \in \nat \wedge \lim\limits_{n \in \nat} \arrowvert \frac{a_{n+1}}{a_n} \arrowvert := q$ existiert $\Rightarrow$ (*)
+  $ \sum_{k=0}^{\infty} a_k, a \neq 0$ für fast alle $k \in \nat \wedge \lim\limits_{n \in \nat} \arrowvert \frac{a_{n+1}}{a_n} \arrowvert := q$ existiert $\Rightarrow \bigotimes$
 
 
   \paragraph{Wurzelkriterium}\hspace{0pt} \\
-  $ \sum_{k=0}^{\infty} a_k;\:a_k \in \compl: q := \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\arrowvert a_k \arrowvert} \Rightarrow$ (*)
+  $ \sum_{k=0}^{\infty} a_k;\:a_k \in \compl: q := \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\arrowvert a_k \arrowvert} \Rightarrow$ $\bigotimes$
 
 
-  \paragraph{(*)}
+  \paragraph{$\bigotimes$}
   \begin{itemize}
   \item $q < 1 \Rightarrow$ Reihe konvergiert absolut
   \item $q > 1 \Rightarrow$ Reihe divergiert
