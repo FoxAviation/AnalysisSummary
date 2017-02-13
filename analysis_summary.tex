@@ -70,14 +70,32 @@
 \begin{multicols*}{4}
 	
 	\section{Reelle Zahlen}
-	\paragraph{Sup, Inf, Max, Min}
 	$(K,+,\cdot)$ angeordneter Körper, $X \subset K$ nicht leer
+	\paragraph{Sup, Inf, Max, Min}
 	\begin{itemize}
 		\item $s \in K$ \textbf{Sup(X)} $\Leftrightarrow$ s kleinste obere Schranke
 		\item $s \in K$ \textbf{Inf(X)} $\Leftrightarrow$ s größte untere Schranke
 		\item $s \in K$ \textbf{Max(x)} $\Leftrightarrow s =$ inf(X) $\wedge s \in K$
 		\item $s \in K$ \textbf{Min(x)} $\Leftrightarrow s =$ inf(X) $\wedge s \in K$
 	\end{itemize}
+	\paragraph{$\epsilon-$Charakterisierung des Supremums}
+	$s = \sup(X) \Leftrightarrow \forall \epsilon > 0 \exists x \in X: s-\epsilon < x \leq s$
+	\textit{Entsprechendes gilt für das Infimum}
+	\paragraph{Rechenregeln für sup}
+	$X,Y \subset \real$ nach oben beschränkt:
+	\begin{itemize}
+		\item $\sup(X+Y) = \sup(X) + \sup(Y)$
+		\item $\lambda > 0 \Rightarrow \sup(\lambda X) = \lambda \sup(X)$
+		\item $X,Y \subset [0,\infty) \Rightarrow \sup(X) \cdot \sup(Y)$
+		\item $X \subset Y \Rightarrow \sup(X) \leq \sup(Y)$
+	\end{itemize}
+\paragraph{Archimedische Anordnung}
+\begin{itemize}
+	\item $\real$ archimedisch angeordnet $\Rightarrow \forall x \in \real \exists n \in \nat: n > x$
+	\item $\forall \epsilon > 0 \exists n \in \nat: \frac{1}{n} < \epsilon$
+	\item $\forall a,b \in \real: a < b: \exists q \in \mathbb{Q}: a<q<b$
+\end{itemize}
+
   \section{Folgen}
   \paragraph{Def: 2.2 - Grenzwert einer reellen Folge}
   \begin{itemize}
