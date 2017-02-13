@@ -232,6 +232,8 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
   \paragraph{Potenzreihe}
     $ P(z) := \sum_{k=0}^{\infty} c_kz^k; c_k \in \compl; z \in \compl\\R := \frac{1}{\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|c_k|}} :=$ Konvergenzradius
 
+  \paragraph{Harmonische Reihe}
+  
   \paragraph{Cauchy-Produkt}
   \begin{itemize}
   \item Seien $ \sum_{k=0}^{\infty} a_k,\:\sum_{k=0}^{\infty} b_k$ absolut konvergent $ \in \compl \Rightarrow (\sum_{k=0}^{\infty} a_k) (\sum_{k=0}^{\infty} b_k) = (\sum_{m=0}^{\infty} c_m)$ mit $ c_m=(\sum_{k=0}^{m} a_kb_{m-k})$ mit $c_k$ absolut konvergent.
@@ -265,8 +267,11 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
 
   \paragraph{Trigonometrische Funktionen}\hspace{0pt} \\
   $\sin(z):=\frac{e^{iz}-e^{-iz}}{2i} = \sum_{k=0}^{\infty} (-1)^k \frac{z^{2k+1}}{(2k+1)!}\\
-  \cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!}$
-
+  \cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!}$\\
+  $\arctan(x):=\sum_{k=0}^{\infty}(-1)^k \frac{x^{2k+1}}{2k+1}$\\
+  $\sinh(x):=\frac{1}{2}(e^x-e^{-x})=\sum_{k=0}^{\infty}\frac{x^{2k+1}}{(2n+1)!}$\\
+  $\cosh(x):=\frac{1}{2}(e^x+e^{-x})=\sum_{k=0}^{\infty}\frac{x^{2k}}{(2n)!}$\\
+  $\tanh(x):=\frac{\cosh(x)}{\sinh(x)}$
 
   \paragraph{Eigenschaften v. sin, cos, tan}
   $\forall z,w \in \compl, x \in \real$
@@ -279,6 +284,7 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
   \item $cos(z+w)=\cos(z)\sin(w)-\sin(z)\sin(w)$
   \item $\cos(x)=Re(e^{ix}) \; \sin(x)=Im(e^{ix})$
   \item $z=\tan(c): \arctan'(z)=\frac{1}{\tan'(c)}=\frac{1}{1+(\tan(c))^2}=\frac{1}{1+z^2}$
+  \item $\arccos(x)+\arcsin(x)=\frac{\pi}{2}$
   \end{itemize}
 
   \resizebox{.9\hsize}{!}{
