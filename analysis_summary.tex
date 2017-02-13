@@ -527,13 +527,14 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
  $
 
   \paragraph{Extrema/Kritische Punkte}
-  kritischer Punkt: $\nabla f(c) = 0$\\
-  lokales Min.: $\nabla^2f(c)$ pos. semidefinit;
-  lokales Max.: $\nabla^2f(c)$ neg. semidefinit;
-  $\nabla f(c)=0 \ \text{und}\ \nabla^2f(c) \ \text{pos. definit}\ \rightarrow$ isoliertes lok. Min.;
-  $\nabla f(c)=0 \ \text{und}\ \nabla^2f(c) \ \text{neg. definit}\ \rightarrow$ isoliertes lok. Max.;
-  $\nabla f(c)=0 \ \text{und}\ \nabla^2f(c) \ \text{pos. und neg. EW}\ \rightarrow$ Sattelpunkt;
-
+  \begin{itemize}
+  	\item kritischer Punkt: $\nabla f(c) = 0$
+  	\item lokales Min.: $\nabla^2f(c)$ pos. semidefinit
+  	\item lokales Max.: $\nabla^2f(c)$ neg. semidefinit
+  	\item $\nabla f(c)=0 \ \text{und}\ \nabla^2f(c) \ \text{pos. definit}\ \Rightarrow$ isoliertes lok. Min.
+  	\item  $\nabla f(c)=0 \ \text{und}\ \nabla^2f(c) \ \text{neg. definit}\ \Rightarrow$ isoliertes lok. Max.
+  	\item $\nabla f(c)=0 \ \text{und}\ \nabla^2f(c) \ \text{pos. und neg. EW}\ \Rightarrow$ Sattelpunkt
+  \end{itemize}
 
   \paragraph{Jacobi-Matrix}
 
@@ -545,7 +546,7 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   \end{pmatrix}
   $ \\
   $f \ \text{in}\ c \ \text{(total) diff'bar wenn lin. Abb. (oder Matrix)}\ L \ \text{existiert mit:}\\ \displaystyle\lim_{\substack{h \rightarrow 0\\ h \in \real^n \setminus \{0\} }} \frac{F(x+h)-F(x)-Lh}{\|h\|} = 0$\\
-  Alle $\partial_jf_k(x)$ ($j=1 \dots n,k=1 \dots m)$ in $c$ stetig $\rightarrow$ $f$ in $c$ stetig diff'bar und Jacobi-Matrix \\
+  Alle $\partial_jf_k(x)$ ($j=1 \dots n,k=1 \dots m)$ in $c$ stetig $\Rightarrow$ $f$ in $c$ stetig diff'bar und Jacobi-Matrix \\
   $DF(c) :=
   \begin{pmatrix}
     \partial_1f_1(c) & \dots   & \partial_nf_1(c) \\
