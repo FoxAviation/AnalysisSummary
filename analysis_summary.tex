@@ -468,17 +468,20 @@ $f'(c) := \lim\limits_{x \rightarrow c} \frac{f(x)-f(c)}{x-c}$
 
 
   \paragraph{Rektifizierbarkeit, Bogenlänge}\hspace{0pt} \\
-  $k:[a,b]\rightarrow \real^n$ rektifizierbar $\Leftrightarrow \{\sum_{k=1}^{N}\lVert\gamma(t_k)-\gamma(t_{k+1})\rVert_2: a = t_0 < t_1 < ... < t_N = b$ Unterteilung v. $[a,b]\}$
+  $k:[a,b]\rightarrow \real^n$ rektifizierbar $\Leftrightarrow \{\sum_{k=1}^{N}\lVert\gamma(t_k)-\gamma(t_{k+1})\rVert_2:\\
+  a = t_0 < t_1 < ... < t_N = b$ Unterteilung v. $[a,b]\}$
 
 
   \paragraph{Bogenlänge stetig diff'barer Kurven}\hspace{0pt} \\
   $k: [a,b]\rightarrow \real^n$ stückweise stetig diff'bar $\Rightarrow L(k)=\int_{a}^{b}\lVert k'(t)\rVert_2 dt$
 
   \paragraph{Parametertransformation}\hspace{0pt} \\
-  $ f: J \rightarrow I \ \text{Parametertransformation} \Leftrightarrow \ \text{bijektiv und stetig;}\\  f, f^{-1} k\text{-mal stetig diff'bar} \Rightarrow \mathscr{C}^k \ \text{Parametertransformation}$\\
-  $\mathscr{C}^1 \text{-Par.transf.} f \ \text{orientierungstreu wenn} \ f'(t) > 0 \ \forall t; \\ \text{orientierungsumkehrend für} \ <$\\
-  $ k \ \text{und}\ \tilde{k} \ \text{äquivalente Kurven wenn mit Par.transf.}\ f \ \text{gilt}\ \tilde{k} = k \circ f$ äquivalente Kurven $\rightarrow$ gleiche Bogenlänge\\
-
+  \begin{itemize}
+  	\item $f: J \rightarrow I \ \text{Parametertransformation} \Leftrightarrow \ \text{bijektiv und stetig}$
+  	\item $f, f^{-1} k\text{-mal stetig diff'bar} \Rightarrow \mathscr{C}^k \ \text{Parametertransformation}$
+  	\item $\mathscr{C}^1 \text{-Par.transf.} f \ \text{orientierungstreu wenn} \ f'(t) > 0 \ \forall t; \\ \text{orientierungsumkehrend für} \ <$
+  	\item $ k \ \text{und}\ \tilde{k} \ \text{äquivalente Kurven wenn mit Par.transf.}\ f:$\\ $\tilde{k} = k \circ f$ äquivalente Kurven $\Rightarrow$ gleiche Bogenlänge
+  \end{itemize}
 
   \paragraph{Bogenlänge/Umparametrisierung}\hspace{0pt} \\
 \begin{itemize}
@@ -492,7 +495,7 @@ $f'(c) := \lim\limits_{x \rightarrow c} \frac{f(x)-f(c)}{x-c}$
   	\item $k: I \rightarrow \real^2$ regulär in $t \in I \Rightarrow \kappa(t)$ \textbf{Krümmung} im Punkt $t$
   	\item $k: I \rightarrow \real^2$ regulär, zweimal stetig diff'bar, k die dazugehörige unparametrisierte Kurve $\Rightarrow$ Krümmung von k in t als $\tilde{k}$ an $\tilde{t}:\;k(t)=\tilde{k}(\tilde{t})$
   \end{itemize}
-	$k: I \rightarrow \real^2$ zweimal stetig diff'bar, $t \in I: k$ in $t$ regulär
+	$k: I \rightarrow \real^2$ zweimal stetig diff'bar, $t \in I: k$ in $t$ regulär:
 	\begin{itemize}
 		\item k nach Bogenlänge parametrisiert $\Rightarrow \kappa(t)=\langle k''(t), N(t) \wedge \lvert \kappa(t)\rvert = \lVert T'(t) \rVert = \lVert k''(t) \rVert$
 		\item $k(t) = 
@@ -567,7 +570,8 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   \end{pmatrix}
   $ \\
   $f \ \text{in}\ c \ \text{(total) diff'bar wenn lin. Abb. (oder Matrix)}\ L \ \text{existiert mit:}\\ \displaystyle\lim_{\substack{h \rightarrow 0\\ h \in \real^n \setminus \{0\} }} \frac{F(x+h)-F(x)-Lh}{\|h\|} = 0$\\
-  Alle $\partial_jf_k(x)$ ($j=1 \dots n,k=1 \dots m)$ in $c$ stetig $\Rightarrow$ $f$ in $c$ stetig diff'bar und Jacobi-Matrix \\
+  Alle $\partial_jf_k(x)$ ($j=1 \dots n,k=1 \dots m)$ in $c$ stetig $\Rightarrow$\\
+  $f$ in $c$ stetig diff'bar und Jacobi-Matrix \\
   $DF(c) :=
   \begin{pmatrix}
     \partial_1f_1(c) & \dots   & \partial_nf_1(c) \\
@@ -601,7 +605,7 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   \end{tabular}
 
   \paragraph{Meth. 1}
-  $F(t)=\int f(t) \mathrm{d}t;G(t)=\int \frac{1}{g(t)\mathrm{d}t}$
+  $F(t)=\int f(t) \mathrm{d}t;\ G(t)=\int \frac{1}{g(t)\mathrm{d}t}$\\
   Jede allgemeine Lsg für $y(t)$ erfüllt die Gleichung $G(y(t))=F(t)+c$
   Mit Anfangsbedingung erfüllt jede Lsg. $\int_{y_0}^{y(t)}\frac{1}{g(u)}\mathrm{d}u=\int_{x_0}^{t}f(u)\mathrm{d}u$
 
@@ -613,44 +617,50 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   Allg. Lsg. $y(t)=e^{-A(t)} \cdot (c+B(t))$
 
   \paragraph{Meth. 4}
-  falls: $a^2>4b$ Löse $\lambda_{1,2}=\lambda^2+a\lambda + b = 0$
-  allg. Lsg.: $y(t)=c_1e^{\lambda_1t}+c_2e^{\lambda_2t}$ \\
-  falls: $a^2=4b$ $\lambda = - \frac{a}{2}$
-  allg. Lsg.: $y(t)=(c_1+c_2)e^{\lambda t}$\\
-  falls: $a^2<4b$ $\omega = \sqrt{b - (\frac{a}{2})^2}$
-  allg. Lsg.: $y(t)=(c_1cos(\omega t) + c_2sin(\omega t))e^{-\frac{a}{2}t}$
+  \begin{itemize}
+  	\item $a^2>4b$: Löse $\lambda_{1,2}=\lambda^2+a\lambda + b = 0$
+  	allg. Lsg.: $y(t)=c_1e^{\lambda_1t}+c_2e^{\lambda_2t}$
+  	\item $a^2=4b$: $\lambda = - \frac{a}{2}$
+  	allg. Lsg.: $y(t)=(c_1+c_2)e^{\lambda t}$ 
+  	\item $a^2<4b$: $\omega = \sqrt{b - (\frac{a}{2})^2}$\\
+  	allg. Lsg.: $y(t)=(c_1cos(\omega t) + c_2sin(\omega t))e^{-\frac{a}{2}t}$
+  \end{itemize}
 
   \paragraph{Meth. 5}\hspace{0pt}\\
-  Bestimme allg. Lsg. $y_h(t)$ von $y''_h(t)+ay'_h(t)+by_h(t)=0$\\
-  Stelle Polyn. $q(t)=a_nt^n+\dots+a_1t+a_0$ mit Grad $n=deg(p) \ \text{und Param.}\ a_0,\dots,a_n$ auf \\
-  $y_p(t) =
-  \begin{cases}
-    q(t)    & \quad b \neq 0 \\
-    tq(t)   & \quad a \neq 0, b = 0\\
-    t^2q(t) & \quad a = 0, b = 0\\
-  \end{cases}
-  $ \\
+  \begin{itemize}
+  	\item Bestimme allg. Lsg. $y_h(t)$ von $y''_h(t)+ay'_h(t)+by_h(t)=0$
+  	\item Stelle Polyn. $q(t)=a_nt^n+\dots+a_1t+a_0$ mit Grad $n=deg(p) \ \text{und Param.}\ a_0,\dots,a_n$ auf
+  	\item $y_p(t) =
+  	\begin{cases}
+  		q(t)    & \quad b \neq 0 \\
+  		tq(t)   & \quad a \neq 0, b = 0\\
+  		t^2q(t) & \quad a = 0, b = 0\\
+  	\end{cases}
+  	$\\
   in Abhängigkeit von $a_0,\dots ,a_n$;
   $y''_p(t)+ay'_p(t)+by_p(t)=p(t)$
-  ermittle $a_1,\dots,a_n$ durch Koeffizientenvergleich \\
-  Allg. Lsg.: $y(t)=y_h(t)+y_p(t)$
-
+ \item Ermittle $a_1,\dots,a_n$ durch Koeffizientenvergleich
+ \item Allg. Lsg.: $y(t)=y_h(t)+y_p(t)$
+  \end{itemize}
   %TODO: compare with slides from Carlos at a later point in time. is this right? 
 
     \paragraph{Meth. 6}\hspace{0pt}\\
-  Bestimme allg. Lsg. $y_h(t)$ von $y''_h(t)+ay'_h(t)+by_h(t)=0$\\
-  Löse $\lambda^2+a\lambda+b=0$
-  $y_p(t) =
-  \begin{cases}
+    \begin{itemize}
+    	\item Bestimme allg. Lsg. $y_h(t)$ von $y''_h(t)+ay'_h(t)+by_h(t)=0$
+    \item Löse $\lambda^2+a\lambda+b=0$
+    \item $y_p(t) =
+    \begin{cases}
     ke^{ct}    & \quad \lambda_1 \neq c \neq \lambda_2 \\
     kte^{ct}   & \quad \lambda_1 = c \neq \lambda_2 \ \text{oder}\ \lambda_1 \neq c = \lambda_2 \\
     kt^2e^{ct} & \quad  \lambda_1 = c = \lambda_2 \\
-  \end{cases}
-  $ \\
-  in Abhängigkeit von $k$;
-  $y''_p(t)+ay'_p(t)+by_p(t)=e^{ct}$
-  ermittle $k$\\
-  Allg. Lsg.: $y(t)=y_h(t)+y_p(t)$
+    \end{cases}
+    $
+    \item In Abhängigkeit von $k$;
+    $y''_p(t)+ay'_p(t)+by_p(t)=e^{ct}$
+    ermittle $k$
+    \item Allg. Lsg.: $y(t)=y_h(t)+y_p(t)$
+    \end{itemize}
+
   % TODO: compare with slides from Carlos at a later point in time. is this right?
   
   \paragraph{Mehrdimensionale DGLs}
