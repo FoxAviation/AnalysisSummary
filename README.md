@@ -2,7 +2,7 @@
 Zusammenfassung für die Vorlesung Analysis für Informatiker der TUM im Wintersemester 2016/17
 
 ## Kompilierung
-Nutzung von xelatex ~~empfohlen~~ notwendig.
+Nutzung von xelatex notwendig.
 
 * ```xelatex analysis_summary.tex```
 
