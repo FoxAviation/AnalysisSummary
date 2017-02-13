@@ -1,4 +1,4 @@
-\documentclass[paper=a3,paper=landscape, fontsize=9pt,DIV=25]{scrartcl}
+\documentclass[paper=a3,paper=landscape, fontsize=9pt,DIV=30]{scrartcl}
 
 % Text libs
 \usepackage{fontspec}
@@ -23,9 +23,7 @@
 \lfoot{\thepage}
 
 % line spacing
-\linespread{0.5}
-
-
+\linespread{0.3}
 
 % Math commands
 \newcommand{\rplus}{{\mathbb{R}}^+}
@@ -64,7 +62,12 @@
 % make superscript smaller
 \DeclareMathSizes{9}{9}{5}{5}
 
-
+% make page margins less
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0,5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{+0.15in}
+\addtolength{\textheight}{0.3in}
 
 \begin{document}
 \begin{multicols*}{4}
@@ -78,8 +81,8 @@
 		\item $s \in K$ \textbf{Max(x)} $\Leftrightarrow s =$ inf(X) $\wedge s \in K$
 		\item $s \in K$ \textbf{Min(x)} $\Leftrightarrow s =$ inf(X) $\wedge s \in K$
 	\end{itemize}
-	\paragraph{$\epsilon-$Charakterisierung des Supremums}
-	$s = \sup(X) \Leftrightarrow \forall \epsilon > 0 \exists x \in X: s-\epsilon < x \leq s$
+	\paragraph{$\epsilon-$Charakterisierung des Supremums}\hspace{0pt}\\
+	$s = \sup(X) \Leftrightarrow\forall \epsilon > 0 \ \exists x \in X: s-\epsilon < x \leq s$\\
 	\textit{Entsprechendes gilt für das Infimum}
 	\paragraph{Rechenregeln für sup}
 	$X,Y \subset \real$ nach oben beschränkt:
@@ -91,22 +94,22 @@
 	\end{itemize}
 \paragraph{Archimedische Anordnung}
 \begin{itemize}
-	\item $\real$ archimedisch angeordnet $\Rightarrow \forall x \in \real \exists n \in \nat: n > x$
-	\item $\forall \epsilon > 0 \exists n \in \nat: \frac{1}{n} < \epsilon$
+	\item $\real$ archimedisch angeordnet $\Rightarrow \forall x \in \real \ \exists n \in \nat: n > x$
+	\item $\forall \epsilon > 0 \ \exists n \in \nat: \frac{1}{n} < \epsilon$
 	\item $\forall a,b \in \real: a < b: \exists q \in \mathbb{Q}: a<q<b$
 \end{itemize}
 
   \section{Folgen}
   \paragraph{Def: 2.2 - Grenzwert einer reellen Folge}
   \begin{itemize}
-  \item $a \in \real$ Grenzwert von $(a_n)$ $\Leftrightarrow \forall \varepsilon > 0$ $\exists n_0 \in \nat$ $\forall n \geq n_0:$ $|a_n - a| < \varepsilon$
-  \item Existiert $a \in \real$ Grenzwert $\Rightarrow$ $(a_n)$ konvergent, sonst $(a_n)$ divergent
+  \item $a \in \real$ Grenzwert von $(a_n)$ $\Leftrightarrow\\\forall \varepsilon > 0$ $\exists n_0 \in \nat$ $\forall n \geq n_0:$ $|a_n - a| < \varepsilon$
+  \item Existiert $a \in \real$ Grenzwert $\Rightarrow$ $(a_n)$ konvergent,\\sonst $(a_n)$ divergent
   \end{itemize}
 
   \paragraph{Nullfolge}
 $\lim\limits_{n \rightarrow \infty} (a_n) \rightarrow 0$
 
-  \paragraph{Satz 2.3 - Rechenregeln für Grenzwerte}
+  \paragraph{Satz 2.3 - Rechenregeln für Grenzwerte}\hspace{0pt}\\
   $(a_n)_{n \in \nat}$, $(b_n)_{n \in \nat}$ reelle Folgen, $\lim\limits_{n \rightarrow \infty} a_n = a$, $\lim\limits_{n \rightarrow \infty} b_n = b$
   \begin{itemize}
   \item Folge $(a_n + b_n)$ konvergiert gegen $a+b$
@@ -129,9 +132,11 @@ $\lim\limits_{n \rightarrow \infty} (a_n) \rightarrow 0$
 
 
   \paragraph{Def: 2.5 - Uneigentliche Konvergenz}\hspace{0pt} \\
-  $(a_n)_{a \in \nat}$ konvergiert uneigentlich gegen $\infty \Leftrightarrow \forall K > 0 \; \exists n_0 \in \nat \forall n \geq n_0: a_n > K$\\
-  $\aseq$ konvergiert uneigentlich gegen $-\infty \Leftrightarrow (-a_n)_{n \in \nat}$ konvergiert uneigentlich gegen $\infty$
-
+  \begin{itemize}
+  	\item $(a_n)_{a \in \nat}$ konvergiert uneigentlich gegen $\infty \Leftrightarrow\\\forall K > 0 \; \exists n_0 \in \nat \forall n \geq n_0: a_n > K$
+  	\item  $\aseq$ konvergiert uneigentlich gegen $-\infty \Leftrightarrow\\ (-a_n)_{n \in \nat}$ konvergiert uneigentlich gegen $\infty$
+  \end{itemize}
+ 
   \paragraph{Satz 2.6 - Rechenregeln für uneigentliche Konvergenz}\hspace{0pt} \\
   $(b_n)_{n \in \nat}$ reelle Folge, $\lim\limits_{n \rightarrow \infty} (b_n)_{n \in \nat} = \infty$, $\aseq$ reelle Folge, $\lim\limits_{n \rightarrow \infty} a_n = a, a \in \real \cup \{\infty, -\infty\}$
 
