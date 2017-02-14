@@ -72,7 +72,7 @@
 
 \begin{document}
 \begin{multicols*}{4}
-	
+
 	\section{Reelle Zahlen}
 	$(K,+,\cdot)$ angeordneter Körper, $X \subset K$ nicht leer
 	\paragraph{Sup, Inf, Max, Min}
@@ -118,7 +118,7 @@ $\lim\limits_{n \rightarrow \infty} (a_n) \rightarrow 0$
   \item $b \neq 0 \Rightarrow (\frac{a_n}{b_n})_{n \in \nat}$ konvergiert gegen $\frac{a}{b}$
   \item $a_n \leq b_n$ für fast alle $n \in \nat \rightarrow a \leq b$
   \item \textbf{Einschließungskriterium}\\$a=b \wedge a_n \leq c_n \leq b_n$ für fast alle $n \in \nat \Rightarrow c_n \rightarrow a$
-  
+
   \end{itemize}
 
   \textit{Spezialfall des Einschließungskriteriums:}\\$(x_n)_{n \in \nat} Folge, x \in R, (y_n)_{n \in \nat}$ Nullfolge, sodass $|x_n -x| \leq y_n$ für fast alle $n \Rightarrow (x_n)_{n \in \nat}$ konvergiert gegen $x$
@@ -137,7 +137,7 @@ $\lim\limits_{n \rightarrow \infty} (a_n) \rightarrow 0$
   	\item $(a_n)_{a \in \nat}$ konvergiert uneigentlich gegen $\infty \Leftrightarrow\\\forall K > 0 \; \exists n_0 \in \nat \forall n \geq n_0: a_n > K$
   	\item  $\aseq$ konvergiert uneigentlich gegen $-\infty \Leftrightarrow\\ (-a_n)_{n \in \nat}$ konvergiert uneigentlich gegen $\infty$
   \end{itemize}
- 
+
   \paragraph{Satz 2.6 - Rechenregeln für uneigentliche Konvergenz}\hspace{0pt} \\
   $(b_n)_{n \in \nat}$ reelle Folge, $\lim\limits_{n \rightarrow \infty} (b_n)_{n \in \nat} = \infty$, $\aseq$ reelle Folge, $\lim\limits_{n \rightarrow \infty} a_n = a, a \in \real \cup \{\infty, -\infty\}$
 
@@ -157,7 +157,7 @@ $\lim\limits_{n \rightarrow \infty} (a_n) \rightarrow 0$
   \item monoton fallend, falls  $a_{n+1} \leq a_n, \forall n \in \nat$
   \item streng monoton fallend, falls  $a_{n+1} < a_n, \forall n \in \nat$
   \end{itemize}
- 
+
  \paragraph{Monotoniesatz}
  $\aseq$ monoton wachsend $\wedge$ nach oben beschränkt $\Rightarrow \lim\limits_{n \rightarrow \infty} a_n = \underset{n \in \nat}{sup}\:a_n = sup\:\{a_n:n \in \nat\}$
 
@@ -239,11 +239,11 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
     $ P(z) := \sum_{k=0}^{\infty} c_kz^k; c_k \in \compl; z \in \compl\\R := \frac{1}{\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|c_k|}} :=$ Konvergenzradius
 
   \paragraph{Harmonische Reihe}
-  
+
   \paragraph{Cauchy-Produkt}
   \begin{itemize}
   \item Seien $ \sum_{k=0}^{\infty} a_k,\:\sum_{k=0}^{\infty} b_k$ absolut konvergent $ \in \compl \Rightarrow (\sum_{k=0}^{\infty} a_k) (\sum_{k=0}^{\infty} b_k) = (\sum_{m=0}^{\infty} c_m)$ mit $ c_m=(\sum_{k=0}^{m} a_kb_{m-k})$ mit $c_k$ absolut konvergent.
-  
+
   \item Seien $ \sum_{k=0}^{\infty} a_kz^k$, $\sum_{k=0}^{\infty} b_kz^k$ zwei Potenzreihen mit Konvergenzradien $R_a$ und $ R_b \Rightarrow (\sum_{k=0}^{\infty} a_kz^k)(\sum_{k=0}^{\infty} b_kz^k)=(\sum_{m=0}^{\infty} c_bz^m)$ mit $ c_m = \sum_{k=0}^{m} a_kb_{m-k}$ und Konvergenzradius $\min\{R_a,R_b\}$
   \end{itemize}
 
@@ -499,17 +499,17 @@ $f'(c) := \lim\limits_{x \rightarrow c} \frac{f(x)-f(c)}{x-c}$
 	$k: I \rightarrow \real^2$ zweimal stetig diff'bar, $t \in I: k$ in $t$ regulär:
 	\begin{itemize}
 		\item k nach Bogenlänge parametrisiert $\Rightarrow \kappa(t)=\langle k''(t), N(t) \wedge \lvert \kappa(t)\rvert = \lVert T'(t) \rVert = \lVert k''(t) \rVert$
-		\item $k(t) = 
+		\item $k(t) =
 		\begin{pmatrix}
 			x(t)\\y(t)\\
 		\end{pmatrix}
 		\Rightarrow \kappa(t)=\frac{x'(t)y''(t)-y'(t)x''(t)}{\sqrt{(x'(t)^2+y'(t)^2)^3}}$
 	\end{itemize}
   \section{Mehrdimensionale Differentialrechnung}
-	$M \subseteq \real^n$ offen, $f: M \rightarrow \real, x \in M$ 
+	$M \subseteq \real^n$ offen, $f: M \rightarrow \real, x \in M$
 	\paragraph{Richtungsableitung}
 	$ v \in \real^n \backslash \{0\}$ Richtungsvektor $\Rightarrow$ Richtungsableitung von $f$ in Richtung $v = \partial_vf(x)= \lim\limits_{x \rightarrow 0} \frac{f(x+tv)-f(x)}{t}$
-	
+
   \paragraph{Totale Differenzierbarkeit}
 $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \real^n \rightarrow \real^n, h \in \real^n \backslash \{0\}: \lim\limits_{h \rightarrow 0} \frac{f(x+h)-f(x)-Lh}{\lVert h \rVert} = \lim\limits_{h \rightarrow 0} \frac{f(x+h)-f(x)-\langle w,h \rangle}{\lVert h \rVert} = 0$
 
@@ -530,7 +530,7 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
  \paragraph{Taylor in höheren Dimensionen}
 
   % TODO: maybe remove that many pmatrices
-  
+
  $\arraycolsep=1.4pt\def\arraystretch{1}
  T_2f((x,y);(0,0))=f(0,0)+\langle f(0,0),
  \begin{pmatrix}
@@ -583,7 +583,7 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
 
   \paragraph{Mehrdimensionale Kettenregel}\hspace{0pt} \\
   $D(G \circ F)(c) = DG(F(c)) \cdot DF(c)$
-  
+
   \section{Mehrdimensionale Integralrechnung}
   % Sazu von Fubini?
 
@@ -622,7 +622,7 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   	\item $a^2>4b$: Löse $\lambda_{1,2}=\lambda^2+a\lambda + b = 0$
   	allg. Lsg.: $y(t)=c_1e^{\lambda_1t}+c_2e^{\lambda_2t}$
   	\item $a^2=4b$: $\lambda = - \frac{a}{2}$
-  	allg. Lsg.: $y(t)=(c_1+c_2)e^{\lambda t}$ 
+  	allg. Lsg.: $y(t)=(c_1+c_2)e^{\lambda t}$
   	\item $a^2<4b$: $\omega = \sqrt{b - (\frac{a}{2})^2}$\\
   	allg. Lsg.: $y(t)=(c_1cos(\omega t) + c_2sin(\omega t))e^{-\frac{a}{2}t}$
   \end{itemize}
@@ -643,7 +643,7 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
  \item Ermittle $a_1,\dots,a_n$ durch Koeffizientenvergleich
  \item Allg. Lsg.: $y(t)=y_h(t)+y_p(t)$
   \end{enumerate}
-  %TODO: compare with slides from Carlos at a later point in time. is this right? 
+  %TODO: compare with slides from Carlos at a later point in time. is this right?
 
     \paragraph{Meth. 6}\hspace{0pt}\\
     \begin{enumerate}
@@ -663,11 +663,11 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
     \end{enumerate}
 
   % TODO: compare with slides from Carlos at a later point in time. is this right?
-  
+
   \paragraph{Mehrdimensionale DGLs}
   Sei $\{v_1, \dots, v_n\} \subset \real^n$ Basis von Eigenvektoren von $A \in \real^{n\times n}$ zu EW $\lambda_1, \dots, \lambda_n$\\
   Lin. unabh. Lösungen v. DGL der Form $y'=Ay$: $y=e^{\lambda_jt}v_j$
-  
+
   \section{Komplexe Zahlen}
   $\compl = \{z \vert z=x+iy, x,y \in \real, i^2=-1\}$
   \begin{itemize}
@@ -676,7 +676,31 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   	\item $\displaystyle \frac{z_1}{z_2} = \frac{x_1x_2+y_1y_2}{x_2^2+y_2^2} + i \frac{x_2y_1-x_1y_2}{x_2^2+y_2^2} = \frac{z_1\overline{z_2}}{\lvert z_2 \rvert^2}$
   	\item $\lvert z \rvert = \sqrt{x^2+y^2}$
   	\item $\overline{z} = x-iy$
-  \end{itemize}
+        \end{itemize}
+
+        \paragraph{Bekannte Ableitungen}
+
+        \begin{multicols*}{2}
+        \hspace{0pt}\\$\frac{\mathrm d}{\mathrm d x} \left( arcsin(x) \right) = \frac{1}{\sqrt{1-x^2}};$\\
+        $\frac{\mathrm d}{\mathrm d x} \left( arccos(x) \right) = -\frac{1}{\sqrt{1-x^2}};$\\
+        $\frac{\mathrm d}{\mathrm d x} \left( arctan(x) \right) = \frac{1}{x^2+1};$\\
+        $\frac{\mathrm d}{\mathrm d x} \left( tan(x)    \right) = \frac{1}{cos^2(x)};$\\
+        $\frac{\mathrm d}{\mathrm d x} \left( arsinh(x) \right) = \frac{1}{\sqrt{x^2+1}};$\\
+        $\frac{\mathrm d}{\mathrm d x} \left( arcosh(x) \right) = \frac{1}{\sqrt{x-1}\sqrt{x+1}};$\\
+        $\frac{\mathrm d}{\mathrm d x} \left( artanh(x) \right) = \frac{1}{1-x^2};$\\
+        $\frac{\mathrm d}{\mathrm d x} \left( tanh(x)   \right) = \frac{1}{cosh^2(x)};$\\
+
+        \end{multicols*}
+
+        \paragraph{Bekannte Integrale}
+
+        \begin{multicols*}{2}
+          \hspace{0pt}\\$\int \left( ln(x)          \right) \mathrm{d}x = x \cdot ln(x)-x;$\\
+          $\int \left( sin(x)cos(x)   \right) \mathrm{d}x = -\frac{1}{2}cos^2(x);$\\
+          $\int \left( cos^2(x)       \right) \mathrm{d}x = \frac{1}{2}(x+sin(x)cos(x));$
+          $\int \left( sin^2(x)       \right) \mathrm{d}x = \frac{1}{2}(x-sin(x)cos(x));$
+        \end{multicols*}
+
 \end{multicols*}
 \end{document}
 
