@@ -686,30 +686,27 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   	\item $\overline{z} = x-iy$
         \end{itemize}
 
-        \paragraph{Bekannte Ableitungen}
 
-        \begin{multicols*}{2}
-        \hspace{0pt}\\$\frac{\mathrm d}{\mathrm d x} \left( arcsin(x) \right) = \frac{1}{\sqrt{1-x^2}};$\\
-        $\frac{\mathrm d}{\mathrm d x} \left( arccos(x) \right) = -\frac{1}{\sqrt{1-x^2}};$\\
-        $\frac{\mathrm d}{\mathrm d x} \left( arctan(x) \right) = \frac{1}{x^2+1};$\\
-        $\frac{\mathrm d}{\mathrm d x} \left( tan(x)    \right) = \frac{1}{cos^2(x)};$\\
-        $\frac{\mathrm d}{\mathrm d x} \left( arsinh(x) \right) = \frac{1}{\sqrt{x^2+1}};$\\
-        $\frac{\mathrm d}{\mathrm d x} \left( arcosh(x) \right) = \frac{1}{\sqrt{x-1}\sqrt{x+1}};$\\
-        $\frac{\mathrm d}{\mathrm d x} \left( artanh(x) \right) = \frac{1}{1-x^2};$\\
-        $\frac{\mathrm d}{\mathrm d x} \left( tanh(x)   \right) = \frac{1}{cosh^2(x)};$\\
+        \paragraph{Bekannte Abl. und Integrale}\hspace{0pt}\\
 
-        \end{multicols*}
+        \begin{tabular}{|l|l|l|}
+          \hline
+          $f(x)$         & $\frac{\mathrm d}{\mathrm d x} \left( f(x) \right)$  &  $\int \left( f(x) \right) \mathrm{d}x$ \\ \hline
+          $arcsin(x)$    & $\frac{1}{\sqrt{1-x^2}}$                             &  TODO                                   \\ \hline
+          $arccos(x)$    & $-\frac{1}{\sqrt{1-x^2}}$                            &                                         \\ \hline
+          $arctan(x)$    & $\frac{1}{x^2+1}$                                    &                                         \\ \hline
+          $arsinh(x)$    & $\frac{1}{\sqrt{x^2+1}}$                             &                                         \\ \hline
+          $arcosh(x)$    & $\frac{1}{\sqrt{x-1}\sqrt{x+1}}$                     &                                         \\ \hline
+          $artanh(x)$    & $\frac{1}{1-x^2}$                                    &                                         \\ \hline
+          $tan(x)$       & $\frac{1}{cos^2(x)}$                                 &                                         \\ \hline
+          $tanh(x)$      & $\frac{1}{cosh^2(x)}$                                &                                         \\ \hline
+          $sin(x)cos(x)$ &                                                      & $-\frac{1}{2}cos^2(x)$                  \\ \hline
+          $cos^2(x)$     &                                                      & $\frac{1}{2}(x+sin(x)cos(x))$           \\ \hline
+          $sin^2(x)$     &                                                      & $\frac{1}{2}(x-sin(x)cos(x))$           \\ \hline
+          $ln(x)$        & $\frac{1}{x}$                                        & $x \cdot ln(x)-x$                       \\ \hline
+        \end{tabular}
 
-        \paragraph{Bekannte Integrale}
 
-        \begin{multicols*}{2}
-          \hspace{0pt}\\$\int \left( ln(x)    \right) \mathrm{d}x = x \cdot ln(x)-x;$\\
-          $\int \left( sin(x)cos(x)           \right) \mathrm{d}x = -\frac{1}{2}cos^2(x);$\\
-          $\int \left( cos^2(x)               \right) \mathrm{d}x = \frac{1}{2}(x+sin(x)cos(x));$
-          $\int \left( sin^2(x)               \right) \mathrm{d}x = \frac{1}{2}(x-sin(x)cos(x));$\\
-          $\int \small( \frac{x}{\sqrt{1+x^2}} \small) \mathrm{d}x = \sqrt{1+x^2};$
-
-        \end{multicols*}
 
 \end{multicols*}
 \end{document}
