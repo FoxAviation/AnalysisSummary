@@ -210,14 +210,11 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
   \item $a_s \text{divergiert}\ \Rightarrow b_s$ divergiert
   \end{itemize}
 
-
   \paragraph{Quotientenkriterum}\hspace{0pt} \\
   $ \sum_{k=0}^{\infty} a_k, a \neq 0$ für fast alle $k \in \nat \wedge \lim\limits_{n \in \nat} \arrowvert \frac{a_{n+1}}{a_n} \arrowvert := q$ existiert $\Rightarrow \bigotimes$
 
-
   \paragraph{Wurzelkriterium}\hspace{0pt} \\
   $ \sum_{k=0}^{\infty} a_k;\:a_k \in \compl: q := \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\arrowvert a_k \arrowvert} \Rightarrow$ $\bigotimes$
-
 
   \paragraph{$\bigotimes$}
   \begin{itemize}
@@ -225,10 +222,8 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
   \item $q > 1 \Rightarrow$ Reihe divergiert
   \end{itemize}
 
-
   \paragraph{Leibnitz-Kriterium}
   $\aseq$ relle, monoton fallende Nullfolge $ \Rightarrow \sum_{k=0}^{\infty} (-1)^ka_k \Rightarrow \forall n \in \nat \lvert \sum_{k=0}^{\infty}(-1)^ka_k-s_n \rvert \leq  a_{n+1}$
-
 
   \paragraph{Umordnungssatz}\begin{itemize}
   \item Jede Umordnung einer konvergenten Reihe konvergiert gegen denselben Wert
@@ -286,12 +281,14 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
   \item $\exp(iz) = \cos(z)+i\sin(w)$
   \item $(\sin(z))^2+(\cos(z))^2=1$
   \item $\sin(z+w)=\sin(z)\cos(w)+\cos(z)\sin(w)$
+  \item $sin(2z)=2sin(z)cos(z)$
   \item $cos(z+w)=\cos(z)\sin(w)-\sin(z)\sin(w)$
   \item $\cos(x)=Re(e^{ix}) \; \sin(x)=Im(e^{ix})$
-  \item $z=\tan(c): \arctan'(z)=\frac{1}{\tan'(c)}=\frac{1}{1+(\tan(c))^2}=\frac{1}{1+z^2}$
-  \item $\arccos(x)+\arcsin(x)=\frac{\pi}{2}$
-  \item $sin(2z)=2sin(z)cos(z)$
   \item $cos(2z)=cos^2(z)-sin^2(z)$
+  \item $\arccos(x)+\arcsin(x)=\frac{\pi}{2}$
+  \item $z=\tan(c): \arctan'(z)=\frac{1}{\tan'(c)}=\frac{1}{1+(\tan(c))^2}=\frac{1}{1+z^2}$
+  \item $\cosh^2(x)=\frac{1}{2}\cosh(x)+\frac{1}{2}$
+  \item $\cosh^2(z) \cdot \sinh^2(x)=1$
   \end{itemize}
 
   \resizebox{.9\hsize}{!}{
@@ -526,8 +523,6 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   \partial_{n1}f(x) & \cdots & \partial_{nn}f(x)
  \end{pmatrix}$
 
-
-
  \paragraph{Taylor in höheren Dimensionen}
 
   % TODO: maybe remove that many pmatrices
@@ -679,7 +674,6 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   	\item $\overline{z} = x-iy$
         \end{itemize}
 
-
         \paragraph{Bekannte Abl. und Integrale}\hspace{0pt}\\
 
         \begin{tabular}{|c|c|c|}
@@ -697,15 +691,17 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
            $-2\sin(x)\cos(x)$                                   & $cos^2(x)$     & $\frac{1}{2}(x+sin(x)cos(x))$           \\ \hline
            $\sin(2x)$                                           & $sin^2(x)$     & $\frac{1}{2}(x-sin(x)cos(x))$           \\ \hline
            $\frac{1}{x}$                                        & $ln(x)$        & $x \cdot ln(x)-x$                       \\ \hline
+           $\frac{x}{\sqrt{1-x^2}}$                                        & $\sqrt{1-x^2}$        & $\frac{1}{2}(\sqrt{1-x^2}x+\sin^{-1}(x))$                       \\ \hline
         \end{tabular}
 
 
         \paragraph{Bekannte Reihen}\hspace{0pt}\\
-		\begin{itemize}
-			\item Harmonische Reihe: $\sum_{k=1}^{\infty}\frac{1}{k}=+\infty; \sum_{k=1}^{\infty}\frac{1}{k^a}=0 \ \forall a \geq 2;$
-			\item Potenzreihe: $\sum_{k=1}^{\infty}a_0q^k=\frac{a_0}{1-q} \ \forall |q| < 1$
-			\item Logarithmus Reihe: $\sum_{k=1}^{\infty}(-1)^{k+1}\frac{x^k}{k}$
-		\end{itemize}
+        \begin{tabular}{ll}
+	        Harmonische Reihe &  $\sum_{k=1}^{\infty}\frac{1}{k}=+\infty; \sum_{k=1}^{\infty}\frac{1}{k^a}=0 \ \forall a \geq 2;$\\
+	        Potenzreihe & $\sum_{k=1}^{\infty}a_0q^k=\frac{a_0}{1-q} \ \forall |q| < 1$\\
+	        Logarithmus Reihe & $\sum_{k=1}^{\infty}(-1)^{k+1}\frac{x^k}{k} = \ln(1+x)$\\
+	        Tangensreihe & $\sum_{k=0}^{\infty}(-1)^k\frac{x^{2k+1}}{2k+1} = \arctan(x)$ in $[-1,1]$
+        \end{tabular}
 	
 		\paragraph{Polarkoordinatentransformationsrezept}
 		\begin{enumerate}
