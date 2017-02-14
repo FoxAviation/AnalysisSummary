@@ -689,21 +689,21 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
 
         \paragraph{Bekannte Abl. und Integrale}\hspace{0pt}\\
 
-        \begin{tabular}{|l|l|l|}
+        \begin{tabular}{|c|c|c|}
           \hline
-           $\frac{\mathrm d}{\mathrm d x} \left( f(x) \right)$  & $f(x)$         & $\int \left( f(x) \right) \mathrm{d}x$ \\ \hline
-           $\frac{1}{\sqrt{1-x^2}}$                             & $arcsin(x)$    & TODO                                   \\ \hline
-           $-\frac{1}{\sqrt{1-x^2}}$                            & $arccos(x)$    &                                        \\ \hline
-           $\frac{1}{x^2+1}$                                    & $arctan(x)$    &                                        \\ \hline
-           $\frac{1}{\sqrt{x^2+1}}$                             & $arsinh(x)$    &                                        \\ \hline
-           $\frac{1}{\sqrt{x-1}\sqrt{x+1}}$                     & $arcosh(x)$    &                                        \\ \hline
-           $\frac{1}{1-x^2}$                                    & $artanh(x)$    &                                        \\ \hline
-           $\frac{1}{cos^2(x)}$                                 & $tan(x)$       &                                        \\ \hline
-           $\frac{1}{cosh^2(x)}$                                & $tanh(x)$      &                                        \\ \hline
-                                                                & $sin(x)cos(x)$ &$-\frac{1}{2}cos^2(x)$                  \\ \hline
-                                                                & $cos^2(x)$     &$\frac{1}{2}(x+sin(x)cos(x))$           \\ \hline
-                                                                & $sin^2(x)$     &$\frac{1}{2}(x-sin(x)cos(x))$           \\ \hline
-           $\frac{1}{x}$                                        & $ln(x)$        &$x \cdot ln(x)-x$                       \\ \hline
+           $\frac{\mathrm d}{\mathrm d x} \left( f(x) \right)$  & $f(x)$         & $\int \left( f(x) \right) \mathrm{d}x$  \\ \hline
+           $\frac{1}{\sqrt{1-x^2}}$                             & $arcsin(x)$    & $\sqrt{1-x^2}+x \sin^{-1}(x)$           \\ \hline
+           $-\frac{1}{\sqrt{1-x^2}}$                            & $arccos(x)$    & $x \ \arccos^{-1}(x)-\sqrt{1-x^2}$      \\ \hline
+           $\frac{1}{x^2+1}$                                    & $arctan(x)$    & $x \ \tan^{-1}(x)-\frac{1}{2}\ln(x^2+1)$\\ \hline
+           $\frac{1}{\sqrt{x^2+1}}$                             & $arsinh(x)$    & $x \sinh^{-1}(x)-\sqrt{x^2+1}$          \\ \hline
+           $\frac{1}{\sqrt{x-1}\sqrt{x+1}}$                     & $arcosh(x)$    & $x \cosh^{-1}(x)-\sqrt{x-1}\sqrt{x+1}$  \\ \hline
+           $\frac{1}{1-x^2}$                                    & $artanh(x)$    & $\frac{1}{2} \ln(1-x^2)+x \tanh^{-1}(x)$\\ \hline
+           $\frac{1}{cos^2(x)}$                                 & $tan(x)$       & $-\ln(\cos(x))$                         \\ \hline
+           $\frac{1}{cosh^2(x)}$                                & $tanh(x)$      & $\ln(\cosh(x))$                         \\ \hline
+           $\cos(2x)$                                           & $sin(x)cos(x)$ & $-\frac{1}{2}cos^2(x)$                  \\ \hline
+           $-2\sin(x)\cos(x)$                                   & $cos^2(x)$     & $\frac{1}{2}(x+sin(x)cos(x))$           \\ \hline
+           $\sin(2x)$                                           & $sin^2(x)$     & $\frac{1}{2}(x-sin(x)cos(x))$           \\ \hline
+           $\frac{1}{x}$                                        & $ln(x)$        & $x \cdot ln(x)-x$                       \\ \hline
         \end{tabular}
 
 
