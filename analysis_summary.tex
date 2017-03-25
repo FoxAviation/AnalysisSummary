@@ -77,13 +77,13 @@
 	$(K,+,\cdot)$ angeordneter Körper, $X \subset K$ nicht leer
 	\paragraph{Sup, Inf, Max, Min}
 	\begin{itemize}
-		\item $s \in K$ \textbf{Sup(X)} $\Leftrightarrow$ s kleinste obere Schranke
-		\item $s \in K$ \textbf{Inf(X)} $\Leftrightarrow$ s größte untere Schranke
-		\item $s \in K$ \textbf{Max(x)} $\Leftrightarrow s =$ inf(X) $\wedge s \in K$
-		\item $s \in K$ \textbf{Min(x)} $\Leftrightarrow s =$ inf(X) $\wedge s \in K$
+		\item $s \in K$ \textbf{sup(X)} $\Leftrightarrow$ s kleinste obere Schranke
+		\item $s \in K$ \textbf{inf(X)} $\Leftrightarrow$ s größte untere Schranke
+		\item $s \in K$ \textbf{max(X)} $\Leftrightarrow s =$ sup(X) $\wedge s \in K$
+		\item $s \in K$ \textbf{min(X)} $\Leftrightarrow s =$ inf(X) $\wedge s \in K$
 	\end{itemize}
-	\paragraph{$\epsilon-$Charakterisierung des Supremums}\hspace{0pt}\\
-	$s = \sup(X) \Leftrightarrow\forall \epsilon > 0 \ \exists x \in X: s-\epsilon < x \leq s$\\
+	\paragraph{$\varepsilon-$Charakterisierung des Supremums}\hspace{0pt}\\
+	$s = \sup(X) \Leftrightarrow\forall \varepsilon > 0 \ \exists x \in X: s-\varepsilon < x \leq s$\\
 	\textit{Entsprechendes gilt für das Infimum}
 	\paragraph{Rechenregeln für sup}
 	$X,Y \subset \real$ nach oben beschränkt:
@@ -96,7 +96,7 @@
 \paragraph{Archimedische Anordnung}
 \begin{itemize}
 	\item $\real$ archimedisch angeordnet $\Rightarrow \forall x \in \real \ \exists n \in \nat: n > x$
-	\item $\forall \epsilon > 0 \ \exists n \in \nat: \frac{1}{n} < \epsilon$
+	\item $\forall \varepsilon > 0 \ \exists n \in \nat: \frac{1}{n} < \varepsilon$
 	\item $\forall a,b \in \real: a < b: \exists q \in \mathbb{Q}: a<q<b$
 \end{itemize}
 
@@ -273,7 +273,7 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
   $\cosh(x):=\frac{1}{2}(e^x+e^{-x})=\sum_{k=0}^{\infty}\frac{x^{2k}}{(2n)!}$\\
   $\tanh(x):=\frac{\cosh(x)}{\sinh(x)}$
 
-  \paragraph{Eigenschaften v. sin, cos, tan}
+  \paragraph{Eigenschaften von sin, cos, tan}
   $\forall z,w \in \compl, x \in \real$
 
   % TODO: Add more equations to the following list!!
@@ -288,7 +288,7 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
   \item $\arccos(x)+\arcsin(x)=\frac{\pi}{2}$
   \item $z=\tan(c): \arctan'(z)=\frac{1}{\tan'(c)}=\frac{1}{1+(\tan(c))^2}=\frac{1}{1+z^2}$
   \item $\cosh^2(x)=\frac{1}{2}\cosh(x)+\frac{1}{2}$
-  \item $\cosh^2(z) \cdot \sinh^2(x)=1$
+  \item $\cosh^2(z) - \sinh^2(z)=1$
   \end{itemize}
 
   \resizebox{.9\hsize}{!}{
@@ -319,7 +319,7 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
 
 
   \paragraph{$\varepsilon$-$\delta$-Charakterisierung}
-  $D \subseteq \real, f \rightarrow \real, c \in D \Rightarrow f$ stetig in $c \Leftrightarrow \forall \varepsilon > 0 \exists \delta > 0: \forall x \in D: \lvert x - c \rvert < \delta \Rightarrow \lvert f(x)-f(c)\rvert < \varepsilon$
+  $D \subseteq \real, f: D \rightarrow \real, c \in D \Rightarrow f$ stetig in $c \Leftrightarrow \forall \varepsilon > 0 \exists \delta > 0: \forall x \in D: \lvert x - c \rvert < \delta \Rightarrow \lvert f(x)-f(c)\rvert < \varepsilon$
 
 
   \paragraph{Zwischenwertsatz}
@@ -403,6 +403,8 @@ $f'(c) := \lim\limits_{x \rightarrow c} \frac{f(x)-f(c)}{x-c}$
 
   \paragraph{Taylor}\hspace{0pt} \\
   $ n \in \{\nat \cup \infty\}: T_nf(x;c):= \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k$
+  %TODO: Potenzreihen: n-ter Taylor = n-te Partialsumme
+  
   \section{Integration}
 
 
@@ -441,7 +443,7 @@ $f'(c) := \lim\limits_{x \rightarrow c} \frac{f(x)-f(c)}{x-c}$
 
 	\paragraph{Folgerung z. uneig. Integrierbarkeit}
 	\begin{itemize}
-		\item $f: (a,b] \rightarrow \real$ auf allen Teilintervallen $\in (a,b]$ integrierbar, $f(x)=\laO(\frac{1}{\lvert x-a \rvert ^s})$ für $x \rightarrow a$ mit $s \in [0,1) \Rightarrow$ f über $[a,b)$ uneig. integrierbar
+		\item $f: (a,b] \rightarrow \real$ auf allen Teilintervallen $\in (a,b]$ integrierbar, $f(x)=\laO(\frac{1}{\lvert x-a \rvert ^s})$ für $x \rightarrow a$ mit $s \in [0,1) \Rightarrow$ f über $(a,b]$ uneig. integrierbar
 		\item $f: [a,\infty) \rightarrow \real, a<b$ integrierbar, $f(x)=\laO(\frac{1}{x^s})$ mit $x \rightarrow \infty$, $s > 1 \Rightarrow f$ über $[a,\infty]$ uneig. integrierbar
 	\end{itemize}
 
@@ -462,7 +464,7 @@ $f'(c) := \lim\limits_{x \rightarrow c} \frac{f(x)-f(c)}{x-c}$
   \item k regulär in $t \Leftrightarrow k'(t) \neq 0$, sonst singulär
   \item k singulär in t $\Rightarrow \nexists$ Tangentialvektor
   \item $k'(t)=(k'_1(t),...,)$ Tangentialvektor
-  \item $T_k(t)=\frac{1}{\lVert k'(t)\rVert_2}$ Tangentialeinheitsvektor in t
+  \item $T_k(t)=\frac{k'(t)}{\lVert k'(t)\rVert_2}$ Tangentialeinheitsvektor in t
   \end{itemize}
 
 
@@ -648,15 +650,14 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
     \begin{enumerate}
     	\item Bestimme allg. Lsg. $y_h(t)$ von $y''_h(t)+ay'_h(t)+by_h(t)=0$
     \item Löse $\lambda^2+a\lambda+b=0$
-    \item $y_p(t) =
+    \item In Abhängigkeit von $k$:\\$y_p(t) =
     \begin{cases}
     ke^{ct}    & \quad \lambda_1 \neq c \neq \lambda_2 \\
     kte^{ct}   & \quad \lambda_1 = c \neq \lambda_2 \ \text{oder}\ \lambda_1 \neq c = \lambda_2 \\
     kt^2e^{ct} & \quad  \lambda_1 = c = \lambda_2 \\
     \end{cases}
     $
-    \item In Abhängigkeit von $k$;
-    $y''_p(t)+ay'_p(t)+by_p(t)=e^{ct}$
+    \item $y''_p(t)+ay'_p(t)+by_p(t)=e^{ct}$
     ermittle $k$
     \item Allg. Lsg.: $y(t)=y_h(t)+y_p(t)$
     \end{enumerate}
@@ -667,7 +668,7 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   Lin. unabh. Lösungen v. DGL der Form $y'=Ay$: $y=e^{\lambda_jt}v_j$
 
   \paragraph{Satz von Picard-Lindelöf}
-  $f$ stetig diff'bar bzgl. y, stetig in t $\Rightarrow$ AWP $y'=f(t,y), y(t_0)=y_0$ auf $(t_0-\epsilon, t_0+\epsilon)$ genau eine Lösung (für $\epsilon > 0$ klein genug)
+  $f$ stetig diff'bar bzgl. y, stetig in t $\Rightarrow$ AWP $y'=f(t,y), y(t_0)=y_0$ auf $(t_0-\varepsilon, t_0+\varepsilon)$ genau eine Lösung (für $\varepsilon > 0$ klein genug)
   \section{Komplexe Zahlen}
   $\compl = \{z \vert z=x+iy, x,y \in \real, i^2=-1\}$
   \begin{itemize}
@@ -704,8 +705,10 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
         \begin{tabular}{ll}
 	        Harmonische Reihe &  $\sum_{k=1}^{\infty}\frac{1}{k}=+\infty; \sum_{k=1}^{\infty}\frac{1}{k^a}=0 \ \forall a \geq 2;$\\
 	        Potenzreihe & $\sum_{k=1}^{\infty}a_0q^k=\frac{a_0}{1-q} \ \forall |q| < 1$\\
-	        Logarithmus Reihe & $\sum_{k=1}^{\infty}(-1)^{k+1}\frac{x^k}{k} = \ln(1+x)$\\
-	        Tangensreihe & $\sum_{k=0}^{\infty}(-1)^k\frac{x^{2k+1}}{2k+1} = \arctan(x)$ in $[-1,1]$
+	        Logarithmusreihe & $\sum_{k=1}^{\infty}(-1)^{k+1}\frac{x^k}{k} = \ln(1+x)$\\
+	        Arcus-Tangens-Reihe & $\sum_{k=0}^{\infty}(-1)^k\frac{x^{2k+1}}{2k+1} = \arctan(x)$ in $[-1,1]$\\
+	        Exponentialreihe & $\sum_{k=0}^{\infty} \frac{z^k}{k!} = exp(z)$\\
+	        & $\sum_{k=0}^{\infty} \frac{1}{k!} = e$
         \end{tabular}
 
 		\paragraph{Polarkoordinatentransformationsrezept}
@@ -713,12 +716,13 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
 			\item Ersetze $dydx$ bzw. $dxdy$ durch $r \cdot d\varphi dr$
 			\item Überlege Grenzen von $\varphi$ und $r$ graphisch
 			\item Ersetze $x$ des Integranten durch $r\cdot \cos(\varphi)$
+			\item Ersetze $y$ des Integranten durch $r\cdot \sin(\varphi)$
 		\end{enumerate}
 	\paragraph{Allgemeines}
 		\begin{itemize}
 			\item $k! \geq 2^{n+1}$
 			\item $x>0 \Rightarrow e^x > \frac{x^{n+1}}{(n+1)!}$
-			\item $\lvert \lvert a \rvert- \lvert b \rvert \rvert \leq \lvert a-b \rvert \leq \lvert a \rvert + \lvert b \rvert$
+			\item $\lvert \lvert a \rvert- \lvert b \rvert \rvert \leq \lvert a-b \rvert \leq \lvert a \rvert + \lvert b \rvert$, $\lvert a+b \rvert \leq \lvert a \rvert + \lvert b \rvert$
 			\item $\frac{1}{e} = \lim\limits_{x \rightarrow \infty} (\frac{k}{k+1})^k$
 		\end{itemize}
 \end{multicols*}
