@@ -1,4 +1,4 @@
-\documentclass[paper=a3,paper=landscape, fontsize=9pt,DIV=30]{scrartcl}
+\documentclass[paper=a3,paper=landscape, fontsize=9pt, DIV=30]{scrartcl}
 
 % Text libs
 \usepackage{fontspec}
@@ -47,8 +47,6 @@
   {0.5ex plus .2ex}%
   {\normalfont\normalsize\bfseries}}
 
-
-
 % Don't print section numbers
 \setcounter{secnumdepth}{0}
 
@@ -67,12 +65,11 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0,5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{+0.15in}
+\addtolength{\topmargin}{+0.10in}
 \addtolength{\textheight}{0.3in}
 
 \begin{document}
 \begin{multicols*}{4}
-
 	\section{Reelle Zahlen}
 	$(K,+,\cdot)$ angeordneter Körper, $X \subset K$ nicht leer
 	\paragraph{Sup, Inf, Max, Min}
@@ -402,8 +399,11 @@ $f'(c) := \lim\limits_{x \rightarrow c} \frac{f(x)-f(c)}{x-c}$
 
 
   \paragraph{Taylor}\hspace{0pt} \\
-  $ n \in \{\nat \cup \infty\}: T_nf(x;c):= \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k$
-  %TODO: Potenzreihen: n-ter Taylor = n-te Partialsumme
+  \begin{itemize}
+  	\item $ n \in \{\nat \cup \infty\}: T_nf(x;c):= \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k$
+  	\item Potenzreihen: Das n-te Taylorpolynom (im Nullpunkt) von Potenzreihen ist deren n-te Partialsumme
+  \end{itemize}
+
   
   \section{Integration}
 
@@ -703,10 +703,10 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
 
         \paragraph{Bekannte Reihen}\hspace{0pt}\\
         \begin{tabular}{ll}
-	        Harmonische Reihe &  $\sum_{k=1}^{\infty}\frac{1}{k}=+\infty; \sum_{k=1}^{\infty}\frac{1}{k^a}=0 \ \forall a \geq 2;$\\
-	        Potenzreihe & $\sum_{k=1}^{\infty}a_0q^k=\frac{a_0}{1-q} \ \forall |q| < 1$\\
-	        Logarithmusreihe & $\sum_{k=1}^{\infty}(-1)^{k+1}\frac{x^k}{k} = \ln(1+x)$\\
-	        Arcus-Tangens-Reihe & $\sum_{k=0}^{\infty}(-1)^k\frac{x^{2k+1}}{2k+1} = \arctan(x)$ in $[-1,1]$\\
+	        Harmonische Reihe &  $\sum_{k=1}^{\infty}\frac{1}{k}=+\infty; \sum_{k=1}^{\infty}\frac{1}{k^a}=0 \ \forall a \geq 2;$\vspace{2pt}\\\vspace{1pt}
+	        Potenzreihe & $\sum_{k=1}^{\infty}a_0q^k=\frac{a_0}{1-q} \ \forall |q| < 1$\\\vspace{2pt}
+	        Logarithmusreihe & $\sum_{k=1}^{\infty}(-1)^{k+1}\frac{x^k}{k} = \ln(1+x)$\\\vspace{2pt}
+	        Arcus-Tangens-Reihe & $\sum_{k=0}^{\infty}(-1)^k\frac{x^{2k+1}}{2k+1} = \arctan(x)$ in $[-1,1]$\\\vspace{2pt}
 	        Exponentialreihe & $\sum_{k=0}^{\infty} \frac{z^k}{k!} = exp(z)$\\
 	        & $\sum_{k=0}^{\infty} \frac{1}{k!} = e$
         \end{tabular}
