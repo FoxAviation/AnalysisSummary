@@ -292,11 +292,9 @@ $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \righ
     \begin{tabular}{c|c|c|c|c|c}
       &$0$                     &$\frac{\pi}{6}=30°$               &$\frac{\pi}{4}=45°$                      &$\frac{\pi}{3}=60°$               &$\frac{\pi}{2}=90°$\\ \hline
       $\sin$ &$\frac{\sqrt{0}}{2}=0$  &$\frac{\sqrt{1}}{2}=\frac{1}{2}$  &$\frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$  &$\frac{\sqrt{3}}{2}$              &$\frac{\sqrt{4}}{2}=1$\\
-      $\cos$ &$\frac{\sqrt{4}}{2}=1$  &$\frac{\sqrt{3}}{2}$              &$\frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$  &$\frac{\sqrt{1}}{2}=\frac{1}{2}$  &$\frac{\sqrt{0}}{2}=0$\\
+      $\cos$ &$\frac{\sqrt{4}}{2}=1$  &$\frac{\sqrt{3}}{2}$              &$\frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$  &$\frac{\sqrt{1}}{2}=\frac{1}{2}$  &$\frac{\sqrt{0}}{2}=0$
     \end{tabular}
-  }
-
-
+}
 
   \section{Stetigkeit}
 
@@ -700,6 +698,14 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
            $\frac{x}{\sqrt{1-x^2}}$                             & $\sqrt{1-x^2}$   & $\frac{1}{2}(\sqrt{1-x^2}x+\sin^{-1}(x))$  \\ \hline
         \end{tabular}
 
+		\paragraph{Landau-Notation}
+		\begin{itemize}
+			\item $f \in \laO(g) \leftrightarrow \lim\limits_{n \rightarrow \infty} \frac{\lvert f(x) \rvert}{g(x)} < \infty$
+			\item $f \in o(g) \leftrightarrow \lim\limits_{n \rightarrow \infty} \frac{\lvert f(x) \rvert}{g(x)} = 0$
+			\item $f \in \Omega(g) \leftrightarrow \lim\limits_{n \rightarrow \infty} \frac{g(x)}{\lvert f(x) \rvert} < \infty$
+			\item $f \in \omega(g) \leftrightarrow \lim\limits_{n \rightarrow \infty} \frac{g(x)}{\lvert f(x) \rvert} = 0$
+		\end{itemize}
+		
 
         \paragraph{Bekannte Reihen}\hspace{0pt}\\
         \begin{tabular}{ll}
@@ -724,6 +730,7 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
 			\item $x>0 \Rightarrow e^x > \frac{x^{n+1}}{(n+1)!}$
 			\item $\lvert \lvert a \rvert- \lvert b \rvert \rvert \leq \lvert a-b \rvert \leq \lvert a \rvert + \lvert b \rvert$, $\lvert a+b \rvert \leq \lvert a \rvert + \lvert b \rvert$
 			\item $\frac{1}{e} = \lim\limits_{x \rightarrow \infty} (\frac{k}{k+1})^k$
+			\item $\forall n > 0: (1+x)^n \geq 1+nx$ (Bernoulli-Ungleichung)
 		\end{itemize}
 \end{multicols*}
 \end{document}
