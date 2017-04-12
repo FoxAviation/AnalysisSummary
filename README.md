@@ -7,6 +7,9 @@ Diese Merkhilfe ist ist von Studenten für Studenten entstanden und kein offizie
 ## Korrekturen & Vorschläge
 Bei Wünschen oder Korrekturvorschlägen lege bitte ein entsprechendes "Issue" an oder kontaktiere einen der Mitarbeitenden anderweitig, falls Du kein GitHub-Konto besitzt. Schließlich soll diese Merkhilfe sich kontinuierlich verbessern.
 
+## Wanted
+Wir würden gerne continious integration integrieren und bei jedem commit automatisch (z.B. mit einem Docker-Container, ...) das entsprechende .pdf generieren. Hierzu brauchen wir Deine Hilfe, wenn Du Dich in diesem Bereich ein bisschen auskennst.
+
 ## Kompilierung
 Nutzung von xelatex notwendig.
 
