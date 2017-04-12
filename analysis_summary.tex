@@ -686,6 +686,25 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   	\item $\overline{z} = x-iy$
         \end{itemize}
 
+	\section{Koordinatentransformation}
+		\paragraph{2D - Kreiskoordinaten}\hspace{0pt}\\
+		$
+			\begin{pmatrix} x\\y \end{pmatrix} \mapsto r \begin{pmatrix} \cos (\varphi) \\  \sin (\varphi) \end{pmatrix},
+			\quad dxdy \mapsto r \cdot \r drd\varphi
+		$
+		
+		\paragraph{3D - Kugelkoordinaten}\hspace{0pt}\\
+		$
+		\begin{pmatrix} x\\y\\z \end{pmatrix} \mapsto r \begin{pmatrix} \sin (\theta) \cos (\varphi) \\  \sin (\theta) \sin (\varphi) \\ \cos(\theta) \end{pmatrix},
+		\quad dxdydz \mapsto r^2 \sin(\theta) drd\theta d\varphi
+		$
+		
+		\paragraph{3D - Zylinderkoordinaten}\hspace{0pt}\\
+		$
+		\begin{pmatrix} x\\y\\z \end{pmatrix} \mapsto \begin{pmatrix} r \cdot \cos (\varphi) \\  r \cdot \sin (\varphi) \\ z \end{pmatrix},
+		\quad dxdydz \mapsto r \cdot drd\varphi dz
+		$
+		
 \section{Sonstiges}
         \paragraph{Bekannte Abl. und Integrale}\hspace{0pt}\\
 
@@ -726,13 +745,6 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
 	        & $\sum_{k=0}^{\infty} \frac{1}{k!} = e$
         \end{tabular}
 
-		\paragraph{Polarkoordinatentransformationsrezept}
-		\begin{enumerate}
-			\item Ersetze $dydx$ bzw. $dxdy$ durch $r \cdot d\varphi dr$
-			\item Überlege Grenzen von $\varphi$ und $r$ graphisch
-			\item Ersetze $x$ des Integranten durch $r\cdot \cos(\varphi)$
-			\item Ersetze $y$ des Integranten durch $r\cdot \sin(\varphi)$
-		\end{enumerate}
 	\paragraph{Allgemeines}
 		\begin{itemize}
 			\item $k! \geq 2^{n+1}$
