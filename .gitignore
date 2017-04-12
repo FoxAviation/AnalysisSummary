@@ -12,7 +12,7 @@
 *.cb2
 
 ##Ignore PDF files
-*.pdf
+##*.pdf
 
 ## Intermediate documents:
 *.dvi
