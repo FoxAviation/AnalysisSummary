@@ -5,7 +5,7 @@ Zusammenfassung für die Vorlesung Analysis für Informatiker der TUM im Winters
 Diese Merkhilfe erhebt keinerlei Anspruch auf Richtigkeit, Vollständigkeit und Konformität mit den Vorgaben zur Verwendung von Hilfsmitteln in Prüfungsleistungen. Dieses Repository ist lizensiert durch die GNU GPLv3.
 
 ## Korrekturen & Vorschläge
-Bei Wünschen oder Korrekturvorschlägen lege bitte ein entsprechendes "Issue" an oder kontaktiere uns anderweitig. Schließlich soll diese Merkhilfe sich kontinuierlich verbessern.
+Bei Wünschen oder Korrekturvorschlägen lege bitte ein entsprechendes "Issue" an oder kontaktiere einen der Mitarbeitenden anderweitig, falls Du kein GitHub-Konto besitzt. Schließlich soll diese Merkhilfe sich kontinuierlich verbessern.
 
 ## Kompilierung
 Nutzung von xelatex notwendig.
