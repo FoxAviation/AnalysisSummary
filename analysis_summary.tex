@@ -191,11 +191,16 @@ $z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \
 \begin{itemize}
 	\item $z_n = a_n + ib_n$ konvergiert $\Leftrightarrow$ $a_n$ und $b_n$ konvergieren
 	\item $z_n$ konvergent $\Rightarrow \lim\limits_{n \rightarrow \infty} z_n = \lim\limits_{n \rightarrow \infty} a_n + i \cdot \lim\limits_{n \rightarrow \infty} b_n$
+	\item $z_n$ konvergent $\Rightarrow \lvert z_n \rvert$ konvergent
 \end{itemize}
 
 
 \paragraph{Grenzwert mehrdimensionaler Folgen}\hspace{0pt} \\
-$\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_2 = 0 \Leftrightarrow \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_\infty = 0 $
+\begin{itemize}
+	\item $z_n$ konvergent $\Leftrightarrow \forall i \in [0, n] : z_i$ konvergent
+	\item $\lim\limits_{n \rightarrow \infty} v_n = v \Leftrightarrow \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_2 = 0 \Leftrightarrow \lim\limits_{n \rightarrow \infty} \Arrowvert v_n - v\Arrowvert_\infty = 0 $
+\end{itemize}
+
 
   \section{Reihen}
 
@@ -408,6 +413,7 @@ $f'(c) := \lim\limits_{x \rightarrow c} \frac{f(x)-f(c)}{x-c}$
   \paragraph{Taylor}\hspace{0pt} \\
   \begin{itemize}
   	\item $ n \in \{\nat \cup \infty\}: T_nf(x;c):= \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k$
+  	\item $T_n(f \cdot g)=T_nf \cdot T_ng$
   	\item Potenzreihen: Das n-te Taylorpolynom (im Nullpunkt) von Potenzreihen ist deren n-te Partialsumme
   \end{itemize}
 
@@ -536,29 +542,8 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   \partial_{n1}f(x) & \cdots & \partial_{nn}f(x)
  \end{pmatrix}$
 
- \paragraph{Taylor in höheren Dimensionen}
-
-  % TODO: maybe remove that many pmatrices
-
- $\arraycolsep=1.4pt\def\arraystretch{1}
- T_2f((x,y);(0,0))=f(0,0)+\langle f(0,0),
- \begin{pmatrix}
-   x\\
-   y
- \end{pmatrix}
- \rangle + \frac{1}{2}
- \begin{pmatrix}
-   x&y
- \end{pmatrix}
- (\nabla^2f
- \begin{pmatrix}
-   x&y
- \end{pmatrix}
- )
- \begin{pmatrix}
-   x&y
- \end{pmatrix}
- $
+ \paragraph{Taylor in höheren Dimensionen}\hspace{0pt}\\
+ $T_nf((\begin{smallmatrix} x\\y \end{smallmatrix}), (\begin{smallmatrix} a\\b \end{smallmatrix})) = \sum_{j+k=0}^{n} \frac{\partial_x^j\partial_y^kf(\begin{smallmatrix} a\\b \end{smallmatrix})}{j! \; k!} (x-a)^j(y-b)^k$
 
   \paragraph{Extrema/Kritische Punkte}
   \begin{itemize}
@@ -686,8 +671,11 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
   	\item $z_1+z_2 = (x_1 \pm x_2)+i(y_1 \pm y_2)$
   	\item $z_1 \cdot z_2 = x_1x_2-y_1y_2+i(x_1y_2+x_2y_1)$
   	\item $\displaystyle \frac{z_1}{z_2} = \frac{x_1x_2+y_1y_2}{x_2^2+y_2^2} + i \frac{x_2y_1-x_1y_2}{x_2^2+y_2^2} = \frac{z_1\overline{z_2}}{\lvert z_2 \rvert^2}$
-  	\item $\lvert z \rvert = \sqrt{x^2+y^2}$
+  	\item $\lvert z \rvert = \sqrt{x^2+y^2} = \sqrt{z \cdot \overline{z}}$
+  	\item  $\varphi=\arctan(\frac{x}{y})$, $r=\lvert z \rvert$, $x = r \cdot \cos(\varphi)$, $y = r \cdot \sin(\varphi)$
   	\item $\overline{z} = x-iy$
+  	\item $z = r(\cos(\varphi) + i \sin(\varphi))=r \cdot e^{i\varphi}$
+  	
         \end{itemize}
 
 	\section{Koordinatentransformation}
