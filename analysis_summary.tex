@@ -42,6 +42,7 @@
 \newcommand{\natnull}{\mathbb{N}_0}
 \newcommand{\laO}{\mathcal{O}}
 \newcommand{\aseq}{(a_n)_{n \in \nat}}
+\newcommand{\bseq}{(b_n)_{n \in \nat}}
 \newcommand{\srow}{(s_n)_{n \in \nat}}
 
 % Redefine section commands to use less space
@@ -144,14 +145,14 @@ $\lim\limits_{n \rightarrow \infty} (a_n) \rightarrow 0$
   \end{itemize}
 
   \paragraph{Satz 2.6 - Rechenregeln für uneigentliche Konvergenz}\hspace{0pt} \\
-  $(b_n)_{n \in \nat}$ reelle Folge, $\lim\limits_{n \rightarrow \infty} (b_n)_{n \in \nat} = \infty$, $\aseq$ reelle Folge, $\lim\limits_{n \rightarrow \infty} a_n = a, a \in \real \cup \{\infty, -\infty\}$
+  $\aseq, \bseq$ reelle Folgen\\$\lim\limits_{n \rightarrow \infty} (b_n)_{n \in \nat} = \infty$, $\lim\limits_{n \rightarrow \infty} a_n = a, a \in \real \cup \{\infty, -\infty\}$
 
   \begin{itemize}
   \item $a \neq -\inf \Rightarrow (a_n+b_n)_{n \in \nat} \rightarrow \infty$
   \item $a \neq 0 \Rightarrow (a_n \cdot b_n)_{n \in \nat}$ konvergiert
   \item $a > 0 \Rightarrow \lim\limits_{n \rightarrow \infty} a_nb_n = \infty$
   \item $a < 0 \Rightarrow \lim\limits_{n \rightarrow \infty} a_nb_n = -\infty$
-  \item $a \notin \{-\infty, \infty\} \vee\aseq \text{ beschränkt } \Rightarrow (\frac{a_n}{b_n})_{n \in \nat} \rightarrow 0$
+  \item $a \notin \{-\infty, \infty\} \vee \aseq \text{ beschränkt } \Rightarrow (\frac{a_n}{b_n})_{n \in \nat} \rightarrow 0$
   \end{itemize}
 
   \paragraph{Def 2.7 - Monotone Folgen}
