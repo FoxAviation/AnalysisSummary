@@ -243,6 +243,10 @@ $z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \
 
   \paragraph{Potenzreihe}
     $ P(z) := \sum_{k=0}^{\infty} c_kz^k; c_k \in \compl; z \in \compl\\R := \frac{1}{\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|c_k|}} :=$ Konvergenzradius
+    \begin{itemize}
+    	\item $\lvert z \rvert < R \Rightarrow P(z)$ konvergiert
+    	\item $\lvert z \rvert > R \Rightarrow P(z)$ divergiert
+    \end{itemize}
 
 
   \paragraph{Cauchy-Produkt}
@@ -274,15 +278,15 @@ $z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \
   \item $e^{ix}=\cos(x)+i\sin(x)$
   \end{itemize}
 
- %TODO: cosh, sinh, ...
-
   \paragraph{Trigonometrische Funktionen}\hspace{0pt} \\
-  $\sin(z):=\frac{e^{iz}-e^{-iz}}{2i} = \sum_{k=0}^{\infty} (-1)^k \frac{z^{2k+1}}{(2k+1)!}\\
-  \cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!}$\\
-  $\arctan(x):=\sum_{k=0}^{\infty}(-1)^k \frac{x^{2k+1}}{2k+1}$\\
-  $\sinh(x):=\frac{1}{2}(e^x-e^{-x})=\sum_{k=0}^{\infty}\frac{x^{2k+1}}{(2n+1)!}$\\
-  $\cosh(x):=\frac{1}{2}(e^x+e^{-x})=\sum_{k=0}^{\infty}\frac{x^{2k}}{(2n)!}$\\
-  $\tanh(x):=\frac{\cosh(x)}{\sinh(x)}$
+  $\sin(z):=\frac{e^{iz}-e^{-iz}}{2i} = \sum_{k=0}^{\infty} (-1)^k \frac{z^{2k+1}}{(2k+1)!} = x-\frac{x^3}{6}+\frac{x^5}{120}+\laO(x^7)\\
+  \cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!} = 1-\frac{x^2}{2}+\frac{x^4}{24} + \frac{x^6}{720} + \laO (x^7)\\
+  \arcsin(x) = x + \frac{x^6}{6} + \frac{3x^5}{40} + \laO (x^7)\\
+  \arccos(x) = \frac{\pi}{2} - x - \frac{x^3}{6} - \frac{3x^5}{40} + \laO(x^7)\\
+  \arctan(x):=\sum_{k=0}^{\infty}(-1)^k \frac{x^{2k+1}}{2k+1} = x - \frac{x^3}{3} + \frac{x^5}{5} + \laO(x^7)$\\
+  $\sinh(x):=\frac{1}{2}(e^x-e^{-x})=\sum_{k=0}^{\infty}\frac{x^{2k+1}}{(2n+1)!} = x + \frac{x^3}{6} + \frac{x^5}{120} + \laO(x^7)$\\
+  $\cosh(x):=\frac{1}{2}(e^x+e^{-x})=\sum_{k=0}^{\infty}\frac{x^{2k}}{(2n)!} = 1 + \frac{x^2}{2} + \frac{x^4}{24} + \frac{x^6}{720} + \laO(x^7)$\\
+  $\tanh(x):=\frac{\cosh(x)}{\sinh(x)} = x + \frac{x^3}{3} + \frac{2x^5}{15} + \laO (x^7)$
 
   \paragraph{Eigenschaften von sin, cos, tan}
   $\forall z,w \in \compl, x \in \real$
