@@ -279,27 +279,29 @@ $z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \
   \end{itemize}
 
   \paragraph{Trigonometrische Funktionen}\hspace{0pt} \\
-  $\sin(z):=\frac{e^{iz}-e^{-iz}}{2i} = \sum_{k=0}^{\infty} (-1)^k \frac{z^{2k+1}}{(2k+1)!} = x-\frac{x^3}{6}+\frac{x^5}{120}+\laO(x^7)\\
-  \cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!} = 1-\frac{x^2}{2}+\frac{x^4}{24} + \frac{x^6}{720} + \laO (x^7)\\
-  \arcsin(x) = x + \frac{x^6}{6} + \frac{3x^5}{40} + \laO (x^7)\\
-  \arccos(x) = \frac{\pi}{2} - x - \frac{x^3}{6} - \frac{3x^5}{40} + \laO(x^7)\\
-  \arctan(x):=\sum_{k=0}^{\infty}(-1)^k \frac{x^{2k+1}}{2k+1} = x - \frac{x^3}{3} + \frac{x^5}{5} + \laO(x^7)$\\
-  $\sinh(x):=\frac{1}{2}(e^x-e^{-x})=\sum_{k=0}^{\infty}\frac{x^{2k+1}}{(2n+1)!} = x + \frac{x^3}{6} + \frac{x^5}{120} + \laO(x^7)$\\
-  $\cosh(x):=\frac{1}{2}(e^x+e^{-x})=\sum_{k=0}^{\infty}\frac{x^{2k}}{(2n)!} = 1 + \frac{x^2}{2} + \frac{x^4}{24} + \frac{x^6}{720} + \laO(x^7)$\\
-  $\tanh(x):=\frac{\sinh(x)}{\cosh(x)} = x + \frac{x^3}{3} + \frac{2x^5}{15} + \laO (x^7)$\\
-  $\tan(x):=\frac{\sin(x)}{\cos(x)}$
+  $
+  	\sin(z):=\frac{e^{iz}-e^{-iz}}{2i} = \sum_{k=0}^{\infty} (-1)^k \frac{z^{2k+1}}{(2k+1)!} = x-\frac{x^3}{6}+\frac{x^5}{120}+\laO(x^7)\\
+  	\cos(z):=\frac{e^{iz}+e^{-iz}}{2} = \sum_{k=0}^{\infty} (-1)^k\frac{z^{2k}}{(2k)!} = 1-\frac{x^2}{2}+\frac{x^4}{24} + \frac{x^6}{720} + \laO (x^7)\\
+ 	 \tan(x):=\frac{\sin(x)}{\cos(x)}
+  	\arcsin(x) = x + \frac{x^6}{6} + \frac{3x^5}{40} + \laO (x^7)\\
+  	\arccos(x) = \frac{\pi}{2} - x - \frac{x^3}{6} - \frac{3x^5}{40} + \laO(x^7)\\
+  	\arctan(x):=\sum_{k=0}^{\infty}(-1)^k \frac{x^{2k+1}}{2k+1} = x - \frac{x^3}{3} + \frac{x^5}{5} + \laO(x^7)\\
+  	\sinh(x):=\frac{1}{2}(e^x-e^{-x})=\sum_{k=0}^{\infty}\frac{x^{2k+1}}{(2n+1)!} = x + \frac{x^3}{6} + \frac{x^5}{120} + \laO(x^7)\\
+  	\cosh(x):=\frac{1}{2}(e^x+e^{-x})=\sum_{k=0}^{\infty}\frac{x^{2k}}{(2n)!} = 1 + \frac{x^2}{2} + \frac{x^4}{24} + \frac{x^6}{720} + \laO(x^7)\\
+  	\tanh(x):=\frac{\sinh(x)}{\cosh(x)} = x + \frac{x^3}{3} + \frac{2x^5}{15} + \laO (x^7)
+  $
+  
 
   \paragraph{Eigenschaften von sin, cos, tan}
   $\forall z,w \in \compl, x \in \real$
 
-  % TODO: Add more equations to the following list!!
   \begin{itemize}
   \item $\exp(iz) = \cos(z)+i\sin(w)$
   \item $(\sin(z))^2+(\cos(z))^2=1$
   \item $\sin(z+w)=\sin(z)\cos(w)+\cos(z)\sin(w)$
   \item $sin(2z)=2sin(z)cos(z)$
   \item $cos(z+w)=\cos(z)\cos(w)-\sin(z)\sin(w)$
-  \item $\cos(x)=Re(e^{ix}) \; \sin(x)=Im(e^{ix})$
+  \item $\cos(x)=Re(e^{ix}), \; \sin(x)=Im(e^{ix})$
   \item $cos(2z)=cos^2(z)-sin^2(z)$
   \item $\arccos(x)+\arcsin(x)=\frac{\pi}{2}$
   \item $z=\tan(c): \arctan'(z)=\frac{1}{\tan'(c)}=\frac{1}{1+(\tan(c))^2}=\frac{1}{1+z^2}$
