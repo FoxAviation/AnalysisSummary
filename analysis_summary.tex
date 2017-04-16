@@ -172,7 +172,7 @@ $\lim\limits_{n \rightarrow \infty} (a_n) \rightarrow 0$
   a $\in \real$ Häufungspunkt $\Leftrightarrow$ $ \exists (a_{n_k})_{k \in \nat}$ Teilfolge von $\aseq$, die gegen a konvergiert.
 
 
- \paragraph{Satz v. Bozano-Weierstraß}\hspace{0pt} \\
+ \paragraph{Satz v. Bolzano-Weierstraß}\hspace{0pt} \\
  Jede beschränkte Folge $\aseq$ besitzt eine konvergente Teilfolge und hat min. einen Häufungspunkt
 
 
@@ -317,7 +317,7 @@ $z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \
   \section{Stetigkeit}
 
   \paragraph{Definition}\hspace{0pt} \\
-  $\text{stetig in}\ c \Leftrightarrow \forall (x_n) \ \text{mit}\ \lim\limits_{x \rightarrow 0}x_n = c \ \text{gilt}\ \lim\limits_{x \rightarrow 0}f(x_n)=f(c)$
+  $f : D \rightarrow \real \text{stetig in} c \Leftrightarrow \forall (x_n) \ \text{mit}\ \lim\limits_{x \rightarrow 0}x_n = c \ \text{gilt}\ \lim\limits_{x \rightarrow 0}f(x_n)=f(c)$
 
   \paragraph{Rechenregeln}
   $D \subseteq \real;f,g: D \rightarrow \real;f,g ~\text{stetig in}\ c \\ \Rightarrow f+g, f \cdot g,\frac{f}{g}$ ($g \neq 0$) stetig in $c$
@@ -724,10 +724,10 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow \exists$ lineare Abbildung $L: \rea
 
 		\paragraph{Landau-Notation}
 		\begin{itemize}
-			\item $f \in \laO(g) \leftrightarrow \lim\limits_{n \rightarrow \infty} \frac{\lvert f(x) \rvert}{g(x)} < \infty$
-			\item $f \in o(g) \leftrightarrow \lim\limits_{n \rightarrow \infty} \frac{\lvert f(x) \rvert}{g(x)} = 0$
-			\item $f \in \Omega(g) \leftrightarrow \lim\limits_{n \rightarrow \infty} \frac{g(x)}{\lvert f(x) \rvert} < \infty$
-			\item $f \in \omega(g) \leftrightarrow \lim\limits_{n \rightarrow \infty} \frac{g(x)}{\lvert f(x) \rvert} = 0$
+			\item $f \in \laO(g) \leftrightarrow \lim\limits_{n \rightarrow a} \frac{\lvert f(x) \rvert}{g(x)} < \infty$
+			\item $f \in o(g) \leftrightarrow \lim\limits_{n \rightarrow a} \frac{\lvert f(x) \rvert}{g(x)} = 0$
+			\item $f \in \Omega(g) \leftrightarrow \lim\limits_{n \rightarrow a} \frac{g(x)}{\lvert f(x) \rvert} < \infty$
+			\item $f \in \omega(g) \leftrightarrow \lim\limits_{n \rightarrow a} \frac{g(x)}{\lvert f(x) \rvert} = 0$
 		\end{itemize}
 		
 
