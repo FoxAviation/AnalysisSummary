@@ -713,7 +713,9 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow\\
 		
 \section{Sonstiges}
         \paragraph{Bekannte Abl. und Integrale}\hspace{0pt}\\
-
+		
+		\bgroup
+		\def\arraystretch{4}
         \begin{tabular}{|c|c|c|}
           \hline
            $\frac{\mathrm d}{\mathrm d x}  f(x)$  & $f(x)$           & $\int f(x) \mathrm{d}x$   \\ \hline
@@ -732,7 +734,8 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow\\
            $\frac{x}{\sqrt{1-x^2}}$                             & $\sqrt{1-x^2}$   & $\frac{1}{2}(\sqrt{1-x^2}x+\sin^{-1}(x))$ \\
            \hline
         \end{tabular}
-
+		\egroup
+		
 		\paragraph{Landau-Notation}
 		\begin{itemize}
 			\item $f \in \laO(g) \leftrightarrow \lim\limits_{n \rightarrow a} \frac{\lvert f(x) \rvert}{g(x)} < \infty$
