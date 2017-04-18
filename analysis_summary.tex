@@ -219,7 +219,7 @@ $z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \
   \end{itemize}
 
   \paragraph{Quotientenkriterum}\hspace{0pt} \\
-  $ \sum_{k=0}^{\infty} a_k, a_k \neq 0$ für fast alle $k \in \nat, \lim\limits_{n \in \nat} \arrowvert \frac{a_{n+1}}{a_n} \arrowvert := q$ existiert $\Rightarrow \bigotimes$
+  $ \sum_{k=0}^{\infty} a_k, a_k \neq 0$ für fast alle $k \in \nat, \lim\limits_{n \rightarrow \infty} \arrowvert \frac{a_{n+1}}{a_n} \arrowvert := q$ existiert $\Rightarrow \bigotimes$
 
   \paragraph{Wurzelkriterium}\hspace{0pt} \\
   $ \sum_{k=0}^{\infty} a_k,\:a_k \in \compl: q := \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\arrowvert a_k \arrowvert} \Rightarrow$ $\bigotimes$
@@ -231,7 +231,8 @@ $z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \
   \end{itemize}
 
   \paragraph{Leibnitz-Kriterium}
-  $\aseq$ relle, monoton fallende Nullfolge $ \Rightarrow \sum_{k=0}^{\infty} (-1)^ka_k \Rightarrow \forall n \in \nat \; \lvert \sum_{k=0}^{\infty}(-1)^ka_k-s_n \rvert \leq  a_{n+1}$
+  $\aseq$ relle, monoton fallende Nullfolge $ \Rightarrow \sum_{k=0}^{\infty} (-1)^ka_k \Rightarrow \forall n \in \nat \; \lvert \sum_{k=0}^{\infty}(-1)^ka_k-s_n \rvert \leq  a_{n+1}$\\
+  Anm. $\sum_{k=0}^{\infty} x_n$ konvergiert $\Rightarrow x_n$ Nullfolge
 
   \paragraph{Umordnungssatz}\begin{itemize}
   \item Jede Umordnung einer konv. Reihe konv. gg. denselben Wert
@@ -239,7 +240,7 @@ $z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \
 \end{itemize}
 
   \paragraph{Potenzreihe}
-    $ P(z) := \sum_{k=0}^{\infty} c_kz^k; c_k \in \compl; z \in \compl\\R := \frac{1}{\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|c_k|}} :=$ Konvergenzradius
+    $ P(z) := \sum_{k=0}^{\infty} c_kz^k; c_k \in \compl; z \in \compl\\R := \frac{1}{\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|c_k|}} = \lim\limits_{k \rightarrow \infty} \lvert \frac{a_k}{a_{k+1}} \rvert$ Konvergenzradius
     \begin{itemize}
     	\item $\lvert z \rvert < R \Rightarrow P(z)$ konvergiert
     	\item $\lvert z \rvert > R \Rightarrow P(z)$ divergiert
@@ -255,7 +256,7 @@ $z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \
 
 
   \paragraph{Natürliche Exponentialfunktion}\hspace{0pt} \\
-  $ exp(z) := \sum_{k=0}^{\infty} \frac{z^k}{k!} = \sum_{K=0}^{n}\binom{n}{k}\frac{1}{n^k}$
+  $ exp(z) := \sum_{k=0}^{\infty} \frac{z^k}{k!}$% = \sum_{K=0}^{n}\binom{n}{k}\frac{1}{n^k}$
 
 
   \paragraph{Eigenschaften von exp}
@@ -547,8 +548,8 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow\\
   \paragraph{Extrema/Kritische Punkte}
   \begin{itemize}
   	\item kritischer Punkt: $\nabla f(c) = 0$
-  	\item lokales Min.: $\nabla^2f(c)$ pos. semidefinit
-  	\item lokales Max.: $\nabla^2f(c)$ neg. semidefinit
+  	\item lokales Min. $\Rightarrow \nabla^2f(c)$ pos. semidefinit
+  	\item lokales Max. $ \Rightarrow \nabla^2f(c)$ neg. semidefinit
   	\item $\nabla f(c)=0 \ \text{und}\ \nabla^2f(c) \ \text{pos. definit}\ \Rightarrow$ isoliertes lok. Min.
   	\item  $\nabla f(c)=0 \ \text{und}\ \nabla^2f(c) \ \text{neg. definit}\ \Rightarrow$ isoliertes lok. Max.
   	\item $\nabla f(c)=0 \ \text{und}\ \nabla^2f(c) \ \text{pos. und neg. EW}\ \Rightarrow$ Sattelpunkt
@@ -753,11 +754,32 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow\\
 	        Logarithmusreihe & $\sum_{k=1}^{\infty}(-1)^{k+1}\frac{x^k}{k} = \ln(1+x)$\\\vspace{2pt}
 	        Arcus-Tangens-Reihe & $\sum_{k=0}^{\infty}(-1)^k\frac{x^{2k+1}}{2k+1} = \arctan(x)$ in $[-1,1]$\\\vspace{2pt}
 	        Exponentialreihe & $\sum_{k=0}^{\infty} \frac{z^k}{k!} = exp(z)$\\
-	        & $\sum_{k=0}^{\infty} \frac{1}{k!} = e$
+	        & $\sum_{k=0}^{\infty} \frac{1}{k!} = e$\\\vspace{2pt}
+	        Binomialreihe & $\sum_{k=0}^{\infty} (\begin{smallmatrix} \alpha\\k \end{smallmatrix}) \; x^k = (1+x)^{\alpha}$
         \end{tabular}
-
+	
+	%TODO: Expand
+	\paragraph{Besondere Potenzreihe: $\sum_{k=1}^{\infty} a^kz^{k^2}$}
+	\begin{enumerate}
+		\item Umschreiben in $\sum_{k=1}^{\infty} c_kz^k$ mit $c_k=
+		\begin{cases}
+			a^m & \text{falls } k=a^m, \text{für ein } n \in \nat\\
+			0 & , \text{sonst}
+		\end{cases}$
+		\item $HP_1 = 0$\\Falls $a \neq 0: \sqrt[k^2]{\lvert a^k \rvert} = 1 \Rightarrow HP_2 = 1$, nach oben beschränkt\\
+		$R^{-1} = \begin{cases}
+		n & a \neq 0\\
+		\infty & a = 0
+		\end{cases}$
+		da $\limsup_{k \rightarrow \infty} \sqrt[k]{\lvert k_n \rvert} = \begin{cases}
+		1 & ,a \neq 0\\
+		0 & ,a = 0
+		\end{cases})$
+	\end{enumerate}
+	
 	\paragraph{Allgemeines}
 		\begin{itemize}
+			\item $\lim\limits_{n \rightarrow \infty}\sqrt[n]{n} = 1$
 			\item $k! \geq 2^{n+1}$
 			\item $x>0 \Rightarrow e^x > \frac{x^{n+1}}{(n+1)!}$
 			\item $\lvert \lvert a \rvert- \lvert b \rvert \rvert \leq \lvert a-b \rvert \leq \lvert a \rvert + \lvert b \rvert$, $\lvert a+b \rvert \leq \lvert a \rvert + \lvert b \rvert$
