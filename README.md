@@ -22,5 +22,5 @@ Oder
 Mit anderen Compilern konnten bisher keine akzeptablen Ergebnisse erzielt werden.
 
 ## Mit besonderem Dank an
-kechtel
-BigHilo
++ kechtel
++ BigHilo
