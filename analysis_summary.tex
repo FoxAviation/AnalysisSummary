@@ -522,7 +522,7 @@ $z$ GW von $(z_n) \Leftrightarrow \forall \varepsilon > 0 \exists n_0 \in \nat \
   \section{Mehrdimensionale Differentialrechnung}
 	$M \subseteq \real^n$ offen, $f: M \rightarrow \real, x \in M$
 	\paragraph{Richtungsableitung}
-	$ v \in \real^n \backslash \{0\}$ Richtungsvektor $\Rightarrow$\\Richtungsableitung von $f$ in Richtung $v: \partial_vf(x)= \lim\limits_{x \rightarrow 0} \frac{f(x+tv)-f(x)}{t}$
+	$ v \in \real^n \backslash \{0\}$ Richtungsvektor $\Rightarrow$\\Richtungsableitung von $f$ in Richtung $v: \partial_vf(x)= \lim\limits_{t \rightarrow 0} \frac{f(x+tv)-f(x)}{t}$
 
   \paragraph{Totale Differenzierbarkeit}
 $f$ in $x$ (total) diff'bar $\Leftrightarrow\\
@@ -697,7 +697,7 @@ $f$ in $x$ (total) diff'bar $\Leftrightarrow\\
 		\paragraph{2D - Kreiskoordinaten}\hspace{0pt}\\
 		$
 			\begin{pmatrix} x\\y \end{pmatrix} \mapsto r \begin{pmatrix} \cos (\varphi) \\  \sin (\varphi) \end{pmatrix},
-			\quad dxdy \mapsto r \cdot \r drd\varphi
+			\quad dxdy \mapsto r \cdot d\varphi dr
 		$
 		
 		\paragraph{3D - Kugelkoordinaten}\hspace{0pt}\\
